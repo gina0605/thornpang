@@ -62,7 +62,7 @@ export default ({
             className="bg-black text-white text-center flex flex-col items-center py-1"
           >
             <Image
-              src={"/logo-white.png"}
+              src={"/logo-horizontal.png"}
               alt="thornapple logo"
               width={300}
               height={48}

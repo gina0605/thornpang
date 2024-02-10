@@ -1,6 +1,6 @@
 from PIL import Image
 
-img = Image.open("./logo-original.png")
+img = Image.open("./logo-original.jpeg")
 img = img.convert("RGBA")
 data = img.getdata()
 
