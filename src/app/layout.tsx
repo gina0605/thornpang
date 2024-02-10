@@ -36,7 +36,7 @@ const Tab = ({ text, link }: TabProps) => {
       className="grow w-0 flex flex-col items-center h-full justify-center text-base hover:text-lg"
     >
       <p
-        className={`text-center transition-all duration-200 ${
+        className={`text-center transition-all duration-200 font-pyeongchang ${
           pathname === link
             ? "text-rose-700 font-extrabold"
             : "text-slate-500 font-bold"
@@ -54,10 +54,13 @@ export default ({
   children: React.ReactNode;
 }>) => {
   return (
-    <html lang="ko" className={`${sunbatang.variable}`}>
-      <body>
+    <html lang="ko" className={`${sunbatang.variable} ${pyeongchang.variable}`}>
+      <body className="bg-white">
         <header className="flex flex-col w-screen prevent-select">
-          <div className="bg-black text-white text-center flex flex-col items-center py-1">
+          <Link
+            href="/"
+            className="bg-black text-white text-center flex flex-col items-center py-1"
+          >
             <Image
               src={"/logo-white.png"}
               alt="thornapple logo"
@@ -67,13 +70,15 @@ export default ({
             <p className="text-sm font-sunbatang font-light">
               팬페이지 by 어떤 쏜팡이
             </p>
-          </div>
-          <div className="flex w-full h-10 items-center border border-slate-200">
-            <Tab text="프로필" link="/" />
-            <Tab text="가사" link="/lyrics" />
-            <Tab text="일정" link="/calendar" />
-            <Tab text="영상" link="/video" />
-            <Tab text="인터뷰" link="/interview" />
+          </Link>
+          <div className="flex w-full h-10 justify-center border border-slate-200">
+            <div className="flex w-full max-w-5xl items-center">
+              <Tab text="프로필" link="/" />
+              <Tab text="가사" link="/lyrics" />
+              <Tab text="일정" link="/calendar" />
+              <Tab text="영상" link="/video" />
+              <Tab text="인터뷰" link="/interview" />
+            </div>
           </div>
         </header>
         {children}
