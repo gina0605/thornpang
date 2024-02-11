@@ -30,12 +30,12 @@ export const Dday = () => {
   useEffect(() => {
     if (activated) {
       timer.current = setInterval(() => {
-        setCnt((x) => (x >= 500 ? 500 : x + 1));
+        setCnt((x) => (x >= 50 ? 50 : x + 1));
       }, 20);
       const timer2 = setTimeout(() => {
-        setCnt(125);
+        setCnt(50);
         if (timer.current) clearInterval(timer.current);
-      }, 2500);
+      }, 1000);
       return () => {
         if (timer.current) clearInterval(timer.current);
         clearTimeout(timer2);
@@ -50,7 +50,7 @@ export const Dday = () => {
     >
       <p className="">데뷔 D+</p>
       <p className="w-20">
-        {String(Math.floor((result * cnt) / 125)).padStart(4, "0")}
+        {String(Math.floor((result * cnt) / 50)).padStart(4, "0")}
       </p>
     </div>
   );
