@@ -1,6 +1,6 @@
 "use client";
 
-import { useThrottle } from "@/common/hooks";
+import { useIntersectionObserver } from "@/common/hooks";
 import { useEffect, useRef, useState } from "react";
 
 export const Dday = () => {
@@ -8,25 +8,8 @@ export const Dday = () => {
   const timer = useRef<NodeJS.Timeout | undefined>(undefined);
   const result = Math.floor((Date.now() - 1261580400000) / 86400000);
   const [activated, setActivated] = useState(false);
-  const ref = useRef<HTMLDivElement>(null);
 
-  const scrollHandler = () => {
-    if (
-      ref.current &&
-      ref.current.getBoundingClientRect().bottom < window.innerHeight
-    )
-      setActivated(true);
-  };
-
-  const scrollThrottled = useThrottle(scrollHandler);
-
-  useEffect(() => {
-    scrollHandler();
-    window.addEventListener("scroll", () => {
-      scrollThrottled();
-      window.removeEventListener("scroll", scrollThrottled);
-    });
-  }, []);
+  const { setTarget } = useIntersectionObserver(() => setActivated(true), 0.9);
 
   useEffect(() => {
     if (activated) {
@@ -47,7 +30,7 @@ export const Dday = () => {
   return (
     <div
       className="flex items-center font-pyeongchang text-3xl font-bold pt-6"
-      ref={ref}
+      ref={setTarget}
     >
       <p className="">데뷔 D+</p>
       <p className="w-20">

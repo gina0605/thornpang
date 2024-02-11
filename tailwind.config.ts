@@ -20,6 +20,9 @@ const config: Config = {
         sunbatang: ["var(--font-sunbatang)", "serif"],
         pyeongchang: ["var(--font-pyeongchang)", "sans-serif"],
       },
+      transitionProperty: {
+        appear: "opacity translate",
+      },
     },
   },
   plugins: [],

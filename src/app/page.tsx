@@ -58,6 +58,7 @@ export default async () => {
             session={x.session}
             sns={x.sns}
             left={idx % 2 == 0}
+            key={idx}
           />
         ))}
         <ThornProfile />

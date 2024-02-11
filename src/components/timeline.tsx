@@ -1,6 +1,5 @@
 "use client";
 
-import { useThrottle } from "@/common/hooks";
 import { useEffect, useRef, useState } from "react";
 
 export interface TimelineProps {
@@ -20,31 +19,37 @@ export const Timeline = ({
 }: TimelineProps) => {
   const [activated, setActivated] = useState(false);
   const ref = useRef<HTMLDivElement>(null);
+  const observer = useRef<IntersectionObserver | null>(null);
 
   const shouldActivate = () =>
     ref.current &&
     ref.current.getBoundingClientRect().bottom < window.innerHeight;
 
-  const scrollThrottled = useThrottle(() => {
-    if (shouldActivate()) setActivated(true);
-  });
-
   useEffect(() => {
     if (shouldActivate())
-      setTimeout(() => setActivated(true), 300 * (index + 1));
+      setTimeout(() => setActivated(true), 300 * index + 150);
     else {
-      window.addEventListener("scroll", () => {
-        scrollThrottled();
-        window.removeEventListener("scroll", scrollThrottled);
-      });
+      if (!ref.current) return;
+      observer.current = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              setActivated(true);
+              if (ref.current) observer.current?.unobserve(ref.current);
+            }
+          });
+        },
+        { threshold: 0.7, rootMargin: "0px 0px -32px 0px" }
+      );
+      observer.current.observe(ref.current);
     }
   }, []);
 
   return (
     <div className="pl-12 w-full relative py-8 md:py-10" ref={ref}>
       <div
-        className={`h-fit font-sunbatang text-black transition-all duration-1000 ease-out ${
-          activated ? "mx-0 opacity-100" : "ml-4 -mr-4 opacity-0"
+        className={`h-fit font-sunbatang text-black transition-appear duration-1000 ease-out ${
+          activated ? "translate-x-0 opacity-100" : "translate-x-4 opacity-0"
         }`}
       >
         <p className="text-rose-700">{date}</p>

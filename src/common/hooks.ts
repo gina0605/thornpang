@@ -1,17 +1,32 @@
 "use client";
 
-import { useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 
-export const useThrottle = (handler: () => void) => {
-  const throttle = useRef<NodeJS.Timeout | undefined>(undefined);
+export const useIntersectionObserver = (
+  onIntersect: () => void,
+  threshold: number,
+  rootMargin: string = "0px 0px 0px 0px"
+) => {
+  const [target, setTarget] = useState<HTMLElement | null>(null);
+  const observer = useRef<IntersectionObserver | null>(null);
 
-  return () => {
-    if (!throttle.current) {
-      throttle.current = setTimeout(() => {
-        handler();
-        clearTimeout(throttle.current);
-        throttle.current = undefined;
-      }, 50);
-    }
-  };
+  useEffect(() => {
+    if (!target) return;
+    observer.current = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            onIntersect();
+            observer.current?.unobserve(target);
+          }
+        });
+      },
+      { rootMargin, threshold }
+    );
+    observer.current.observe(target);
+
+    return () => observer.current?.unobserve(target);
+  }, [target, onIntersect, threshold, rootMargin]);
+
+  return { target, setTarget };
 };
