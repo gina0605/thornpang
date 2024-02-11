@@ -15,3 +15,7 @@ img {
   -o-user-drag: none;
   user-drag: none;
 }
+
+p {
+  word-break: keep-all;
+}
