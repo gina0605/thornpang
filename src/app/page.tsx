@@ -1,5 +1,5 @@
 import { Dday } from "@/components/Dday";
-import Image from "next/image";
+import { AppleProfile } from "@/components/appleProfile";
 
 interface TimelineProps {
   date: string;
@@ -30,14 +30,7 @@ export default () => (
   <main className="w-screen flex flex-col items-center">
     <div className="w-full bg-gradient-to-b from-white to-gray-pfp flex flex-col items-center">
       <div className="w-full max-w-5xl">
-        <div className="w-full pt-[75%] relative">
-          <Image
-            src="/profile/apple.jpeg"
-            alt="THORNAPPLE profile picture max-h-screen"
-            fill
-            objectFit="contain"
-          />
-        </div>
+        <AppleProfile />
       </div>
       <Dday />
       <div className="w-full max-w-2xl flex flex-col px-6 pt-4">
