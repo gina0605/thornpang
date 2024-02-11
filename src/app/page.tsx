@@ -3,6 +3,7 @@ import { Dday } from "@/components/Dday";
 import { AppleProfile } from "@/components/appleProfile";
 import { IndivProfile } from "@/components/indivProfile";
 import { Timeline } from "@/components/timeline";
+import { ThornProfile } from "@/components/thornProfile";
 
 export default async () => {
   const file = await fs.readFile(
@@ -13,7 +14,7 @@ export default async () => {
 
   return (
     <main className="w-screen flex flex-col items-center">
-      <div className="w-full bg-gradient-to-b from-white to-gray-pfp flex flex-col items-center pb-20">
+      <div className="w-full bg-gradient-to-b from-white to-gray-pfp flex flex-col items-center pb-8">
         <div className="w-full max-w-5xl">
           <AppleProfile />
         </div>
@@ -59,6 +60,7 @@ export default async () => {
             left={idx % 2 == 0}
           />
         ))}
+        <ThornProfile />
       </div>
     </main>
   );

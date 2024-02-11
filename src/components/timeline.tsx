@@ -43,7 +43,7 @@ export const Timeline = ({
   return (
     <div className="pl-12 w-full relative py-8 md:py-10" ref={ref}>
       <div
-        className={`h-fit font-sunbatang text-slate-800 transition-all duration-1000 ease-out ${
+        className={`h-fit font-sunbatang text-black transition-all duration-1000 ease-out ${
           activated ? "mx-0 opacity-100" : "ml-4 -mr-4 opacity-0"
         }`}
       >

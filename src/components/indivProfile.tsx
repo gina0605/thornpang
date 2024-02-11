@@ -81,8 +81,8 @@ export const IndivProfile = ({
             alt={`${name} profile picture`}
             fill
             priority
-            style={{ objectFit: "contain" }}
             sizes="33vw"
+            className="drop-shadow object-contain"
           />
         </div>
       </div>
