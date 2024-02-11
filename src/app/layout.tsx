@@ -65,7 +65,10 @@ export default ({
               src={"/logo-horizontal.png"}
               alt="thornapple logo"
               width={300}
-              height={48}
+              height={52}
+              className="h-12"
+              style={{ width: "auto" }}
+              priority
             />
             <p className="text-sm font-sunbatang font-light">
               팬페이지 by 어떤 쏜팡이
