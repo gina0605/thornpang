@@ -1,3 +1,4 @@
+import { Dday } from "@/components/Dday";
 import Image from "next/image";
 
 interface TimelineProps {
@@ -38,9 +39,7 @@ export default () => (
           />
         </div>
       </div>
-      <div className="flex items-center pt-6 space-x-4">
-        <p className="font-pyeongchang text-3xl font-bold">데뷔 D+5612</p>
-      </div>
+      <Dday />
       <div className="w-full max-w-2xl flex flex-col px-6 pt-4">
         <Timeline
           date="2009.12.24"
