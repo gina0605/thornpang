@@ -60,10 +60,13 @@ export const Timeline = ({
       )}
       <div className="absolute rounded-full border-black border-4 w-6 h-6 top-1/2 -mt-3 left-0" />
       <div
-        className={`absolute w-2 top-1/2 mt-2 left-2 bottom-0 ${
-          isbottom ? "from-black to-transparent bg-gradient-to-b" : "bg-black"
+        className={`absolute w-2 top-1/2 mt-2 left-2 bg-black ${
+          isbottom ? "bottom-1/4" : "bottom-0"
         }`}
       />
+      {isbottom && (
+        <div className="absolute w-2 top-3/4 h-16 md:h-20 left-2 from-black to-transparent bg-gradient-to-b" />
+      )}
     </div>
   );
 };

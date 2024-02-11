@@ -19,7 +19,7 @@ export default async () => {
           <AppleProfile />
         </div>
         <Dday />
-        <div className="w-full max-w-2xl flex flex-col px-6 pt-4 pb-12 md:pb-20">
+        <div className="w-full max-w-2xl flex flex-col px-6 pt-4 pb-16 md:pb-32">
           <Timeline
             date="2009.12.24"
             text="데뷔공연 'THE 조용한 크리스마스' @살롱바다비"

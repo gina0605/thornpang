@@ -12,7 +12,7 @@ const links = [
 ];
 
 export const ThornProfile = () => (
-  <div className="w-full max-w-4xl pl-5 pr-4 flex flex-col items-center mt-14 md:mt-28 mb-4 opacity-100">
+  <div className="w-full max-w-4xl pl-5 pr-4 flex flex-col items-center mt-10 md:mt-28 mb-4 opacity-100">
     <div className="w-full pt-[17%] relative">
       <Image
         src={"/logo-horizontal.png"}
