@@ -1,0 +1,47 @@
+[
+  {
+    "image": "yoon.jpeg",
+    "name": "윤성현",
+    "bday": "1986.01.08",
+    "session": "Vocal&Guitar",
+    "sns": []
+  },
+  {
+    "image": "sim.jpeg",
+    "name": "심재현",
+    "bday": "1987.01.12",
+    "session": "Bass",
+    "sns": [
+      {
+        "link": "https://www.instagram.com/simjaehyun213/",
+        "type": "instagram"
+      },
+      { "link": "https://soundcloud.com/simjaehyun", "type": "soundcloud" },
+      { "link": "https://soundcloud.com/eboutique", "type": "soundcloud" },
+      { "link": "https://www.youtube.com/@ebclick2", "type": "youtube" }
+    ]
+  },
+  {
+    "image": "hong.jpeg",
+    "name": "홍동균",
+    "bday": "1988.04.10",
+    "session": "Guitar",
+    "sns": [
+      {
+        "link": "https://www.instagram.com/dk_the_flake/",
+        "type": "instagram"
+      },
+      { "link": "https://www.youtube.com/c/dktheflake", "type": "youtube" },
+      { "link": "https://www.twitch.tv/dktheflake", "type": "twitch" }
+    ]
+  },
+  {
+    "image": "bang.jpeg",
+    "name": "방요셉",
+    "bday": "1990.11.10",
+    "session": "Drums",
+    "sns": [
+      { "link": "https://www.instagram.com/bbang_yo_90/", "type": "instagram" }
+    ]
+  }
+]

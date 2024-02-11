@@ -7,7 +7,6 @@ export default async () => {
     "utf8"
   );
   const data = JSON.parse(file);
-  console.log(data);
 
   return (
     <Image

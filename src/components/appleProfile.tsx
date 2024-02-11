@@ -16,7 +16,7 @@ export const AppleProfile = () => {
     >
       <Image
         src="/profile/apple.jpeg"
-        alt="THORNAPPLE profile picture max-h-screen"
+        alt="THORNAPPLE profile picture"
         fill
         style={{ objectFit: "contain" }}
         priority
