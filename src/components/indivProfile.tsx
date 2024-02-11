@@ -21,7 +21,7 @@ export const SnsIcon = ({ sns }: SnsIconProps) => (
       height={24}
       width={24}
       alt={`${sns.type} icon`}
-      className="fill-black"
+      className="fill-black md:h-6 md:w-6 h-5 w-5"
     />
   </Link>
 );
@@ -67,7 +67,11 @@ export const IndivProfile = ({
     <div
       className={`w-full max-w-4xl flex items-center space-x-4 px-6 justify-start md:-my-12 transition-all duration-1000 ease-out h-fit ${
         left ? "flex-row" : "flex-row-reverse space-x-reverse"
-      } ${activated ? "oapcity-100" : `opacity-0 ${left ? "pl-8" : "pr-8"}`}`}
+      } ${
+        activated
+          ? "oapcity-100"
+          : `opacity-0 ${left ? "ml-16 -mr-16" : "mr-16 -ml-16"}`
+      }`}
       ref={ref}
     >
       <div className="w-4/12 max-w-lg">
