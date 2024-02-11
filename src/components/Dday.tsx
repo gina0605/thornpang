@@ -24,6 +24,7 @@ export const Dday = () => {
     scrollHandler();
     window.addEventListener("scroll", () => {
       scrollThrottled();
+      window.removeEventListener("scroll", scrollThrottled);
     });
   }, []);
 
