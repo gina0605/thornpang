@@ -2,6 +2,7 @@ import { Line, Song } from "@/types";
 import { LineItem } from "@/components/lyrics/lineItem";
 import { SongItem } from "@/components/lyrics/songItem";
 import { readJson } from "@/common/utils";
+import { SearchBar } from "@/components/lyrics/searchBar";
 
 export default async ({
   searchParams,
@@ -54,7 +55,7 @@ export default async ({
 
   return (
     <main className="w-screen flex flex-col items-center">
-      <div>searchbar</div>
+      <SearchBar param={param} />
       <div className="flex flex-col w-full">
         {param
           ? filtered.map((line, idx) => <LineItem line={line} key={idx} />)
