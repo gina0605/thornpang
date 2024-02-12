@@ -30,12 +30,20 @@ export const SongItem = ({
       title={title}
       text={<p className="font-sunbatang text-slate-500 text-sm">{info}</p>}
       slug={slug}
-      className={`transition-opacity duration-700 ease-in-out ${
-        activated ? "opacity-100" : "opacity-0"
-      }`}
-      linkClassName={`transition-[transform] duration-200 ease-in-out ${
-        activated ? "" : "-translate-y-8"
-      }`}
+      className={
+        move
+          ? `transition-opacity duration-700 ease-in-out ${
+              activated ? "opacity-100" : "opacity-0"
+            }`
+          : ""
+      }
+      linkClassName={
+        move
+          ? `transition-[transform] duration-200 ease-in-out ${
+              activated ? "" : "-translate-y-8"
+            }`
+          : ""
+      }
     />
   );
 };
