@@ -30,6 +30,7 @@ const config: Config = {
       },
       spacing: {
         "13": "3.25rem",
+        "17": "4.25rem",
         "19": "4.75rem",
       },
       boxShadow: {

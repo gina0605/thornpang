@@ -18,16 +18,27 @@ export default async ({ params: { slug } }: { params: PageProps }) => {
   const songIdx = data.findIndex((s) => s.slug === slug);
   const { title, album, lyrics } = data[songIdx];
 
-  let albumTitle;
-  if (album === "1") albumTitle = "난 자꾸 말을 더듬고 잠드는 법도 잊었네";
-  else if (album === "2") albumTitle = "이상기후";
-  else if (album === "seoul") albumTitle = "서울병";
-  else if (album === "3") albumTitle = "계몽";
-  else if (album === "animal") albumTitle = "동물";
+  let albumTitle, bgColor;
+  if (album === "1") {
+    albumTitle = "난 자꾸 말을 더듬고 잠드는 법도 잊었네";
+    bgColor = "from-stammer/10";
+  } else if (album === "2") {
+    albumTitle = "이상기후";
+    bgColor = "from-weather/10";
+  } else if (album === "seoul") {
+    albumTitle = "서울병";
+    bgColor = "from-seoul/10";
+  } else if (album === "3") {
+    albumTitle = "계몽";
+    bgColor = "from-enlight/10";
+  } else if (album === "animal") {
+    albumTitle = "동물";
+    bgColor = "from-animal/10";
+  }
 
   return (
     <main className="w-screen full-body-height flex font-sunbatang justify-center relative overflow-hidden text-black">
-      <div className="absolute inset-0">
+      <div className="absolute inset-0 top-17">
         <div className="relative w-full h-full">
           <Image
             src={`/album/${album}.jpeg`}
@@ -39,7 +50,9 @@ export default async ({ params: { slug } }: { params: PageProps }) => {
         </div>
       </div>
       <div className="w-full flex flex-col items-center z-30">
-        <div className="w-full flex justify-center relative bg-gradient-to-b from-white/30 to-black/15 z-10 shadow-down">
+        <div
+          className={`w-full flex justify-center relative bg-gradient-to-b ${bgColor} to-transparent z-10 shadow-down`}
+        >
           <div className="w-full flex items-center justify-between max-w-xl py-2 z-30">
             <div>{"<"}</div>
             <div className="flex flex-col items-center">
