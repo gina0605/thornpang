@@ -32,7 +32,7 @@ export default async ({
 
         const matched: string[] = [];
         for (let i = 0; i < stripped.length - 1; i++) {
-          if (matched.includes(stripped[i])) continue;
+          if (matched.includes(filtered[i])) continue;
           const str = stripped[i] + stripped[i + 1];
           const matchIdx = str.indexOf(pattern);
           if (matchIdx >= 0) {

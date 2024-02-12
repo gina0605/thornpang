@@ -1,10 +1,17 @@
-import Link from "next/link";
 import { Line } from "@/types";
+import { ListItem } from "./listItem";
 
 export interface LineItemProps {
   line: Line;
 }
 
-export const LineItem = ({ line: { title, album, line } }: LineItemProps) => (
-  <Link href={`/lyrics/${title}`}>{line}</Link>
+export const LineItem = ({
+  line: { title, slug, album, line },
+}: LineItemProps) => (
+  <ListItem
+    album={album}
+    title={title}
+    text={<p className="font-sunbatang text-slate-500 text">{line}</p>}
+    slug={slug}
+  />
 );
