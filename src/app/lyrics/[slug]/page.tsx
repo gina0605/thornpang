@@ -1,3 +1,4 @@
+import Link from "next/link";
 import Image from "next/image";
 import { readJson } from "@/common/utils";
 import { Song } from "@/types";
@@ -16,6 +17,8 @@ interface PageProps {
 export default async ({ params: { slug } }: { params: PageProps }) => {
   const data = (await readJson("/src/data/lyrics.json")) as Song[];
   const songIdx = data.findIndex((s) => s.slug === slug);
+  const leftIdx = songIdx === 0 ? data.length - 1 : songIdx - 1;
+  const rightIdx = songIdx === data.length - 1 ? 0 : songIdx + 1;
   const { title, album, lyrics } = data[songIdx];
 
   let albumTitle, bgColor;
@@ -54,19 +57,35 @@ export default async ({ params: { slug } }: { params: PageProps }) => {
           className={`w-full flex justify-center relative bg-gradient-to-b ${bgColor} to-transparent z-10 shadow-down`}
         >
           <div className="w-full flex items-center justify-between max-w-xl py-2 z-30">
-            <div>{"<"}</div>
+            <Link href={`/lyrics/${data[leftIdx].slug}`} className="p-4 -m-2">
+              <Image
+                src="/icon/chevron-left.svg"
+                alt="left arrow"
+                width={24}
+                height={24}
+              />
+            </Link>
             <div className="flex flex-col items-center">
               <p className="text-lg">{title}</p>
               <p className="font-light">{albumTitle}</p>
             </div>
-            <div>{">"}</div>
+            <Link href={`/lyrics/${data[rightIdx].slug}`} className="p-4 -m-2">
+              <Image
+                src="/icon/chevron-right.svg"
+                alt="right arrow"
+                width={24}
+                height={24}
+              />
+            </Link>
           </div>
         </div>
         <div className="w-full flex justify-center overflow-y-auto">
           <div className="w-fit h-fit font-light pb-20 pt-3 md:pt-6">
-            {lyrics.map((l, idx) => (
-              <p key={idx}>{l}</p>
-            ))}
+            {lyrics.length ? (
+              lyrics.map((l, idx) => (l ? <p key={idx}>{l}</p> : <br />))
+            ) : (
+              <p className="text-slate-500">연주곡</p>
+            )}
           </div>
         </div>
       </div>
