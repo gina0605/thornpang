@@ -19,7 +19,7 @@ export const SongItem = ({
 
   useEffect(() => {
     if (move) {
-      const timer = setTimeout(() => setActivated(true), idx * 100);
+      const timer = setTimeout(() => setActivated(true), idx * 90);
       return () => clearTimeout(timer);
     }
   }, []);

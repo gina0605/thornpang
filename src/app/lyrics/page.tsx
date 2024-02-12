@@ -21,17 +21,18 @@ export default async ({
   const param = getParam() as string | null;
 
   const getFiltered = () => {
+    const strip = (s: string) => s.replaceAll(/[\s.⋯?,'!"]+/g, "");
+
     if (!param) return [];
-    const pattern = param?.replaceAll(/[\s.⋯?,'!"]+/g, "");
+    const pattern = strip(param);
 
     return data
       .map(({ title, slug, album, lyrics }) => {
         const filtered = lyrics.filter((l) => l !== "");
-        const stripped = filtered
-          .map((l) => l.replaceAll(/[\s.⋯?,'!"]+/g, ""))
-          .concat([""]);
+        const stripped = filtered.map(strip).concat([""]);
 
         const matched: string[] = [];
+        if (strip(title).includes(pattern)) matched.push("-");
         for (let i = 0; i < stripped.length - 1; i++) {
           if (matched.includes(filtered[i])) continue;
           const str = stripped[i] + stripped[i + 1];
