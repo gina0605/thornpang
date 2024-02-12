@@ -15,6 +15,11 @@ const config: Config = {
       },
       colors: {
         "gray-pfp": "#939393",
+        stammer: "#e69085",
+        weather: "#77a9bf",
+        seoul: "#bf796b",
+        enlight: "#8a837a",
+        animal: "#9e926c",
       },
       fontFamily: {
         sunbatang: ["var(--font-sunbatang)", "serif"],

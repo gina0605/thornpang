@@ -10,22 +10,39 @@ export interface ListItemProps {
   slug: string;
 }
 
-export const ListItem = ({ ref, album, title, text, slug }: ListItemProps) => (
-  <Link href={`/lyrics/${slug}`}>
-    <div
-      className="flex h-12 items-center p-1 border-b border-l border-r from-white to-rose-100 bg-gradient-to-r"
-      ref={ref}
-    >
-      <Image
-        src={`/album/${album}.jpeg`}
-        alt={`${album} album cover`}
-        width={40}
-        height={40}
-      />
-      <div className="flex flex-col pl-1">
-        <p className="font-sunbatang font-semibold">{title}</p>
-        {text}
+export const ListItem = ({ ref, album, title, text, slug }: ListItemProps) => {
+  let bgColor;
+  if (album === "1") bgColor = "to-stammer";
+  else if (album === "2") bgColor = "to-weather";
+  else if (album === "seoul") bgColor = "to-seoul";
+  else if (album === "3") bgColor = "to-enlight";
+  else if (album === "animal") bgColor = "to-animal";
+
+  return (
+    <Link href={`/lyrics/${slug}`}>
+      <div
+        className="flex h-14 items-center border-b border-l border-r"
+        ref={ref}
+      >
+        <div className="h-full w-14 flex items-center relative">
+          <div
+            className={`w-full h-full absolute from-white ${bgColor} bg-gradient-to-l opacity-20`}
+          />
+          <Image
+            src={`/album/${album}.jpeg`}
+            alt={`${album} album cover`}
+            width={44}
+            height={44}
+            className="rounded-sm z-30 ml-3"
+          />
+        </div>
+        <div
+          className={`h-full flex flex-col grow p-2 from-white ${bgColor} bg-gradient-to-r`}
+        >
+          <p className="font-sunbatang font-semibold -mb-1">{title}</p>
+          {text}
+        </div>
       </div>
-    </div>
-  </Link>
-);
+    </Link>
+  );
+};
