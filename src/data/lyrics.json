@@ -163,7 +163,8 @@
     "title": "청색증",
     "slug": "cyanosis",
     "album": "1",
-    "info": "작곡 윤성현"
+    "info": "작곡 윤성현",
+    "lyrics": []
   },
   {
     "title": "너의 무리",
@@ -421,6 +422,7 @@
   },
   {
     "title": "멸종",
+    "slug": "extinction",
     "album": "animal",
     "info": "작사,작곡 윤성현",
     "lyrics": []

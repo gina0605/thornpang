@@ -59,7 +59,7 @@ export default ({
         <header className="flex flex-col w-screen prevent-select">
           <Link
             href="/"
-            className="bg-black text-white text-center flex flex-col items-center py-1"
+            className="bg-black text-white text-center flex flex-col items-center py-1 h-19"
           >
             <Image
               src={"/logo-horizontal.png"}
