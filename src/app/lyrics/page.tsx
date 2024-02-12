@@ -9,7 +9,7 @@ export default async ({
 }: {
   searchParams: { [key: string]: string | string[] | undefined };
 }) => {
-  const data = (await readJson("/src/data/lyrics.json")) as Song[];
+  const data = (await readJson("/public/lyrics.json")) as Song[];
 
   const getParam = () => {
     const keyword = searchParams.keyword;

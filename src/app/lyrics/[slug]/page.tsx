@@ -4,7 +4,7 @@ import { readJson } from "@/common/utils";
 import { Song } from "@/types";
 
 export const generateStaticParams = async () => {
-  const data = await readJson("/src/data/lyrics.json");
+  const data = await readJson("/public/lyrics.json");
   return data.map((song: Song) => ({ slug: song.slug }));
 };
 
@@ -15,7 +15,7 @@ interface PageProps {
 }
 
 export default async ({ params: { slug } }: { params: PageProps }) => {
-  const data = (await readJson("/src/data/lyrics.json")) as Song[];
+  const data = (await readJson("/public/lyrics.json")) as Song[];
   const songIdx = data.findIndex((s) => s.slug === slug);
   const leftIdx = songIdx === 0 ? data.length - 1 : songIdx - 1;
   const rightIdx = songIdx === data.length - 1 ? 0 : songIdx + 1;
