@@ -2,7 +2,6 @@
 
 import { useState } from "react";
 import Image from "next/image";
-import Link from "next/link";
 import { useIntersectionObserver } from "@/common/hooks";
 
 export interface SnsLink {
@@ -15,7 +14,7 @@ interface SnsIconProps {
 }
 
 export const SnsIcon = ({ sns }: SnsIconProps) => (
-  <Link href={sns.link}>
+  <a href={sns.link} target="_blank">
     <Image
       src={`/icon/${sns.type}.svg`}
       height={24}
@@ -23,7 +22,7 @@ export const SnsIcon = ({ sns }: SnsIconProps) => (
       alt={`${sns.type} icon`}
       className="fill-black md:h-6 md:w-6 h-5 w-5"
     />
-  </Link>
+  </a>
 );
 
 export interface IndivProfileProps {

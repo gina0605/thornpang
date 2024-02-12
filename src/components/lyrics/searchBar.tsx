@@ -17,6 +17,8 @@ export const SearchBar = ({ param }: SearchBarProps) => {
     setActivated(true);
   }, []);
 
+  useEffect(() => setText(param ?? ""), [param]);
+
   return (
     <div className="w-full h-9 flex">
       <div

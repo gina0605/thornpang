@@ -64,7 +64,7 @@ export default ({
             <Image
               src={"/logo-horizontal.png"}
               alt="thornapple logo"
-              width={300}
+              width={305}
               height={52}
               className="h-12"
               style={{ width: "auto" }}

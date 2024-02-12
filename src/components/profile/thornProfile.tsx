@@ -1,5 +1,4 @@
 import Image from "next/image";
-import Link from "next/link";
 
 const links = [
   { link: "https://mpmgmusic.com/thornapple", text: "MPMG" },
@@ -25,11 +24,11 @@ export const ThornProfile = () => (
     </div>
     <div className="flex w-full justify-center space-x-4 mt-2">
       {links.map(({ link, text }, idx) => (
-        <Link href={link} key={idx}>
+        <a href={link} key={idx} target="_blank">
           <p className="font-sunbatang underline decoration-black text-black underline-offset-4 decoration-1">
             {text}
           </p>
-        </Link>
+        </a>
       ))}
     </div>
   </div>

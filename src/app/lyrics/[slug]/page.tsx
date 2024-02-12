@@ -67,7 +67,7 @@ export default async ({ params: { slug } }: { params: PageProps }) => {
             </Link>
             <div className="flex flex-col items-center">
               <p className="text-lg">{title}</p>
-              <p className="font-light">{albumTitle}</p>
+              <p className="font-light text-slate-500">{albumTitle}</p>
             </div>
             <Link href={`/lyrics/${data[rightIdx].slug}`} className="p-4 -m-2">
               <Image
