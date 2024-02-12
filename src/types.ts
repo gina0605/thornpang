@@ -8,6 +8,7 @@ export interface Song {
 
 export interface Line {
   title: string;
+  slug: string;
   album: string;
   line: string;
 }

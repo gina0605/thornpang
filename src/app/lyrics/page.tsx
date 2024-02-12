@@ -14,12 +14,43 @@ export default async ({
     const keyword = searchParams.keyword;
     if (Object.prototype.toString.call(keyword) === "[object Array]") {
       const keywordString = keyword as string;
-      return keywordString.length ? keywordString[0] : "";
-    } else return keyword;
+      return keywordString.length ? decodeURI(keywordString[0]) : "";
+    } else return keyword === undefined ? null : decodeURI(keyword as string);
   };
-  const param = getParam() as string | undefined;
+  const param = getParam() as string | null;
 
-  const filtered: Line[] = []; // TODO
+  const getFiltered = () => {
+    if (!param) return [];
+    const pattern = param?.replaceAll(/[\s.⋯?,']+/g, "");
+
+    return data
+      .map(({ title, slug, album, lyrics }) => {
+        const filtered = lyrics.filter((l) => l !== "");
+        const stripped = filtered
+          .map((l) => l.replaceAll(/[\s.⋯?,']+/g, ""))
+          .concat([""]);
+
+        const matched: string[] = [];
+        for (let i = 0; i < stripped.length - 1; i++) {
+          if (matched.includes(stripped[i])) continue;
+          const str = stripped[i] + stripped[i + 1];
+          const matchIdx = str.indexOf(pattern);
+          if (matchIdx >= 0) {
+            if (matchIdx < stripped[i].length) matched.push(filtered[i]);
+            else {
+              if (!matched.includes(filtered[i + 1]))
+                matched.push(filtered[i + 1]);
+              i++;
+            }
+          }
+        }
+
+        return matched.map((l) => ({ title, slug, album, line: l }));
+      })
+      .reduce((x, y) => x.concat(y), []);
+  };
+
+  const filtered: Line[] = getFiltered();
 
   return (
     <main className="w-screen flex flex-col items-center">
@@ -28,12 +59,7 @@ export default async ({
         {param
           ? filtered.map((line, idx) => <LineItem line={line} key={idx} />)
           : data.map((song, idx) => (
-              <SongItem
-                idx={idx}
-                song={song}
-                key={idx}
-                move={param === undefined}
-              />
+              <SongItem idx={idx} song={song} key={idx} move={param === null} />
             ))}
       </div>
     </main>
