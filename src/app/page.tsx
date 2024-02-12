@@ -1,16 +1,12 @@
-import { promises as fs } from "fs";
 import { Dday } from "@/components/profile/Dday";
 import { AppleProfile } from "@/components/profile/appleProfile";
 import { IndivProfile } from "@/components/profile/indivProfile";
 import { Timeline } from "@/components/profile/timeline";
 import { ThornProfile } from "@/components/profile/thornProfile";
+import { readJson } from "@/common/utils";
 
 export default async () => {
-  const file = await fs.readFile(
-    process.cwd() + "/src/data/profile.json",
-    "utf8"
-  );
-  const data = JSON.parse(file);
+  const data = await readJson("/src/data/profile.json");
 
   return (
     <main className="w-screen flex flex-col items-center">

@@ -1,12 +1,8 @@
-import { promises as fs } from "fs";
 import Image from "next/image";
+import { readJson } from "@/common/utils";
 
 export default async () => {
-  const file = await fs.readFile(
-    process.cwd() + "/src/data/video.json",
-    "utf8"
-  );
-  const data = JSON.parse(file);
+  const data = readJson("/src/data/video.json");
 
   return (
     <Image

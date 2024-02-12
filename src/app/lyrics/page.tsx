@@ -1,18 +1,14 @@
-import { promises as fs } from "fs";
 import { Line, Song } from "@/types";
 import { LineItem } from "@/components/lyrics/lineItem";
 import { SongItem } from "@/components/lyrics/songItem";
+import { readJson } from "@/common/utils";
 
 export default async ({
   searchParams,
 }: {
   searchParams: { [key: string]: string | string[] | undefined };
 }) => {
-  const file = await fs.readFile(
-    process.cwd() + "/src/data/lyrics.json",
-    "utf8"
-  );
-  const data = JSON.parse(file) as Song[];
+  const data = (await readJson("/src/data/lyrics.json")) as Song[];
 
   const getParam = () => {
     const keyword = searchParams.keyword;
