@@ -1,9 +1,9 @@
 import { promises as fs } from "fs";
-import { Dday } from "@/components/Dday";
-import { AppleProfile } from "@/components/appleProfile";
-import { IndivProfile } from "@/components/indivProfile";
-import { Timeline } from "@/components/timeline";
-import { ThornProfile } from "@/components/thornProfile";
+import { Dday } from "@/components/profile/Dday";
+import { AppleProfile } from "@/components/profile/appleProfile";
+import { IndivProfile } from "@/components/profile/indivProfile";
+import { Timeline } from "@/components/profile/timeline";
+import { ThornProfile } from "@/components/profile/thornProfile";
 
 export default async () => {
   const file = await fs.readFile(

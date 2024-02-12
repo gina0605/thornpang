@@ -1,4 +1,4 @@
-import { LineItem, SongItem } from "@/components/songItem";
+import { LineItem, SongItem } from "@/components/lyrics/songItem";
 import { Line, Song } from "@/types";
 import { promises as fs } from "fs";
 
