@@ -19,3 +19,13 @@ img {
 p {
   word-break: keep-all;
 }
+
+@media (min-width:768px) {
+  .list-item-left {
+    width: calc(50vw - 380px)
+  }
+
+  .list-item-right {
+    left: calc(50vw - 380px)
+  }
+}

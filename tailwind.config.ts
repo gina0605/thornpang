@@ -28,6 +28,9 @@ const config: Config = {
       transitionProperty: {
         appear: "opacity translate",
       },
+      spacing: {
+        "13": "3.25rem",
+      },
     },
   },
   plugins: [],

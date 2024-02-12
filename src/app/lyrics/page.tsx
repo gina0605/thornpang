@@ -26,14 +26,12 @@ export default async ({
   const filtered: Line[] = []; // TODO
 
   return (
-    <main className="w-screen flex justify-center">
-      <div className="w-full max-w-2xl flex flex-col">
-        <div>searchbar</div>
-        <div className="flex flex-col">
-          {param
-            ? filtered.map((line, idx) => <LineItem line={line} key={idx} />)
-            : data.map((song, idx) => <SongItem song={song} key={idx} />)}
-        </div>
+    <main className="w-screen flex flex-col items-center">
+      <div>searchbar</div>
+      <div className="flex flex-col w-full">
+        {param
+          ? filtered.map((line, idx) => <LineItem line={line} key={idx} />)
+          : data.map((song, idx) => <SongItem song={song} key={idx} />)}
       </div>
     </main>
   );

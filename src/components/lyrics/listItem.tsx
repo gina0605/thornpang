@@ -19,30 +19,31 @@ export const ListItem = ({ ref, album, title, text, slug }: ListItemProps) => {
   else if (album === "animal") bgColor = "to-animal";
 
   return (
-    <Link href={`/lyrics/${slug}`}>
+    <div className="w-full h-14 md:h-16 flex justify-center relative">
       <div
-        className="flex h-14 items-center border-b border-l border-r"
-        ref={ref}
+        className={`absolute top-0 bottom-0 left-0 w-4 list-item-left bg-gradient-to-l opacity-20 md:opacity-30 from-white ${bgColor}`}
+      />
+      <div
+        className={`absolute top-0 bottom-0 right-0 left-4 list-item-right bg-gradient-to-r from-white ${bgColor}`}
+      />
+      <Link
+        href={`/lyrics/${slug}`}
+        className="w-full max-w-screen-md h-full flex items-center justify-center px-2 z-30"
       >
-        <div className="h-full w-14 flex items-center relative">
-          <div
-            className={`w-full h-full absolute from-white ${bgColor} bg-gradient-to-l opacity-20`}
-          />
+        <div className="w-12 h-12 md:w-13 md:h-13 relative">
           <Image
             src={`/album/${album}.jpeg`}
             alt={`${album} album cover`}
-            width={44}
-            height={44}
-            className="rounded-sm z-30 ml-3"
+            fill
+            sizes="(max-width: 768px) 52px, 48px"
+            className="rounded-sm object-contain"
           />
         </div>
-        <div
-          className={`h-full flex flex-col grow p-2 from-white ${bgColor} bg-gradient-to-r`}
-        >
-          <p className="font-sunbatang font-semibold -mb-1">{title}</p>
+        <div className="h-full flex flex-col grow p-2">
+          <p className="font-sunbatang font-semibold -mb-1 md:mb-0">{title}</p>
           {text}
         </div>
-      </div>
-    </Link>
+      </Link>
+    </div>
   );
 };
