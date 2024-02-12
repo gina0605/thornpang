@@ -2,7 +2,7 @@ import Image from "next/image";
 import { readJson } from "@/common/utils";
 
 export default async () => {
-  const data = readJson("/src/data/video.json");
+  const data = await readJson("/src/data/video.json");
 
   return (
     <Image
