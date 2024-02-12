@@ -8,9 +8,19 @@ export interface ListItemProps {
   title: string;
   text: ReactElement;
   slug: string;
+  className?: string;
+  linkClassName?: string;
 }
 
-export const ListItem = ({ ref, album, title, text, slug }: ListItemProps) => {
+export const ListItem = ({
+  ref,
+  album,
+  title,
+  text,
+  slug,
+  className,
+  linkClassName,
+}: ListItemProps) => {
   let bgColor;
   if (album === "1") bgColor = "to-stammer";
   else if (album === "2") bgColor = "to-weather";
@@ -19,7 +29,9 @@ export const ListItem = ({ ref, album, title, text, slug }: ListItemProps) => {
   else if (album === "animal") bgColor = "to-animal";
 
   return (
-    <div className="w-full h-14 md:h-16 flex justify-center relative">
+    <div
+      className={`w-full h-14 md:h-16 flex justify-center relative ${className}`}
+    >
       <div
         className={`absolute top-0 bottom-0 left-0 w-4 list-item-left bg-gradient-to-l opacity-20 md:opacity-30 from-white ${bgColor}`}
       />
@@ -28,7 +40,7 @@ export const ListItem = ({ ref, album, title, text, slug }: ListItemProps) => {
       />
       <Link
         href={`/lyrics/${slug}`}
-        className="w-full max-w-screen-md h-full flex items-center justify-center px-2 z-30"
+        className={`w-full max-w-screen-md h-full flex items-center justify-center px-2 z-30 ${linkClassName}`}
       >
         <div className="w-12 h-12 md:w-13 md:h-13 relative">
           <Image

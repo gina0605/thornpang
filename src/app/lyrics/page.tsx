@@ -19,9 +19,9 @@ export default async ({
     if (Object.prototype.toString.call(keyword) === "[object Array]") {
       const keywordString = keyword as string;
       return keywordString.length ? keywordString[0] : "";
-    } else return keyword ?? "";
+    } else return keyword;
   };
-  const param = getParam();
+  const param = getParam() as string | undefined;
 
   const filtered: Line[] = []; // TODO
 
@@ -31,7 +31,14 @@ export default async ({
       <div className="flex flex-col w-full">
         {param
           ? filtered.map((line, idx) => <LineItem line={line} key={idx} />)
-          : data.map((song, idx) => <SongItem song={song} key={idx} />)}
+          : data.map((song, idx) => (
+              <SongItem
+                idx={idx}
+                song={song}
+                key={idx}
+                move={param === undefined}
+              />
+            ))}
       </div>
     </main>
   );
