@@ -30,7 +30,7 @@ export const ListItem = ({
 
   return (
     <div
-      className={`w-full h-14 md:h-16 flex justify-center relative ${className}`}
+      className={`w-full h-14 md:h-16 flex justify-center relative ${className} overflow-x-hidden`}
     >
       <div
         className={`absolute top-0 bottom-0 left-0 w-4 list-item-left bg-gradient-to-l opacity-20 md:opacity-30 from-white ${bgColor}`}
@@ -40,9 +40,9 @@ export const ListItem = ({
       />
       <Link
         href={`/lyrics/${slug}`}
-        className={`w-full max-w-screen-md h-full flex items-center justify-center px-2 z-30 ${linkClassName}`}
+        className={`w-full max-w-screen-md h-full flex items-center justify-start px-2 z-30 ${linkClassName}`}
       >
-        <div className="w-12 h-12 md:w-13 md:h-13 relative">
+        <div className="w-12 h-12 md:w-13 md:h-13 relative shrink-0">
           <Image
             src={`/album/${album}.jpeg`}
             alt={`${album} album cover`}
