@@ -22,13 +22,13 @@ export default async ({
 
   const getFiltered = () => {
     if (!param) return [];
-    const pattern = param?.replaceAll(/[\s.⋯?,']+/g, "");
+    const pattern = param?.replaceAll(/[\s.⋯?,'!"]+/g, "");
 
     return data
       .map(({ title, slug, album, lyrics }) => {
         const filtered = lyrics.filter((l) => l !== "");
         const stripped = filtered
-          .map((l) => l.replaceAll(/[\s.⋯?,']+/g, ""))
+          .map((l) => l.replaceAll(/[\s.⋯?,'!"]+/g, ""))
           .concat([""]);
 
         const matched: string[] = [];

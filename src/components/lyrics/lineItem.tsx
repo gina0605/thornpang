@@ -11,7 +11,7 @@ export const LineItem = ({
   <ListItem
     album={album}
     title={title}
-    text={<p className="font-sunbatang text-slate-500 text">{line}</p>}
+    text={<p className="font-sunbatang text-slate-500">{line}</p>}
     slug={slug}
   />
 );

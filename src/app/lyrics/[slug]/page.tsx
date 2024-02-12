@@ -79,7 +79,7 @@ export default async ({ params: { slug } }: { params: PageProps }) => {
             </Link>
           </div>
         </div>
-        <div className="w-full flex justify-center overflow-y-auto">
+        <div className="w-full flex justify-center overflow-y-auto px-2">
           <div className="w-fit h-fit font-light pb-20 pt-3 md:pt-6">
             {lyrics.length ? (
               lyrics.map((l, idx) => (l ? <p key={idx}>{l}</p> : <br />))
