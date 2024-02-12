@@ -32,6 +32,9 @@ const config: Config = {
         "13": "3.25rem",
         "19": "4.75rem",
       },
+      boxShadow: {
+        down: "0 15px 20px 0px rgb(0 0 0 / 0.1)",
+      },
     },
   },
   plugins: [],

@@ -26,7 +26,7 @@ export default async ({ params: { slug } }: { params: PageProps }) => {
   else if (album === "animal") albumTitle = "동물";
 
   return (
-    <main className="w-screen full-body-height flex font-sunbatang justify-center relative overflow-hidden text-white">
+    <main className="w-screen full-body-height flex font-sunbatang justify-center relative overflow-hidden text-black">
       <div className="absolute inset-0">
         <div className="relative w-full h-full">
           <Image
@@ -34,24 +34,27 @@ export default async ({ params: { slug } }: { params: PageProps }) => {
             alt={`${album} album cover`}
             fill
             sizes="100vw"
-            className="object-contain blur-3xl z-0"
+            className="object-contain blur-3xl z-0 opacity-40"
           />
-          <div className="absolute inset-0 bg-black opacity-70 z-10" />
         </div>
       </div>
-      <div className="w-full max-w-xl flex flex-col items-center z-30">
-        <div className="w-full flex justify-between">
-          <div>{"<"}</div>
-          <div className="flex flex-col items-center">
-            <p>{title}</p>
-            <p>{albumTitle}</p>
+      <div className="w-full flex flex-col items-center z-30">
+        <div className="w-full flex justify-center relative bg-gradient-to-b from-white/30 to-black/15 z-10 shadow-down">
+          <div className="w-full flex items-center justify-between max-w-xl py-2 z-30">
+            <div>{"<"}</div>
+            <div className="flex flex-col items-center">
+              <p className="text-lg">{title}</p>
+              <p className="font-light">{albumTitle}</p>
+            </div>
+            <div>{">"}</div>
           </div>
-          <div>{">"}</div>
         </div>
-        <div className="w-fit flex flex-col font-light overflow-y-auto scrollbar-hidden">
-          {lyrics.map((l) => (
-            <p>{l}</p>
-          ))}
+        <div className="w-full flex justify-center overflow-y-auto">
+          <div className="w-fit h-fit font-light pb-20 pt-3 md:pt-6">
+            {lyrics.map((l, idx) => (
+              <p key={idx}>{l}</p>
+            ))}
+          </div>
         </div>
       </div>
     </main>
