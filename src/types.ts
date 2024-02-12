@@ -2,6 +2,7 @@ export interface Song {
   title: string;
   slug: string;
   album: string;
+  info: string;
   lyrics: string[];
 }
 
