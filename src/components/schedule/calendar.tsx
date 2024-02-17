@@ -22,7 +22,7 @@ const CalendarCell = ({
   const d = new Date(year, month - 1, day);
   return (
     <div
-      className={`h-24 md:h-36 relative border-slate-200 border-b border-r flex flex-col items-center overflow-hidden ${
+      className={`h-20 md:h-36 relative border-slate-200 border-b border-r flex flex-col items-center overflow-hidden ${
         d.getDay() === 0 ? "border-l" : ""
       }`}
     >
@@ -43,7 +43,7 @@ const CalendarCell = ({
             <div className="absolute top-1 bottom-1 -left-px -right-px bg-white bg-opacity-30 rounded -z-10" />
           </div>,
           <div className="w-fit h-fit relative" key="info">
-            <p className="relative text-center text-rose-700 text-xs -mt-1">
+            <p className="relative text-center text-rose-700 text-xs -mt-1 break-normal">
               {holiday}
             </p>
             <div className="absolute inset-0 -top-1 bg-white bg-opacity-30 rounded -z-10" />
