@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { Schedule } from "@/types";
 import { MonthSelecter } from "./monthSelecter";
+import { Calendar } from "./calendar";
 
 export interface SchedulePageProps {
   year: number;
@@ -28,6 +29,12 @@ export const SchedulePage = ({
         month={month}
         minYear={minYear}
         maxYear={maxYear}
+      />
+      <Calendar
+        year={year}
+        month={month}
+        schedules={schedules}
+        onClick={() => {}}
       />
     </main>
   );
