@@ -12,3 +12,8 @@ export const paramToInt = (param: string | string[] | undefined) => {
 
 export const minmax = (x: number, min: number, max: number) =>
   x < min ? min : x > max ? max : x;
+
+export const range = (size: number, start: number = 0) =>
+  Array(size)
+    .fill(null)
+    .map((_, i) => i + start);
