@@ -1,16 +1,14 @@
 import { Line, Song } from "@/types";
 import { LineItem } from "@/components/lyrics/lineItem";
 import { SongItem } from "@/components/lyrics/songItem";
-import { readJson } from "@/common/utils";
 import { SearchBar } from "@/components/lyrics/searchBar";
+import data from "@/data/lyrics";
 
 export default async ({
   searchParams,
 }: {
   searchParams: { [key: string]: string | string[] | undefined };
 }) => {
-  const data = (await readJson("/public/lyrics.json")) as Song[];
-
   const getParam = () => {
     const keyword = searchParams.keyword;
     if (Object.prototype.toString.call(keyword) === "[object Array]") {

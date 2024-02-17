@@ -1,12 +1,10 @@
 import Link from "next/link";
 import Image from "next/image";
-import { readJson } from "@/common/utils";
 import { Song } from "@/types";
+import data from "@/data/lyrics";
 
-export const generateStaticParams = async () => {
-  const data = await readJson("/public/lyrics.json");
-  return data.map((song: Song) => ({ slug: song.slug }));
-};
+export const generateStaticParams = () =>
+  data.map((song: Song) => ({ slug: song.slug }));
 
 export const dynamicParams = false;
 
@@ -14,8 +12,7 @@ interface PageProps {
   slug: string;
 }
 
-export default async ({ params: { slug } }: { params: PageProps }) => {
-  const data = (await readJson("/public/lyrics.json")) as Song[];
+export default ({ params: { slug } }: { params: PageProps }) => {
   const songIdx = data.findIndex((s) => s.slug === slug);
   const leftIdx = songIdx === 0 ? data.length - 1 : songIdx - 1;
   const rightIdx = songIdx === data.length - 1 ? 0 : songIdx + 1;
