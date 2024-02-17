@@ -22,14 +22,12 @@ export default ({
   console.log(schedules);
 
   return (
-    <main className="w-full flex justify-center">
-      <SchedulePage
-        year={year}
-        month={month}
-        schedules={schedules}
-        isFirst={year === minYear && month === 1}
-        isLast={year === maxYear && month === 12}
-      />
-    </main>
+    <SchedulePage
+      year={year}
+      month={month}
+      schedules={schedules}
+      minYear={minYear}
+      maxYear={maxYear}
+    />
   );
 };
