@@ -1,6 +1,6 @@
 import { minmax, paramToInt } from "@/common/utils";
 import { SchedulePage } from "@/components/schedule/schedulePage";
-import data, { minYear, maxYear } from "@/data/schedule";
+import data, { minYear, maxYear, holidays } from "@/data/schedule";
 
 export default ({
   searchParams,
@@ -15,11 +15,12 @@ export default ({
       ? currentDate.getUTCFullYear()
       : minmax(paramYear, minYear, maxYear);
   const month =
-    paramMonth === null ? currentDate.getUTCMonth() : minmax(paramMonth, 1, 12);
+    paramMonth === null
+      ? currentDate.getUTCMonth() + 1
+      : minmax(paramMonth, 1, 12);
 
   const schedules = (data[year] ?? {})[month] ?? [];
-
-  console.log(schedules);
+  const thisHolidays = (holidays[year] ?? {})[month] ?? {};
 
   return (
     <SchedulePage
@@ -28,6 +29,7 @@ export default ({
       schedules={schedules}
       minYear={minYear}
       maxYear={maxYear}
+      holidays={thisHolidays}
     />
   );
 };

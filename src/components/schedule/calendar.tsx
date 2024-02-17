@@ -5,10 +5,17 @@ export interface CalendarCellProps {
   year: number;
   month: number;
   day: number;
+  holiday?: string;
   out?: boolean;
 }
 
-const CalendarCell = ({ year, month, day, out }: CalendarCellProps) => {
+const CalendarCell = ({
+  year,
+  month,
+  day,
+  holiday,
+  out,
+}: CalendarCellProps) => {
   const d = new Date(year, month - 1, day);
   return (
     <div
@@ -21,9 +28,19 @@ const CalendarCell = ({ year, month, day, out }: CalendarCellProps) => {
           {d.getMonth() + 1}/{d.getDate()}
         </p>
       ) : (
-        <p className={`text-center ${d.getDay() === 0 ? "text-rose-700" : ""}`}>
-          {day}
-        </p>
+        [
+          <p
+            className={`text-center ${
+              d.getDay() === 0 || holiday !== undefined ? "text-rose-700" : ""
+            }`}
+            key="day"
+          >
+            {day}
+          </p>,
+          <p className="text-center text-rose-700 text-xs -mt-1" key="info">
+            {holiday}
+          </p>,
+        ]
       )}
     </div>
   );
@@ -33,6 +50,7 @@ export interface CalendarProps {
   year: number;
   month: number;
   schedules: Schedule[];
+  holidays: Record<number, string>;
   onClick: (d: number) => void;
 }
 
@@ -40,12 +58,11 @@ export const Calendar = ({
   year,
   month,
   schedules,
+  holidays,
   onClick,
 }: CalendarProps) => {
   const first = new Date(year, month - 1);
   const monthLength = new Date(year, month, 0).getDate();
-
-  console.log(year, month, first, monthLength);
 
   return (
     <div className="w-full max-w-5xl grid grid-cols-7 font-sunbatang mb-8">
@@ -65,6 +82,7 @@ export const Calendar = ({
           year={year}
           month={month}
           day={x}
+          holiday={holidays[x]}
           out={x < 1 || x > monthLength}
           key={x}
         />

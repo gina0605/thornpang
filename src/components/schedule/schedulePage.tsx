@@ -11,6 +11,7 @@ export interface SchedulePageProps {
   schedules: Schedule[];
   minYear: number;
   maxYear: number;
+  holidays: Record<number, string>;
 }
 
 export const SchedulePage = ({
@@ -19,6 +20,7 @@ export const SchedulePage = ({
   schedules,
   minYear,
   maxYear,
+  holidays,
 }: SchedulePageProps) => {
   const [modal, setModal] = useState<number | null>(null);
 
@@ -34,6 +36,7 @@ export const SchedulePage = ({
         year={year}
         month={month}
         schedules={schedules}
+        holidays={holidays}
         onClick={() => {}}
       />
     </main>
