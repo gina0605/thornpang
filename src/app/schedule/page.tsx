@@ -9,14 +9,14 @@ export default ({
 }) => {
   const paramYear = paramToInt(searchParams.year);
   const paramMonth = paramToInt(searchParams.month);
-  const currentDate = new Date(Date.now() + 32400000);
+  const currentDate = new Date();
   const year =
     paramYear === null
-      ? currentDate.getUTCFullYear()
+      ? currentDate.getFullYear()
       : minmax(paramYear, minYear, maxYear);
   const month =
     paramMonth === null
-      ? currentDate.getUTCMonth() + 1
+      ? currentDate.getMonth() + 1
       : minmax(paramMonth, 1, 12);
 
   const schedules = (data[year] ?? {})[month] ?? [];
