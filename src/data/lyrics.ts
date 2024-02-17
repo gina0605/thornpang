@@ -1,6 +1,6 @@
 import { Song } from "@/types";
 
-const Lyrics: Song[] = [
+const data: Song[] = [
   {
     title: "피어나다",
     slug: "bloom",
@@ -1914,4 +1914,4 @@ const Lyrics: Song[] = [
   },
 ];
 
-export default Lyrics;
+export default data;

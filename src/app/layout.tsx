@@ -80,7 +80,7 @@ export default ({
             <div className="flex w-full max-w-5xl items-center">
               <Tab text="프로필" link="/" />
               <Tab text="가사" link="/lyrics" />
-              <Tab text="일정" link="/calendar" />
+              <Tab text="일정" link="/schedule" />
               <Tab text="영상" link="/video" />
               <Tab text="인터뷰" link="/interview" />
             </div>

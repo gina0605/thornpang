@@ -12,3 +12,12 @@ export interface Line {
   album: string;
   line: string;
 }
+
+export interface Schedule {
+  dates: number[];
+  image: string;
+  title: string;
+  dateText: string;
+  text: string[];
+  links: { text: string; link: string }[];
+}

@@ -3,7 +3,7 @@ import { AppleProfile } from "@/components/profile/appleProfile";
 import { IndivProfile } from "@/components/profile/indivProfile";
 import { Timeline } from "@/components/profile/timeline";
 import { ThornProfile } from "@/components/profile/thornProfile";
-import { readJson } from "@/common/utils";
+import { readJson } from "@/common/serverUtils";
 
 export default async () => {
   const data = await readJson("/src/data/profile.json");

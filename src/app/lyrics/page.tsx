@@ -1,22 +1,16 @@
-import { Line, Song } from "@/types";
+import { Line } from "@/types";
 import { LineItem } from "@/components/lyrics/lineItem";
 import { SongItem } from "@/components/lyrics/songItem";
 import { SearchBar } from "@/components/lyrics/searchBar";
+import { paramToString } from "@/common/utils";
 import data from "@/data/lyrics";
 
-export default async ({
+export default ({
   searchParams,
 }: {
   searchParams: { [key: string]: string | string[] | undefined };
 }) => {
-  const getParam = () => {
-    const keyword = searchParams.keyword;
-    if (Object.prototype.toString.call(keyword) === "[object Array]") {
-      const keywordString = keyword as string;
-      return keywordString.length ? decodeURI(keywordString[0]) : "";
-    } else return keyword === undefined ? null : decodeURI(keyword as string);
-  };
-  const param = getParam() as string | null;
+  const param = paramToString(searchParams.keyword);
 
   const getFiltered = () => {
     const strip = (s: string) => s.replaceAll(/[\s.⋯?,'!"]+/g, "");
