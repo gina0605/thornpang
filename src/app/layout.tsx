@@ -57,11 +57,8 @@ export default ({
     <html lang="ko" className={`${sunbatang.variable} ${pyeongchang.variable}`}>
       <body className="bg-white">
         <header className="flex flex-col w-screen prevent-select">
-          <div className="bg-black flex flex-col items-center h-19">
-            <Link
-              href="/"
-              className="w-fit h-19 p-1 text-white text-center flex flex-col items center"
-            >
+          <div className="bg-black flex flex-col items-center h-19 p-1 text-white text-center">
+            <Link href="/">
               <Image
                 src={"/logo-horizontal.png"}
                 alt="thornapple logo"
@@ -71,10 +68,10 @@ export default ({
                 style={{ width: "auto" }}
                 priority
               />
-              <p className="text-sm font-sunbatang font-light">
-                팬페이지 by 어떤 쏜팡이
-              </p>
             </Link>
+            <p className="text-sm font-sunbatang font-light">
+              팬페이지 by 어떤 쏜팡이
+            </p>
           </div>
           <div className="flex w-full h-10 justify-center border border-slate-200">
             <div className="flex w-full max-w-5xl items-center">

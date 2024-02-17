@@ -17,6 +17,7 @@ export const ThornProfile = () => (
         src={"/logo-horizontal.png"}
         alt="thornapple logo"
         fill
+        sizes="(max-width: 896px) 100vw, 860px"
         className="w-full drop-shadow-xl"
         style={{ objectFit: "contain" }}
         priority
