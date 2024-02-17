@@ -1,5 +1,6 @@
 import { minmax, paramToInt } from "@/common/utils";
-import schedules, { minYear, maxYear } from "@/data/schedule";
+import { SchedulePage } from "@/components/schedule/schedulePage";
+import data, { minYear, maxYear } from "@/data/schedule";
 
 export default ({
   searchParams,
@@ -16,11 +17,19 @@ export default ({
   const month =
     paramMonth === null ? currentDate.getUTCMonth() : minmax(paramMonth, 1, 12);
 
-  console.log(year, month);
+  const schedules = (data[year] ?? {})[month] ?? [];
+
+  console.log(schedules);
 
   return (
-    <main className="w-full max-w-5xl flex flex-col">
-      <div className="flex"></div>
+    <main className="w-full flex justify-center">
+      <SchedulePage
+        year={year}
+        month={month}
+        schedules={schedules}
+        isFirst={year === minYear && month === 1}
+        isLast={year === maxYear && month === 12}
+      />
     </main>
   );
 };

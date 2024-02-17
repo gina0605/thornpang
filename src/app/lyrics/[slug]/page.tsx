@@ -37,7 +37,7 @@ export default ({ params: { slug } }: { params: PageProps }) => {
   }
 
   return (
-    <main className="w-screen full-body-height flex font-sunbatang justify-center relative overflow-hidden text-black">
+    <main className="w-screen h-full-body flex font-sunbatang justify-center relative overflow-hidden text-black">
       <div className="absolute inset-0 top-17">
         <div className="relative w-full h-full">
           <Image
