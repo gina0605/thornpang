@@ -13,7 +13,7 @@ export default ({
   const param = paramToString(searchParams.keyword);
 
   const getFiltered = () => {
-    const strip = (s: string) => s.replaceAll(/[\s.⋯?,'!"]+/g, "");
+    const strip = (s: string) => s.replaceAll(/[\s.⋯?,'!"]+/g, " ");
 
     if (!param) return [];
     const pattern = strip(param);
@@ -21,13 +21,13 @@ export default ({
     return data
       .map(({ title, slug, album, lyrics }) => {
         const filtered = lyrics.filter((l) => l !== "");
-        const stripped = filtered.map(strip).concat([""]);
+        const stripped = filtered.map((s) => strip(s).trim()).concat([""]);
 
         const matched: string[] = [];
         if (strip(title).includes(pattern)) matched.push("-");
         for (let i = 0; i < stripped.length - 1; i++) {
           if (matched.includes(filtered[i])) continue;
-          const str = stripped[i] + stripped[i + 1];
+          const str = stripped[i] + " " + stripped[i + 1];
           const matchIdx = str.indexOf(pattern);
           if (matchIdx >= 0) {
             if (matchIdx < stripped[i].length) matched.push(filtered[i]);

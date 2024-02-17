@@ -19,6 +19,8 @@ export const SearchBar = ({ param }: SearchBarProps) => {
 
   useEffect(() => setText(param ?? ""), [param]);
 
+  const textToURI = (text: string) => text.replace(" ", "%20");
+
   return (
     <div className="w-full h-9 flex">
       <div
@@ -36,7 +38,8 @@ export const SearchBar = ({ param }: SearchBarProps) => {
             value={text}
             onChange={(e) => setText(e.target.value)}
             onKeyUp={(e) => {
-              if (e.key === "Enter") router.push(`/lyrics?keyword=${text}`);
+              if (e.key === "Enter")
+                router.push(`/lyrics?keyword=${textToURI(text)}`);
               else if (e.key === "Escape") e.currentTarget.blur();
             }}
             className="border-0 grow outline-none"
@@ -46,7 +49,7 @@ export const SearchBar = ({ param }: SearchBarProps) => {
             width={24}
             height={24}
             alt="search button"
-            onClick={() => router.push(`/lyrics?keyword=${text}`)}
+            onClick={() => router.push(`/lyrics?keyword=${textToURI(text)}`)}
             className="cursor-pointer"
           />
         </div>
