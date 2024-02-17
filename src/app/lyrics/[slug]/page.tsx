@@ -44,7 +44,7 @@ export default ({ params: { slug } }: { params: PageProps }) => {
             src={`/album/${album}.jpeg`}
             alt={`${album} album cover`}
             fill
-            sizes="100vw"
+            sizes="5vw"
             className="object-contain blur-3xl z-0 opacity-40"
           />
         </div>
@@ -79,7 +79,9 @@ export default ({ params: { slug } }: { params: PageProps }) => {
         <div className="w-full flex justify-center overflow-y-auto px-2">
           <div className="w-fit h-fit font-light pb-20 pt-3 md:pt-6">
             {lyrics.length ? (
-              lyrics.map((l, idx) => (l ? <p key={idx}>{l}</p> : <br />))
+              lyrics.map((l, idx) =>
+                l ? <p key={idx}>{l}</p> : <br key={idx} />
+              )
             ) : (
               <p className="text-slate-500">연주곡</p>
             )}
