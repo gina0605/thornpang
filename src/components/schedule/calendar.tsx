@@ -9,6 +9,7 @@ export interface CalendarCellProps {
   schedule?: Schedule;
   holiday?: string;
   out?: boolean;
+  onClick?: () => void;
 }
 
 const CalendarCell = ({
@@ -18,13 +19,15 @@ const CalendarCell = ({
   schedule,
   holiday,
   out,
+  onClick,
 }: CalendarCellProps) => {
   const d = new Date(year, month - 1, day);
   return (
     <div
       className={`h-[20vw] md:h-36 relative border-slate-200 border-b border-r flex flex-col items-center overflow-hidden ${
         d.getDay() === 0 ? "border-l" : ""
-      }`}
+      } ${schedule ? "cursor-pointer" : ""}`}
+      onClick={onClick}
     >
       {out ? (
         <p className="opacity-40 text-center">
@@ -83,10 +86,10 @@ export const Calendar = ({
   const monthLength = new Date(year, month, 0).getDate();
 
   const getScheduleDict = () => {
-    const result: Record<number, Schedule> = {};
-    schedules.forEach((s) =>
+    const result: Record<number, number> = {};
+    schedules.forEach((s, idx) =>
       s.dates.forEach((d) => {
-        result[d] = s;
+        result[d] = idx;
       })
     );
     return result;
@@ -111,9 +114,14 @@ export const Calendar = ({
           year={year}
           month={month}
           day={x}
-          schedule={scheduleDict[x]}
+          schedule={schedules[scheduleDict[x]]}
           holiday={holidays[x]}
           out={x < 1 || x > monthLength}
+          onClick={
+            scheduleDict[x] === undefined
+              ? undefined
+              : () => onClick(scheduleDict[x])
+          }
           key={idx}
         />
       ))}

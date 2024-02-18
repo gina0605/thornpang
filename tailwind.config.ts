@@ -20,6 +20,7 @@ const config: Config = {
         seoul: "#bf796b",
         enlight: "#8a837a",
         animal: "#9e926c",
+        "link-blue": "#1b75d0",
       },
       fontFamily: {
         sunbatang: ["var(--font-sunbatang)", "serif"],

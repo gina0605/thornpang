@@ -28,7 +28,7 @@ const data: { [key: number]: { [key: number]: Schedule[] } } = {
         dates: [17],
         title: "어쩌다 페스티벌",
         image: "202403_suddenly.jpeg",
-        dateText: "2024.03.17",
+        dateText: "2024.03.17 17시",
         text: ["장소: 부산 소향씨어터 신한카드홀"],
         links: [
           {

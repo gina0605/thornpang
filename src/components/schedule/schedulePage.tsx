@@ -4,6 +4,7 @@ import { useState } from "react";
 import { Schedule } from "@/types";
 import { MonthSelecter } from "./monthSelecter";
 import { Calendar } from "./calendar";
+import { Modal } from "./modal";
 
 export interface SchedulePageProps {
   year: number;
@@ -26,6 +27,9 @@ export const SchedulePage = ({
 
   return (
     <main className="w-full flex flex-col items-center">
+      {modal !== null && (
+        <Modal schedule={schedules[modal]} onClose={() => setModal(null)} />
+      )}
       <MonthSelecter
         year={year}
         month={month}
@@ -37,7 +41,7 @@ export const SchedulePage = ({
         month={month}
         schedules={schedules}
         holidays={holidays}
-        onClick={() => {}}
+        onClick={setModal}
       />
     </main>
   );
