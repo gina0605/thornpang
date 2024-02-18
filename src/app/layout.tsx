@@ -26,18 +26,19 @@ const pyeongchang = localFont({
 interface TabProps {
   text: string;
   link: string;
+  exact?: boolean;
 }
 
-const Tab = ({ text, link }: TabProps) => {
+const Tab = ({ text, link, exact }: TabProps) => {
   const pathname = usePathname();
   return (
     <Link
       href={link}
-      className="grow w-0 flex flex-col items-center h-full justify-center text-base hover:text-lg"
+      className="grow w-0 flex flex-col items-center h-full justify-center text-base"
     >
       <p
-        className={`text-center transition-all duration-200 font-pyeongchang ${
-          pathname === link
+        className={`text-center font-pyeongchang ${
+          (exact ? pathname === link : pathname.startsWith(link))
             ? "text-rose-700 font-extrabold"
             : "text-slate-500 font-bold"
         }`}
@@ -75,7 +76,7 @@ export default ({
           </div>
           <div className="flex w-full h-10 justify-center border border-slate-200">
             <div className="flex w-full max-w-5xl items-center">
-              <Tab text="프로필" link="/" />
+              <Tab text="프로필" link="/" exact />
               <Tab text="가사" link="/lyrics" />
               <Tab text="일정" link="/schedule" />
               <Tab text="영상" link="/video" />
