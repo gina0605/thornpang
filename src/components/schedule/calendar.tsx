@@ -106,7 +106,7 @@ export const Calendar = ({
       {range(
         Math.ceil((first.getDay() + monthLength) / 7) * 7,
         -first.getDay() + 1
-      ).map((x) => (
+      ).map((x, idx) => (
         <CalendarCell
           year={year}
           month={month}
@@ -114,7 +114,7 @@ export const Calendar = ({
           schedule={scheduleDict[x]}
           holiday={holidays[x]}
           out={x < 1 || x > monthLength}
-          key={x}
+          key={idx}
         />
       ))}
     </div>
