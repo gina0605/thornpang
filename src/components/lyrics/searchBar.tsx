@@ -42,7 +42,7 @@ export const SearchBar = ({ param }: SearchBarProps) => {
                 router.push(`/lyrics?keyword=${textToURI(text)}`);
               else if (e.key === "Escape") e.currentTarget.blur();
             }}
-            className="border-0 grow outline-none"
+            className="border-0 grow outline-none font-pretendard"
           />
           <Image
             src="/icon/search.svg"

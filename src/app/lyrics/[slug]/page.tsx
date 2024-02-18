@@ -64,7 +64,9 @@ export default ({ params: { slug } }: { params: PageProps }) => {
             </Link>
             <div className="flex flex-col items-center">
               <p className="text-lg">{title}</p>
-              <p className="font-light text-slate-500">{albumTitle}</p>
+              <p className="font-light text-slate-500 font-pretendard">
+                {albumTitle}
+              </p>
             </div>
             <Link href={`/lyrics/${data[rightIdx].slug}`} className="p-4 -m-2">
               <Image
@@ -77,7 +79,7 @@ export default ({ params: { slug } }: { params: PageProps }) => {
           </div>
         </div>
         <div className="w-full flex justify-center overflow-y-auto px-2">
-          <div className="w-fit h-fit font-light pb-20 pt-3 md:pt-6">
+          <div className="w-fit h-fit font-light pb-20 pt-6 md:pt-8">
             {lyrics.length ? (
               lyrics.map((l, idx) =>
                 l ? <p key={idx}>{l}</p> : <br key={idx} />

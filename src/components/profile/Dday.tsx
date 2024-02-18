@@ -29,7 +29,7 @@ export const Dday = () => {
 
   return (
     <div
-      className="flex items-center font-pyeongchang text-3xl font-bold pt-6"
+      className="flex items-center font-pretendard text-4xl font-semibold pt-6"
       ref={setTarget}
     >
       <p className="">데뷔 D+</p>

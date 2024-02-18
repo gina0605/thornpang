@@ -23,6 +23,57 @@ const pyeongchang = localFont({
   variable: "--font-pyeongchang",
 });
 
+const pretendard = localFont({
+  src: [
+    {
+      path: "../font/Pretendard-Thin.subset.woff2",
+      weight: "100",
+      style: "normal",
+    },
+    {
+      path: "../font/Pretendard-ExtraLight.subset.woff2",
+      weight: "200",
+      style: "normal",
+    },
+    {
+      path: "../font/Pretendard-Light.subset.woff2",
+      weight: "300",
+      style: "normal",
+    },
+    {
+      path: "../font/Pretendard-Regular.subset.woff2",
+      weight: "400",
+      style: "normal",
+    },
+    {
+      path: "../font/Pretendard-Medium.subset.woff2",
+      weight: "500",
+      style: "normal",
+    },
+    {
+      path: "../font/Pretendard-SemiBold.subset.woff2",
+      weight: "600",
+      style: "normal",
+    },
+    {
+      path: "../font/Pretendard-Bold.subset.woff2",
+      weight: "700",
+      style: "normal",
+    },
+    {
+      path: "../font/Pretendard-ExtraBold.subset.woff2",
+      weight: "800",
+      style: "normal",
+    },
+    {
+      path: "../font/Pretendard-Black.subset.woff2",
+      weight: "900",
+      style: "normal",
+    },
+  ],
+  variable: "--font-pretendard",
+});
+
 interface TabProps {
   text: string;
   link: string;
@@ -55,7 +106,10 @@ export default ({
   children: React.ReactNode;
 }>) => {
   return (
-    <html lang="ko" className={`${sunbatang.variable} ${pyeongchang.variable}`}>
+    <html
+      lang="ko"
+      className={`${sunbatang.variable} ${pyeongchang.variable} ${pretendard.variable}`}
+    >
       <body className="bg-white">
         <header className="flex flex-col w-screen prevent-select">
           <div className="bg-black flex flex-col items-center h-19 p-1 text-white text-center">
