@@ -5,11 +5,6 @@ export const paramToString = (param: string | string[] | undefined) => {
   } else return param === undefined ? null : decodeURI(param as string);
 };
 
-export const paramToInt = (param: string | string[] | undefined) => {
-  const num = parseInt(paramToString(param) ?? "");
-  return isNaN(num) ? null : num;
-};
-
 export const minmax = (x: number, min: number, max: number) =>
   x < min ? min : x > max ? max : x;
 

@@ -21,7 +21,7 @@ export const MonthSelecter = ({
   const isLast = year === maxYear && month === 12;
 
   const routerPush = (y: number | string, m: number | string) =>
-    router.push(`schedule?year=${y}&month=${m}`);
+    router.push(`/schedule/${y}/${m}`);
 
   return (
     <div className="w-full max-w-xl px-4 h-14 flex justify-between font-pyeongchang text-xl font-semibold">
@@ -75,10 +75,9 @@ export const MonthSelecter = ({
           isLast
             ? undefined
             : () =>
-                router.push(
-                  `/schedule?year=${month === 12 ? year + 1 : year}&month=${
-                    month === 12 ? 1 : month + 1
-                  }`
+                routerPush(
+                  month === 12 ? year + 1 : year,
+                  month === 12 ? 1 : month + 1
                 )
         }
       />
