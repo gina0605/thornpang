@@ -10,7 +10,7 @@ export const Modal = ({ schedule, onClose }: ModalProps) => {
   const { image, title, dateText, text, links } = schedule;
   return (
     <div
-      className="fixed inset-0 bg-black/65 z-30 flex items-center justify-center flex-col md:flex-row"
+      className="fixed inset-0 bg-black/65 z-30 flex items-center justify-center flex-col md:flex-row overflow-y-auto"
       onClick={onClose}
     >
       <Image
@@ -22,7 +22,7 @@ export const Modal = ({ schedule, onClose }: ModalProps) => {
         onClick={onClose}
       />
       <div
-        className="w-[75vw] h-[106vw] md:w-[57vh] md:h-[80vh] relative"
+        className="w-[75vw] h-[106vw] max-w-[50vh] max-h-[70vh] md:w-[57vh] md:max-w-[57vh] md:h-[80vh] md:max-h-[80vh] relative shrink-0"
         onClick={(e) => {
           e.stopPropagation();
         }}
@@ -32,10 +32,11 @@ export const Modal = ({ schedule, onClose }: ModalProps) => {
           alt="schedule"
           fill
           className="object-fill"
+          sizes="(max-width: 768px) 75vw, 57vh"
         />
       </div>
       <div
-        className="w-[75vw] md:w-80 md:h-[80vh] bg-white font-pretendard py-2 px-3"
+        className="w-[75vw] max-w-[50vh] md:max-w-80 md:w-80 md:h-[80vh] bg-white font-pretendard py-2 px-3 shrink"
         onClick={(e) => {
           e.stopPropagation();
         }}
