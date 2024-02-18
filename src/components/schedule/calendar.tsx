@@ -97,34 +97,38 @@ export const Calendar = ({
   const scheduleDict = getScheduleDict();
 
   return (
-    <div className="w-full max-w-3xl grid grid-cols-7 font-sunbatang mb-8">
-      <p className="text-center text-rose-700 border-b border-slate-200 py-1">
-        일
-      </p>
-      {"월화수목금토".split("").map((s) => (
-        <p className="text-center border-b border-slate-200 py-1" key={s}>
-          {s}
+    <div className="w-full max-w-3xl font-sunbatang mb-8">
+      <div className="w-full grid grid-cols-7">
+        <p className="text-center text-rose-700 border-b border-slate-200 py-1">
+          일
         </p>
-      ))}
-      {range(
-        Math.ceil((first.getDay() + monthLength) / 7) * 7,
-        -first.getDay() + 1
-      ).map((x, idx) => (
-        <CalendarCell
-          year={year}
-          month={month}
-          day={x}
-          schedule={schedules[scheduleDict[x]]}
-          holiday={holidays[x]}
-          out={x < 1 || x > monthLength}
-          onClick={
-            scheduleDict[x] === undefined
-              ? undefined
-              : () => onClick(scheduleDict[x])
-          }
-          key={idx}
-        />
-      ))}
+        {"월화수목금토".split("").map((s) => (
+          <p className="text-center border-b border-slate-200 py-1" key={s}>
+            {s}
+          </p>
+        ))}
+      </div>
+      <div className="w-full grid grid-cols-7 shadow-sm md:shadow-md">
+        {range(
+          Math.ceil((first.getDay() + monthLength) / 7) * 7,
+          -first.getDay() + 1
+        ).map((x, idx) => (
+          <CalendarCell
+            year={year}
+            month={month}
+            day={x}
+            schedule={schedules[scheduleDict[x]]}
+            holiday={holidays[x]}
+            out={x < 1 || x > monthLength}
+            onClick={
+              scheduleDict[x] === undefined
+                ? undefined
+                : () => onClick(scheduleDict[x])
+            }
+            key={idx}
+          />
+        ))}
+      </div>
     </div>
   );
 };

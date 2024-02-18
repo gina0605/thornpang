@@ -36,7 +36,7 @@ export const Modal = ({ schedule, onClose }: ModalProps) => {
         />
       </div>
       <div
-        className="w-[75vw] max-w-[50vh] md:max-w-80 md:w-80 md:h-[80vh] bg-white font-pretendard py-2 px-3 shrink"
+        className="w-[75vw] max-w-[50vh] md:max-w-80 md:w-80 md:h-[80vh] bg-white font-pretendard py-2 px-3 md:px-4 md:py-4 shrink"
         onClick={(e) => {
           e.stopPropagation();
         }}
