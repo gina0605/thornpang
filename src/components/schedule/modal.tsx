@@ -22,7 +22,7 @@ export const Modal = ({ schedule, onClose }: ModalProps) => {
         onClick={onClose}
       />
       <div
-        className="w-[75vw] h-[106vw] max-w-[50vh] max-h-[70vh] md:w-[57vh] md:max-w-[57vh] md:h-[80vh] md:max-h-[80vh] relative shrink-0"
+        className="w-[75vw] h-[106vw] max-w-[50vh] max-h-[70vh] md:w-[57vh] md:max-w-[57vh] md:h-[80vh] md:max-h-[80vh] relative shrink-0 rounded-t md:rounded-r-none md:rounded-l overflow-hidden"
         onClick={(e) => {
           e.stopPropagation();
         }}
@@ -31,12 +31,14 @@ export const Modal = ({ schedule, onClose }: ModalProps) => {
           src={`/schedule/${image}`}
           alt="schedule"
           fill
+          placeholder="blur"
+          blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mPU2wQAARQA4liArccAAAAASUVORK5CYII="
           className="object-fill"
           sizes="(max-width: 768px) 75vw, 57vh"
         />
       </div>
       <div
-        className="w-[75vw] max-w-[50vh] md:max-w-80 md:w-80 md:h-[80vh] bg-white font-pretendard py-2 px-3 md:px-4 md:py-4 shrink"
+        className="w-[75vw] max-w-[50vh] md:max-w-80 md:w-80 md:h-[80vh] bg-white font-pretendard py-2 px-3 md:px-4 md:py-4 shrink rounded-b md:rounded-l-none md:rounded-r"
         onClick={(e) => {
           e.stopPropagation();
         }}

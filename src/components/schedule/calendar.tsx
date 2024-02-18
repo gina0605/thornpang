@@ -98,17 +98,15 @@ export const Calendar = ({
 
   return (
     <div className="w-full max-w-3xl font-sunbatang mb-8">
-      <div className="w-full grid grid-cols-7">
-        <p className="text-center text-rose-700 border-b border-slate-200 py-1">
-          일
-        </p>
+      <div className="w-full grid grid-cols-7 border-b border-slate-200 py-1 md:pb-2">
+        <p className="text-center text-rose-700">일</p>
         {"월화수목금토".split("").map((s) => (
-          <p className="text-center border-b border-slate-200 py-1" key={s}>
+          <p className="text-center" key={s}>
             {s}
           </p>
         ))}
       </div>
-      <div className="w-full grid grid-cols-7 shadow-sm md:shadow-md">
+      <div className="w-full grid grid-cols-7 md:shadow-md">
         {range(
           Math.ceil((first.getDay() + monthLength) / 7) * 7,
           -first.getDay() + 1
