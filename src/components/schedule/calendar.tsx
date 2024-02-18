@@ -22,7 +22,7 @@ const CalendarCell = ({
   const d = new Date(year, month - 1, day);
   return (
     <div
-      className={`h-20 md:h-36 relative border-slate-200 border-b border-r flex flex-col items-center overflow-hidden ${
+      className={`h-[20vw] md:h-36 relative border-slate-200 border-b border-r flex flex-col items-center overflow-hidden ${
         d.getDay() === 0 ? "border-l" : ""
       }`}
     >
@@ -55,7 +55,7 @@ const CalendarCell = ({
               className="object-fill -z-20"
               alt={schedule.title}
               key="image"
-              sizes="(max-width: 896px) 14vw, 128px"
+              sizes="(max-width: 896px) 14vw, 110px"
             />
           ) : null,
         ]
@@ -94,7 +94,7 @@ export const Calendar = ({
   const scheduleDict = getScheduleDict();
 
   return (
-    <div className="w-full max-w-4xl grid grid-cols-7 font-sunbatang mb-8">
+    <div className="w-full max-w-3xl grid grid-cols-7 font-sunbatang mb-8">
       <p className="text-center text-rose-700 border-b border-slate-200 py-1">
         일
       </p>
