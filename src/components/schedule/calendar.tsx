@@ -1,15 +1,38 @@
 import { Schedule } from "@/types";
 import { range } from "@/common/utils";
 import Image from "next/image";
+import Link from "next/link";
 
-export interface CalendarCellProps {
+interface CalendarCellInnerProps {
+  red: boolean;
+  day: number;
+  holiday?: string;
+}
+
+const CalendarCellIner = ({ red, day, holiday }: CalendarCellInnerProps) => (
+  <>
+    <div className="w-fit h-fit relative" key="day">
+      <p className={`text-center relative ${red ? "text-rose-700" : ""}`}>
+        {day}
+      </p>
+      <div className="absolute top-1 bottom-1 -left-px -right-px bg-white bg-opacity-30 rounded -z-10" />
+    </div>
+    <div className="w-fit h-fit relative" key="info">
+      <p className="relative text-center text-rose-700 text-xs -mt-1 break-normal">
+        {holiday}
+      </p>
+      <div className="absolute inset-0 -top-1 bg-white bg-opacity-30 rounded -z-10" />
+    </div>
+  </>
+);
+
+interface CalendarCellProps {
   year: number;
   month: number;
   day: number;
   schedule?: Schedule;
   holiday?: string;
   out?: boolean;
-  onClick?: () => void;
 }
 
 const CalendarCell = ({
@@ -19,52 +42,40 @@ const CalendarCell = ({
   schedule,
   holiday,
   out,
-  onClick,
 }: CalendarCellProps) => {
   const d = new Date(year, month - 1, day);
-  return (
-    <div
-      className={`h-[20vw] md:h-36 relative border-slate-200 border-b border-r flex flex-col items-center overflow-hidden ${
-        d.getDay() === 0 ? "border-l" : ""
-      } ${schedule ? "cursor-pointer" : ""}`}
-      onClick={onClick}
+  const red = d.getDay() === 0 || holiday !== undefined;
+  const outerClassName = `h-[20vw] md:h-36 relative border-slate-200 border-b border-r flex flex-col items-center overflow-hidden ${
+    d.getDay() === 0 ? "border-l" : ""
+  } ${schedule ? "cursor-pointer" : ""}`;
+
+  return out ? (
+    <div className={outerClassName}>
+      <p className="opacity-40 text-center">
+        {d.getMonth() + 1}/{d.getDate()}
+      </p>
+    </div>
+  ) : schedule ? (
+    <Link
+      href={`/schedule/${year}/${month}/${schedule.slug}`}
+      className={outerClassName}
+      scroll={false}
     >
-      {out ? (
-        <p className="opacity-40 text-center">
-          {d.getMonth() + 1}/{d.getDate()}
-        </p>
-      ) : (
-        [
-          <div className="w-fit h-fit relative" key="day">
-            <p
-              className={`text-center relative ${
-                d.getDay() === 0 || holiday !== undefined ? "text-rose-700" : ""
-              }`}
-            >
-              {day}
-            </p>
-            <div className="absolute top-1 bottom-1 -left-px -right-px bg-white bg-opacity-30 rounded -z-10" />
-          </div>,
-          <div className="w-fit h-fit relative" key="info">
-            <p className="relative text-center text-rose-700 text-xs -mt-1 break-normal">
-              {holiday}
-            </p>
-            <div className="absolute inset-0 -top-1 bg-white bg-opacity-30 rounded -z-10" />
-          </div>,
-          schedule ? (
-            <Image
-              src={`/schedule/${schedule.image}`}
-              fill
-              className="object-fill -z-20"
-              alt={schedule.title}
-              key="image"
-              sizes="(max-width: 896px) 14vw, 110px"
-              placeholder="blur"
-              blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNc8h8AAk0BpWsR4hwAAAAASUVORK5CYII="
-            />
-          ) : null,
-        ]
-      )}
+      <CalendarCellIner red={red} day={day} holiday={holiday} />
+      <Image
+        src={`/schedule/${schedule.image}`}
+        fill
+        className="object-fill -z-20"
+        alt={schedule.title}
+        key="image"
+        sizes="(max-width: 896px) 14vw, 110px"
+        placeholder="blur"
+        blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNc8h8AAk0BpWsR4hwAAAAASUVORK5CYII="
+      />
+    </Link>
+  ) : (
+    <div className={outerClassName}>
+      <CalendarCellIner red={red} day={day} holiday={holiday} />
     </div>
   );
 };
@@ -74,7 +85,6 @@ export interface CalendarProps {
   month: number;
   schedules: Schedule[];
   holidays: Record<number, string>;
-  onClick: (d: number) => void;
 }
 
 export const Calendar = ({
@@ -82,7 +92,6 @@ export const Calendar = ({
   month,
   schedules,
   holidays,
-  onClick,
 }: CalendarProps) => {
   const first = new Date(year, month - 1);
   const monthLength = new Date(year, month, 0).getDate();
@@ -120,11 +129,6 @@ export const Calendar = ({
             schedule={schedules[scheduleDict[x]]}
             holiday={holidays[x]}
             out={x < 1 || x > monthLength}
-            onClick={
-              scheduleDict[x] === undefined
-                ? undefined
-                : () => onClick(scheduleDict[x])
-            }
             key={idx}
           />
         ))}

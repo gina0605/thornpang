@@ -12,3 +12,5 @@ export const range = (size: number, start: number = 0) =>
   Array(size)
     .fill(null)
     .map((_, i) => i + start);
+
+export const flatten = <T>(a: T[][]) => ([] as T[]).concat(...a);

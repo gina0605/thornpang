@@ -25,6 +25,7 @@ const data: { [key: number]: { [key: number]: Schedule[] } } = {
   2024: {
     3: [
       {
+        slug: "suddenly",
         dates: [17],
         title: "어쩌다 페스티벌",
         image: "202403_suddenly.jpeg",

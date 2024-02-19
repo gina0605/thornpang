@@ -1,6 +1,3 @@
-"use client";
-
-import { useState } from "react";
 import { Schedule } from "@/types";
 import { MonthSelecter } from "./monthSelecter";
 import { Calendar } from "./calendar";
@@ -13,6 +10,7 @@ export interface SchedulePageProps {
   minYear: number;
   maxYear: number;
   holidays: Record<number, string>;
+  modal?: Schedule;
 }
 
 export const SchedulePage = ({
@@ -22,27 +20,23 @@ export const SchedulePage = ({
   minYear,
   maxYear,
   holidays,
-}: SchedulePageProps) => {
-  const [modal, setModal] = useState<number | null>(null);
-
-  return (
-    <main className="w-full flex flex-col items-center">
-      {modal !== null && (
-        <Modal schedule={schedules[modal]} onClose={() => setModal(null)} />
-      )}
-      <MonthSelecter
-        year={year}
-        month={month}
-        minYear={minYear}
-        maxYear={maxYear}
-      />
-      <Calendar
-        year={year}
-        month={month}
-        schedules={schedules}
-        holidays={holidays}
-        onClick={setModal}
-      />
-    </main>
-  );
-};
+  modal,
+}: SchedulePageProps) => (
+  <main className="w-full flex flex-col items-center">
+    {modal && (
+      <Modal schedule={modal} closeLink={`/schedule/${year}/${month}`} />
+    )}
+    <MonthSelecter
+      year={year}
+      month={month}
+      minYear={minYear}
+      maxYear={maxYear}
+    />
+    <Calendar
+      year={year}
+      month={month}
+      schedules={schedules}
+      holidays={holidays}
+    />
+  </main>
+);
