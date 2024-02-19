@@ -24,6 +24,7 @@ const data = [
       "은하 피아노 버전",
     ],
     link: "https://www.youtube.com/watch?v=M3DnmCFHB6o",
+    date: "2024.02.09",
   },
   {
     title: "불구경 2023",
@@ -31,6 +32,7 @@ const data = [
     subtitle: "빨간 피터 POV",
     content: ["빨간 피터"],
     link: "https://www.youtube.com/watch?v=M3DnmCFHB6o",
+    date: "2024.01.26",
   },
 ];
 

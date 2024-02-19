@@ -9,7 +9,7 @@ export interface RowProps {
 }
 
 export const Row = ({
-  video: { title, thumbnail, subtitle, content, link },
+  video: { title, thumbnail, subtitle, content, link, date },
 }: RowProps) => {
   const [detail, setDetail] = useState(false);
 
@@ -24,22 +24,41 @@ export const Row = ({
           className="object-cover"
         />
       </a>
-      <div className="flex flex-col font-pretendard px-2 md:pl-3 w-[calc(100vw_-_144px)] md:w-[624px] justify-center h-18 grow">
-        <a href={link} target="_blank">
+      <div
+        className={`flex flex-col font-pretendard px-2 md:pl-3 pt-0.5 w-[calc(100vw_-_144px)] md:w-[624px] grow ${
+          detail ? "" : "h-18"
+        }`}
+      >
+        <a href={link} target="_blank" className="w-fit">
           <p>{title}</p>
         </a>
-        <a href={link} target="_blank">
+        <a href={link} target="_blank" className="w-fit">
           <p>{subtitle}</p>
         </a>
-        <div className="flex text-slate-500 text-sm">
-          <p className="text-nowrap truncate grow">{content.join(", ")}</p>
-          <p
-            className="underline shrink-0 pl-1 md:pl-2 cursor-pointer"
-            onClick={() => setDetail(true)}
-          >
-            자세히
-          </p>
-        </div>
+        {detail ? (
+          <div className="flex flex-col w-full text-slate-500 text-sm">
+            <p className="text-wrap w-full">{content.join(", ")}</p>
+            <div className="flex w-full justify-between mt-0.5">
+              <p>{date}</p>
+              <p
+                className="underline cursor-pointer"
+                onClick={() => setDetail(false)}
+              >
+                간단히
+              </p>
+            </div>
+          </div>
+        ) : (
+          <div className="flex text-slate-500 text-sm">
+            <p className="text-nowrap truncate grow">{content.join(", ")}</p>
+            <p
+              className="underline shrink-0 pl-1 md:pl-2 cursor-pointer"
+              onClick={() => setDetail(true)}
+            >
+              자세히
+            </p>
+          </div>
+        )}
       </div>
     </div>
   );

@@ -29,4 +29,5 @@ export interface Video {
   subtitle: string;
   content: string[];
   link: string;
+  date: string;
 }
