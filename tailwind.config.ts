@@ -34,7 +34,7 @@ const config: Config = {
         "13": "3.25rem",
         "17": "4.25rem",
         "19": "4.75rem",
-        "full-body": "calc(100vh - 116px)",
+        "full-body": "calc(100vh - 120px)",
       },
       boxShadow: {
         down: "0 15px 20px 0px rgb(0 0 0 / 0.1)",

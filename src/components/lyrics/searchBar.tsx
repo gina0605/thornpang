@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import { useRouter } from "next/navigation";
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 
 export interface SearchBarProps {
   param: string | null;
@@ -11,6 +11,7 @@ export interface SearchBarProps {
 export const SearchBar = ({ param }: SearchBarProps) => {
   const [text, setText] = useState(param ?? "");
   const [activated, setActivated] = useState(param !== null);
+  const inputRef = useRef<HTMLInputElement>(null);
   const router = useRouter();
 
   useEffect(() => {
@@ -38,18 +39,23 @@ export const SearchBar = ({ param }: SearchBarProps) => {
             value={text}
             onChange={(e) => setText(e.target.value)}
             onKeyUp={(e) => {
-              if (e.key === "Enter")
+              if (e.key === "Enter") {
+                e.currentTarget.blur();
                 router.push(`/lyrics?keyword=${textToURI(text)}`);
-              else if (e.key === "Escape") e.currentTarget.blur();
+              } else if (e.key === "Escape") e.currentTarget.blur();
             }}
             className="border-0 grow outline-none font-pretendard"
+            ref={inputRef}
           />
           <Image
             src="/icon/search.svg"
             width={24}
             height={24}
             alt="search button"
-            onClick={() => router.push(`/lyrics?keyword=${textToURI(text)}`)}
+            onClick={() => {
+              inputRef.current?.blur();
+              router.push(`/lyrics?keyword=${textToURI(text)}`);
+            }}
             className="cursor-pointer"
           />
         </div>

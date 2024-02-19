@@ -59,6 +59,8 @@ const CalendarCell = ({
               alt={schedule.title}
               key="image"
               sizes="(max-width: 896px) 14vw, 110px"
+              placeholder="blur"
+              blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNc8h8AAk0BpWsR4hwAAAAASUVORK5CYII="
             />
           ) : null,
         ]

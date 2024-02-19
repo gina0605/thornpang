@@ -112,7 +112,7 @@ export default ({
     >
       <body className="bg-white">
         <header className="flex flex-col w-screen prevent-select">
-          <div className="bg-black flex flex-col items-center h-19 p-1 text-white text-center">
+          <div className="bg-black flex flex-col items-center h-20 p-2 text-white text-center">
             <Link href="/">
               <Image
                 src={"/logo-horizontal.png"}
@@ -124,7 +124,7 @@ export default ({
                 priority
               />
             </Link>
-            <p className="text-sm font-sunbatang font-light">
+            <p className="text-sm font-sunbatang font-light -mt-0.5">
               팬 사이트 by 어떤 쏜팡이
             </p>
           </div>
