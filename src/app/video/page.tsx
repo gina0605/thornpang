@@ -1,15 +1,15 @@
 import Image from "next/image";
-import { readJson } from "@/common/serverUtils";
+import data from "@/data/video";
+import { Row } from "@/components/video/row";
 
-export default async () => {
-  const data = await readJson("/src/data/video.json");
-
+export default () => {
   return (
-    <Image
-      src={`/video/${data[0].thumbnail}`}
-      alt="alt"
-      width={164}
-      height={32}
-    />
+    <main className="w-full flex justify-center">
+      <div className="w-full max-w-3xl flex flex-col">
+        {data.map((v) => (
+          <Row video={v} key={v.link} />
+        ))}
+      </div>
+    </main>
   );
 };

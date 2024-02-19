@@ -22,3 +22,11 @@ export interface Schedule {
   text: string[];
   links: { text: string; link: string }[];
 }
+
+export interface Video {
+  title: string;
+  thumbnail: string;
+  subtitle: string;
+  content: string[];
+  link: string;
+}
