@@ -1,7 +1,7 @@
 import { Line } from "@/types";
 import { LineItem } from "@/components/lyrics/lineItem";
 import { SongItem } from "@/components/lyrics/songItem";
-import { SearchBar } from "@/components/lyrics/searchBar";
+import { LyricsSearchBar } from "@/components/lyrics/lyricsSearchBar";
 import { paramToString } from "@/common/utils";
 import data from "@/data/lyrics";
 
@@ -10,7 +10,7 @@ export default ({
 }: {
   searchParams: { [key: string]: string | string[] | undefined };
 }) => {
-  const param = paramToString(searchParams.keyword);
+  const param = paramToString(searchParams.search);
 
   const getFiltered = () => {
     const strip = (s: string) => s.replaceAll(/[\s.⋯?,'!"]+/g, " ");
@@ -48,7 +48,7 @@ export default ({
 
   return (
     <main className="w-screen flex flex-col items-center">
-      <SearchBar param={param} />
+      <LyricsSearchBar param={param} />
       <div className="flex flex-col w-full">
         {param
           ? filtered.map((line, idx) => <LineItem line={line} key={idx} />)
