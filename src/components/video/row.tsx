@@ -16,7 +16,7 @@ export const Row = ({
   const contentDetailText = contentDetail.join(" / ");
 
   return (
-    <div className="w-full flex items-start py-1 border-b border-slate-300">
+    <div className="w-full flex items-start p-1 pr-0 border-b border-slate-300">
       <a className="w-32 h-18 relative shrink-0" href={link} target="_blank">
         <Image
           src={`/video/${thumbnail}`}
