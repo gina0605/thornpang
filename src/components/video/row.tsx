@@ -9,9 +9,11 @@ export interface RowProps {
 }
 
 export const Row = ({
-  video: { title, thumbnail, subtitle, content, link, date },
+  video: { title, thumbnail, subtitle, content, contentDetail, link, date },
 }: RowProps) => {
   const [detail, setDetail] = useState(false);
+  const contentText = content.join(", ");
+  const contentDetailText = contentDetail.join(" / ");
 
   return (
     <div className="w-full flex items-start py-1 border-b border-slate-300">
@@ -37,8 +39,13 @@ export const Row = ({
         </a>
         {detail ? (
           <div className="flex flex-col w-full text-slate-500 text-sm">
-            <p className="text-wrap w-full">{content.join(", ")}</p>
-            <div className="flex w-full justify-between mt-0.5">
+            <p className="text-wrap w-full">{contentText}</p>
+            {contentDetailText && (
+              <p className="text-nowrap truncate grow my-0.5">
+                {contentDetailText}
+              </p>
+            )}
+            <div className="flex w-full justify-between">
               <p>{date}</p>
               <p
                 className="underline cursor-pointer"
@@ -50,7 +57,7 @@ export const Row = ({
           </div>
         ) : (
           <div className="flex text-slate-500 text-sm">
-            <p className="text-nowrap truncate grow">{content.join(", ")}</p>
+            <p className="text-nowrap truncate grow">{contentText}</p>
             <p
               className="underline shrink-0 pl-1 md:pl-2 cursor-pointer"
               onClick={() => setDetail(true)}

@@ -1,4 +1,6 @@
-const data = [
+import { Video } from "@/types";
+
+const data: Video[] = [
   {
     title: "불구경 2022",
     thumbnail: "2022_fire_live.webp",
@@ -23,6 +25,7 @@ const data = [
       "이유",
       "은하 피아노 버전",
     ],
+    contentDetail: ["불구경 2022", "라이브 콘서트 필름"],
     link: "https://www.youtube.com/watch?v=M3DnmCFHB6o",
     date: "2024.02.09",
   },
@@ -31,7 +34,8 @@ const data = [
     thumbnail: "2023_fire_peter.webp",
     subtitle: "빨간 피터 POV",
     content: ["빨간 피터"],
-    link: "https://www.youtube.com/watch?v=M3DnmCFHB6o",
+    contentDetail: ["라이브", "불구경 2023", "POV"],
+    link: "https://www.youtube.com/watch?v=gEHLMNn8WT0",
     date: "2024.01.26",
   },
 ];
