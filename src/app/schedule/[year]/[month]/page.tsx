@@ -1,11 +1,5 @@
 import { flatten, range } from "@/common/utils";
-import { SchedulePage } from "@/components/schedule/schedulePage";
-import data, { minYear, maxYear, holidays } from "@/data/schedule";
-
-interface PageParams {
-  year: string;
-  month: string;
-}
+import { minYear, maxYear } from "@/data/schedule";
 
 export const generateStaticParams = () =>
   flatten(
@@ -16,20 +10,4 @@ export const generateStaticParams = () =>
 
 export const dynamicParams = false;
 
-export default ({ params: { year, month } }: { params: PageParams }) => {
-  const y = parseInt(year),
-    m = parseInt(month);
-  const schedules = (data[y] ?? {})[m] ?? [];
-  const thisHolidays = (holidays[y] ?? {})[m] ?? {};
-
-  return (
-    <SchedulePage
-      year={y}
-      month={m}
-      schedules={schedules}
-      minYear={minYear}
-      maxYear={maxYear}
-      holidays={thisHolidays}
-    />
-  );
-};
+export default () => <></>;

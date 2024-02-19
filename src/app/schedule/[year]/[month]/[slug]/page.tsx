@@ -1,15 +1,10 @@
 import { flatten, range } from "@/common/utils";
-import { SchedulePage } from "@/components/schedule/schedulePage";
-import data, { minYear, maxYear, holidays } from "@/data/schedule";
+import { Modal } from "@/components/schedule/modal";
+import data, { minYear, maxYear } from "@/data/schedule";
+import { Schedule } from "@/types";
 
 const getSchedules = (year: number, month: number) =>
   (data[year] ?? {})[month] ?? [];
-
-interface PageParams {
-  year: string;
-  month: string;
-  slug: string;
-}
 
 export const generateStaticParams = () =>
   flatten(
@@ -28,22 +23,17 @@ export const generateStaticParams = () =>
 
 export const dynamicParams = false;
 
+interface PageParams {
+  year: string;
+  month: string;
+  slug: string;
+}
+
 export default ({ params: { year, month, slug } }: { params: PageParams }) => {
   const y = parseInt(year),
     m = parseInt(month);
   const schedules = getSchedules(y, m);
-  const thisHolidays = (holidays[y] ?? {})[m] ?? {};
-  const schedule = schedules.find((s) => s.slug === slug);
+  const schedule = schedules.find((s) => s.slug === slug) as Schedule;
 
-  return (
-    <SchedulePage
-      year={y}
-      month={m}
-      schedules={schedules}
-      minYear={minYear}
-      maxYear={maxYear}
-      holidays={thisHolidays}
-      modal={schedule}
-    />
-  );
+  return <Modal schedule={schedule} closeLink={`/schedule/${y}/${m}/`} />;
 };
