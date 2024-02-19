@@ -1,10 +1,8 @@
-"use client";
-
-import { usePathname } from "next/navigation";
 import Link from "next/link";
 import Image from "next/image";
 import localFont from "next/font/local";
 import "./globals.css";
+import { Tab } from "@/components/header/tab";
 
 const sunbatang = localFont({
   src: [
@@ -73,32 +71,6 @@ const pretendard = localFont({
   ],
   variable: "--font-pretendard",
 });
-
-interface TabProps {
-  text: string;
-  link: string;
-  exact?: boolean;
-}
-
-const Tab = ({ text, link, exact }: TabProps) => {
-  const pathname = usePathname();
-  return (
-    <Link
-      href={link}
-      className="grow w-0 flex flex-col items-center h-full justify-center text-base"
-    >
-      <p
-        className={`text-center font-pyeongchang ${
-          (exact ? pathname === link : pathname.startsWith(link))
-            ? "text-rose-700 font-extrabold"
-            : "text-slate-500 font-bold"
-        }`}
-      >
-        {text}
-      </p>
-    </Link>
-  );
-};
 
 export default ({
   children,
