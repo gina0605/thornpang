@@ -1,5 +1,5 @@
-import { Video } from "@/types";
 import Image from "next/image";
+import { Video } from "@/types";
 import { RowDetail } from "./rowDetail";
 
 export interface RowProps {
@@ -13,7 +13,7 @@ export const Row = ({
   const contentDetailText = contentDetail.join(" / ");
 
   return (
-    <div className="w-full flex items-start p-1 border-b border-slate-300">
+    <div className="w-full flex items-start px-1.5 md:px-0 py-1 border-b border-slate-300">
       <a className="w-32 h-18 relative shrink-0" href={link} target="_blank">
         <Image
           src={`/video/${thumbnail}`}

@@ -1,9 +1,8 @@
-import { ReactElement, RefObject } from "react";
+import { ReactElement } from "react";
 import Image from "next/image";
 import Link from "next/link";
 
 export interface ListItemProps {
-  ref?: RefObject<HTMLDivElement>;
   album: string;
   title: string;
   text: ReactElement;
@@ -13,7 +12,6 @@ export interface ListItemProps {
 }
 
 export const ListItem = ({
-  ref,
   album,
   title,
   text,
@@ -40,7 +38,7 @@ export const ListItem = ({
       />
       <Link
         href={`/lyrics/${slug}`}
-        className={`w-full max-w-screen-md h-full flex items-center justify-start px-2 z-30 ${linkClassName}`}
+        className={`w-full max-w-screen-md h-full flex items-center justify-start px-1.5 z-30 ${linkClassName}`}
       >
         <div className="w-12 h-12 md:w-13 md:h-13 relative shrink-0">
           <Image

@@ -22,7 +22,7 @@ export const LyricsSearchBar = ({ param }: SearchBarProps) => {
         }`}
       />
       <div
-        className={`w-full h-9 max-w-screen-md flex items-center justify-start px-2 relative transition-opacity duration-400 ease-in-out ${
+        className={`w-full h-9 max-w-screen-md flex items-center justify-start px-1.5 relative transition-opacity duration-400 ease-in-out ${
           activated ? "opacity-100" : "opacity-0"
         }`}
       >
