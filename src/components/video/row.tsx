@@ -24,7 +24,9 @@ export const Row = ({
           fill
           sizes="128px"
           alt={title}
-          className="object-cover"
+          className="object-cover rounded-sm"
+          placeholder="blur"
+          blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNc8h8AAk0BpWsR4hwAAAAASUVORK5CYII="
         />
       </a>
       <div className="w-0 grow flex flex-col justify-center font-pretendard pr-1 pl-2 md:pl-3 pt-0.5 md:pt-2">
