@@ -2,6 +2,7 @@ import { Row } from "@/components/video/row";
 import { SearchBar } from "@/components/common/searchBar";
 import { paramToString } from "@/common/utils";
 import data from "@/data/video";
+import { VideoSearchBar } from "@/components/video/videoSearchBar";
 
 export default ({
   searchParams,
@@ -12,9 +13,7 @@ export default ({
 
   return (
     <main className="w-full flex flex-col items-center">
-      <div className="w-full max-w-3xl px-1.5 h-9 flex items-center">
-        <SearchBar defaultText={param ?? ""} />
-      </div>
+      <VideoSearchBar param={param} />
       <div className="w-full max-w-5xl flex flex-col md:px-1.5">
         {data.map((v) => (
           <Row video={v} key={v.link} />

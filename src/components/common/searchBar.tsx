@@ -18,7 +18,7 @@ export const SearchBar = ({ defaultText }: SearchBarProps) => {
     `${pathname}?search=${text.replace(" ", "%20")}`;
 
   return (
-    <div className="h-8 flex items-center rounded border-slate-500 border w-full px-2">
+    <div className="h-8 flex items-center rounded border-slate-500 border w-full px-2 bg-white">
       <input
         value={text}
         onChange={(e) => setText(e.target.value)}
