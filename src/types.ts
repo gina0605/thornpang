@@ -27,8 +27,8 @@ export interface Video {
   title: string;
   thumbnail: string;
   subtitle: string;
-  content: string[];
-  contentDetail: string[];
+  setlist: string[];
+  info: string[];
   link: string;
   date: string;
 }

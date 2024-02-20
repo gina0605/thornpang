@@ -7,10 +7,10 @@ export interface RowProps {
 }
 
 export const Row = ({
-  video: { title, thumbnail, subtitle, content, contentDetail, link, date },
+  video: { title, thumbnail, subtitle, setlist, info, link, date },
 }: RowProps) => {
-  const contentText = content.join(", ");
-  const contentDetailText = contentDetail.join(" / ");
+  const setlistText = setlist.join(", ");
+  const infoText = info.join(" / ");
 
   return (
     <div className="w-full flex items-start px-1.5 md:px-0 py-1 border-b border-slate-300">
@@ -30,11 +30,7 @@ export const Row = ({
         <a href={link} target="_blank" className="w-fit">
           <p>{subtitle}</p>
         </a>
-        <RowDetail
-          content={contentText}
-          contentDetail={contentDetailText}
-          date={date}
-        />
+        <RowDetail setlist={setlistText} info={infoText} date={date} />
       </div>
     </div>
   );

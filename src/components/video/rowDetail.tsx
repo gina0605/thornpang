@@ -3,19 +3,17 @@
 import { useState } from "react";
 
 export interface RowDetailProps {
-  content: string;
-  contentDetail: string;
+  setlist: string;
+  info: string;
   date: string;
 }
 
-export const RowDetail = ({ content, contentDetail, date }: RowDetailProps) => {
+export const RowDetail = ({ setlist, info, date }: RowDetailProps) => {
   const [detail, setDetail] = useState(false);
   return detail ? (
     <div className="flex flex-col w-full text-slate-500 text-sm">
-      <p className="text-wrap w-full">{content}</p>
-      {contentDetail && (
-        <p className="text-nowrap truncate grow my-0.5">{contentDetail}</p>
-      )}
+      <p className="text-wrap w-full">{setlist}</p>
+      <p className="text-nowrap truncate grow my-0.5">{info}</p>
       <div className="flex w-full justify-between">
         <p>{date}</p>
         <p
@@ -28,7 +26,7 @@ export const RowDetail = ({ content, contentDetail, date }: RowDetailProps) => {
     </div>
   ) : (
     <div className="flex text-slate-500 text-sm">
-      <p className="text-nowrap truncate grow">{content}</p>
+      <p className="text-nowrap truncate grow">{setlist}</p>
       <p
         className="underline shrink-0 pl-1 md:pl-2 cursor-pointer"
         onClick={() => setDetail(true)}
