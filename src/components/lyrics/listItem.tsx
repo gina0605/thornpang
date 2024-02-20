@@ -28,19 +28,19 @@ export const ListItem = ({
 
   return (
     <div
-      className={`w-full h-14 md:h-16 flex justify-center relative ${className} overflow-x-hidden`}
+      className={`w-full h-14 md:h-17 flex justify-center relative ${className} overflow-x-hidden`}
     >
       <div
-        className={`absolute top-0 bottom-0 left-0 w-4 list-item-left bg-gradient-to-l opacity-20 md:opacity-30 from-white ${bgColor}`}
+        className={`absolute top-0 bottom-0 left-0 w-4 md:w-[calc(50vw_-_380px)] bg-gradient-to-l opacity-20 md:opacity-30 from-white ${bgColor}`}
       />
       <div
-        className={`absolute top-0 bottom-0 right-0 left-4 list-item-right bg-gradient-to-r from-white ${bgColor}`}
+        className={`absolute top-0 bottom-0 right-0 left-4 md:left-[calc(50vw_-_380px)] bg-gradient-to-r from-white ${bgColor}`}
       />
       <Link
         href={`/lyrics/${slug}`}
         className={`w-full max-w-screen-md h-full flex items-center justify-start px-1.5 z-30 ${linkClassName}`}
       >
-        <div className="w-12 h-12 md:w-13 md:h-13 relative shrink-0">
+        <div className="w-12 h-12 md:w-14 md:h-14 relative shrink-0">
           <Image
             src={`/album/${album}.jpeg`}
             alt={`${album} album cover`}
@@ -49,7 +49,7 @@ export const ListItem = ({
             className="rounded-sm object-contain"
           />
         </div>
-        <div className="h-full flex flex-col grow p-2">
+        <div className="h-full flex flex-col grow p-2 md:p-2.5 justify-center">
           <p className="font-sunbatang font-semibold -mb-1 md:mb-0">{title}</p>
           {text}
         </div>
