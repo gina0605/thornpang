@@ -1,21 +1,24 @@
 "use client";
 
 import Image from "next/image";
-import { usePathname, useRouter } from "next/navigation";
-import { useRef, useState } from "react";
+import { useRouter } from "next/navigation";
+import { useEffect, useRef, useState } from "react";
 
 export interface SearchBarProps {
   defaultText: string;
+  searchPath: string;
 }
 
-export const SearchBar = ({ defaultText }: SearchBarProps) => {
+export const SearchBar = ({ defaultText, searchPath }: SearchBarProps) => {
   const [text, setText] = useState(defaultText);
   const inputRef = useRef<HTMLInputElement>(null);
   const router = useRouter();
-  const pathname = usePathname();
 
-  const textToURI = (text: string) =>
-    `${pathname}?search=${text.replace(" ", "%20")}`;
+  const textToURI = (text: string) => searchPath + text.replace(" ", "%20");
+
+  useEffect(() => {
+    setText(defaultText);
+  }, [defaultText]);
 
   return (
     <div className="h-8 flex items-center rounded border-slate-500 border w-full px-2 bg-white">

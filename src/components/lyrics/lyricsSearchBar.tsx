@@ -26,7 +26,7 @@ export const LyricsSearchBar = ({ param }: SearchBarProps) => {
           activated ? "opacity-100" : "opacity-0"
         }`}
       >
-        <SearchBar defaultText={param ?? ""} />
+        <SearchBar defaultText={param ?? ""} searchPath="/lyrics?search=" />
       </div>
       <div
         className={`w-0 grow bg-gradient-to-l from-slate-500 to-white transition-opacity duration-400 ease-in-out ${
