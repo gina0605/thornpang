@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useMemo, useState } from "react";
 import Image from "next/image";
 import { useIntersectionObserver } from "@/common/hooks";
 
@@ -44,7 +44,9 @@ export const IndivProfile = ({
 }: IndivProfileProps) => {
   const [activated, setActivated] = useState(false);
 
-  const { setTarget } = useIntersectionObserver(() => setActivated(true), 0.7);
+  const onIntersect = useMemo(() => () => setActivated(true), []);
+
+  const { setTarget } = useIntersectionObserver(onIntersect, 0.7);
 
   return (
     <div

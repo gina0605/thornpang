@@ -13,14 +13,13 @@ export const useIntersectionObserver = (
   useEffect(() => {
     if (!target) return;
     observer.current = new IntersectionObserver(
-      (entries) => {
+      (entries) =>
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
             onIntersect();
             observer.current?.unobserve(target);
           }
-        });
-      },
+        }),
       { rootMargin, threshold }
     );
     observer.current.observe(target);

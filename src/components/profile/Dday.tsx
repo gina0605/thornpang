@@ -1,7 +1,7 @@
 "use client";
 
 import { useIntersectionObserver } from "@/common/hooks";
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 
 export const Dday = () => {
   const [cnt, setCnt] = useState(0);
@@ -9,7 +9,8 @@ export const Dday = () => {
   const result = Math.floor((Date.now() - 1261580400000) / 86400000);
   const [activated, setActivated] = useState(false);
 
-  const { setTarget } = useIntersectionObserver(() => setActivated(true), 0.9);
+  const onIntersect = useMemo(() => () => setActivated(true), []);
+  const { setTarget } = useIntersectionObserver(onIntersect, 0.9);
 
   useEffect(() => {
     if (activated) {
