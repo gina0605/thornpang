@@ -21,7 +21,7 @@ export const SongItem = ({
     if (move) {
       const timer = setTimeout(
         () => setActivated(true),
-        idx * 90 - idx * idx * 0.6
+        idx * 90 - idx * idx * 0.8 - idx * idx * idx * 0.005
       );
       return () => clearTimeout(timer);
     }
