@@ -101,12 +101,11 @@ export default ({
             </p>
           </div>
           <div className="flex w-full h-10 justify-center border border-slate-200">
-            <div className="flex w-full max-w-5xl items-center">
+            <div className="flex w-full max-w-4xl items-center">
               <Tab text="프로필" link="/" exact />
               <Tab text="가사" link="/lyrics" />
               <Tab text="일정" link="/schedule" />
               <Tab text="영상" link="/video" />
-              <Tab text="인터뷰" link="/interview" />
             </div>
           </div>
         </header>
