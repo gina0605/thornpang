@@ -9,17 +9,16 @@ export const AppleProfile = () => {
   useEffect(() => setVisible(true), []);
 
   return (
-    <div
-      className={`w-full pt-[75%] relative transition-all duration-1000 ease-out opacity-100 mt-0 mb-0 ${
-        visible ? "" : "md:opacity-0 md:mt-4 md:-mb-4"
-      }`}
-    >
+    <div className="w-full pt-[75%] relative">
       <Image
         src="/profile/apple.jpeg"
         alt="THORNAPPLE profile picture"
         fill
         style={{ objectFit: "contain" }}
         priority
+        className={`transition-appear duration-1000 ease-out ${
+          visible ? "opacity-100" : "md:opacity-0 md:translate-y-4"
+        }`}
       />
     </div>
   );
