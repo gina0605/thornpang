@@ -120,7 +120,7 @@ export default ({
               />
             </Link>
             <p className="text-sm font-sunbatang font-light -mt-0.5">
-              팬 사이트 by 어떤 쏜팡이
+              팬사이트 by 어떤 쏜팡이
             </p>
           </div>
           <div className="flex w-full h-10 justify-center border border-slate-200">
