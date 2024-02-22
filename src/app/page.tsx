@@ -7,7 +7,7 @@ import { readJson } from "@/common/serverUtils";
 import { createMetadata } from "@/common/seo";
 
 export const metadata = createMetadata(
-  "프로필",
+  "",
   "2009.12.24 데뷔공연 'THE 조용한 크리스마스' @살롱바다비 · 2010.07.09 밴드명 '가시사과'에서 쏜애플(THORNAPPLE)로 개명 · 2010.07.17 정규 1집 [난 자꾸 말을 더듬고 잠드는 법도 잊었네] 발매 · 2014.06.12 정규 2집 [이상기후] 발매"
 );
 

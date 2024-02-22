@@ -1,16 +1,15 @@
 import { Metadata } from "next";
 
 export const createMetadata = (title: string, description: string) => {
-  const titleWrapped = `${title} | 쏜애플 팬사이트`;
+  const titleWrapped = title ? `${title} | 쏜애플 팬사이트` : "쏜애플 팬사이트";
 
   const metadata: Metadata = {
     title: titleWrapped,
     description,
     openGraph: {
-      title,
+      title: titleWrapped,
       description,
       url: "https://thornpang.vercel.app",
-      siteName: "쏜애플 팬사이트",
       images: [
         {
           url: "https://thornpang.vercel.app/opengraph-image.png",
