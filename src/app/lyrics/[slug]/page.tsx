@@ -1,6 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import { Song } from "@/types";
+import { createMetadata } from "@/common/seo";
 import data from "@/data/lyrics";
 
 export const generateStaticParams = () =>
@@ -8,11 +9,23 @@ export const generateStaticParams = () =>
 
 export const dynamicParams = false;
 
-interface PageProps {
+interface PageParams {
   slug: string;
 }
 
-export default ({ params: { slug } }: { params: PageProps }) => {
+export const generateMetadata = ({
+  params: { slug },
+}: {
+  params: PageParams;
+}) => {
+  const { title, lyrics } = data.find((s) => s.slug === slug) as Song;
+  return createMetadata(
+    title,
+    lyrics.length === 0 ? "연주곡" : lyrics.filter((l) => l).join(" ")
+  );
+};
+
+export default ({ params: { slug } }: { params: PageParams }) => {
   const songIdx = data.findIndex((s) => s.slug === slug);
   const leftIdx = songIdx === 0 ? data.length - 1 : songIdx - 1;
   const rightIdx = songIdx === data.length - 1 ? 0 : songIdx + 1;

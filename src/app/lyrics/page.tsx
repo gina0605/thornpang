@@ -3,7 +3,13 @@ import { LineItem } from "@/components/lyrics/lineItem";
 import { SongItem } from "@/components/lyrics/songItem";
 import { LyricsSearchBar } from "@/components/lyrics/lyricsSearchBar";
 import { paramToString } from "@/common/utils";
+import { createMetadata } from "@/common/seo";
 import data from "@/data/lyrics";
+
+export const metadata = createMetadata(
+  "가사",
+  "피어나다: 작곡 심재현 · 오렌지의 시간: 작사, 작곡 윤성현 · 빨간 피터: 작사, 작곡 윤성현 · 아가미: 작사, 작곡 윤성현 · 도롱뇽: 작사, 작곡 윤성현 · 청색증: 작곡 윤성현 · 너의 무리: 작사, 작곡 윤성현 · 플랑크톤: 작사, 작곡 윤성현"
+);
 
 export default ({
   searchParams,

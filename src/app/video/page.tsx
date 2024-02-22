@@ -2,7 +2,13 @@ import { Video } from "@/types";
 import { paramToString } from "@/common/utils";
 import { Row } from "@/components/video/row";
 import { VideoSearchBar } from "@/components/video/videoSearchBar";
+import { createMetadata } from "@/common/seo";
 import data, { replaceLogic } from "@/data/video";
+
+export const metadata = createMetadata(
+  "영상",
+  "불구경 2022 - 라이브 콘서트 필름 · 불구경 2023 - 빨간 피터 POV · 불구경 2023 파리의 왕 / 한낮 / 수성의 하루 / 매미는 비가 와도 운다 / 멸종 · [동물] 라이브 세션 - 게와 수돗물 · [동물] 라이브 세션 - 살 · [동물] 라이브 세션 - 할시온"
+);
 
 export default ({
   searchParams,

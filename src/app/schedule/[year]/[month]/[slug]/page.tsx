@@ -1,10 +1,16 @@
+import { createMetadata } from "@/common/seo";
 import { flatten, range } from "@/common/utils";
 import { Modal } from "@/components/schedule/modal";
-import data, { minYear, maxYear } from "@/data/schedule";
 import { Schedule } from "@/types";
+import data, { minYear, maxYear } from "@/data/schedule";
 
 const getSchedules = (year: number, month: number) =>
   (data[year] ?? {})[month] ?? [];
+
+const getSchedule = (year: string, month: string, slug: string) =>
+  getSchedules(parseInt(year), parseInt(month)).find(
+    (s) => s.slug === slug
+  ) as Schedule;
 
 export const generateStaticParams = () =>
   flatten(
@@ -29,11 +35,19 @@ interface PageParams {
   slug: string;
 }
 
-export default ({ params: { year, month, slug } }: { params: PageParams }) => {
-  const y = parseInt(year),
-    m = parseInt(month);
-  const schedules = getSchedules(y, m);
-  const schedule = schedules.find((s) => s.slug === slug) as Schedule;
+export const generateMetadata = ({
+  params: { year, month, slug },
+}: {
+  params: PageParams;
+}) => {
+  const { title, dateText, text } = getSchedule(year, month, slug);
+  return createMetadata(title, [dateText, ...text].join(" · "));
+};
 
-  return <Modal schedule={schedule} closeLink={`/schedule/${y}/${m}/`} />;
+export default ({ params: { year, month, slug } }: { params: PageParams }) => {
+  const schedule = getSchedule(year, month, slug);
+
+  return (
+    <Modal schedule={schedule} closeLink={`/schedule/${year}/${month}/`} />
+  );
 };
