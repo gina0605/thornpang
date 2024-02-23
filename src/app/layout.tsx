@@ -3,6 +3,7 @@ import Image from "next/image";
 import localFont from "next/font/local";
 import "./globals.css";
 import { Tab } from "@/components/header/tab";
+import { ScheduleLoader } from "@/components/common/scheduleLoader";
 
 const sunbatang = localFont({
   src: [
@@ -105,6 +106,7 @@ export default ({
         <meta name="msapplication-TileColor" content="#be123c" />
         <meta name="theme-color" content="#ffffff" />
       </head>
+      <ScheduleLoader />
       <body className="bg-white">
         <header className="flex flex-col w-screen prevent-select">
           <div className="bg-black flex flex-col items-center h-20 p-2 text-white text-center">
