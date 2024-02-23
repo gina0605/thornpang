@@ -1,7 +1,6 @@
 import { createMetadata } from "@/common/seo";
 import { Calendar } from "@/components/schedule/calendar";
-import { MonthSelecter } from "@/components/schedule/monthSelecter";
-import data, { minYear, maxYear, holidays } from "@/data/schedule";
+import data, { holidays } from "@/data/schedule";
 
 const getSchedules = (year: number, month: number) =>
   (data[year] ?? {})[month] ?? [];
@@ -38,15 +37,14 @@ export default ({
   const thisHolidays = (holidays[y] ?? {})[m] ?? {};
 
   return (
-    <main className="w-full flex flex-col items-center">
-      {children}
-      <MonthSelecter year={y} month={m} minYear={minYear} maxYear={maxYear} />
+    <>
       <Calendar
         year={y}
         month={m}
         schedules={schedules}
         holidays={thisHolidays}
       />
-    </main>
+      {children}
+    </>
   );
 };

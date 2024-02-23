@@ -2,7 +2,7 @@
 
 import { range } from "@/common/utils";
 import Link from "next/link";
-import { useRouter } from "next/navigation";
+import { useRouter, useSelectedLayoutSegments } from "next/navigation";
 import { Chevron } from "../common/icons";
 import { useEffect } from "react";
 
@@ -21,19 +21,16 @@ const ArrowButton = ({ direction, link }: ArrowButtonProps) =>
   );
 
 export interface MonthSelecterProps {
-  year: number;
-  month: number;
   minYear: number;
   maxYear: number;
 }
 
-export const MonthSelecter = ({
-  year,
-  month,
-  minYear,
-  maxYear,
-}: MonthSelecterProps) => {
+export const MonthSelecter = ({ minYear, maxYear }: MonthSelecterProps) => {
   const router = useRouter();
+
+  const [yearStr, monthStr] = useSelectedLayoutSegments();
+  const year = parseInt(yearStr),
+    month = parseInt(monthStr);
 
   const isFirst = year === minYear && month === 1;
   const isLast = year === maxYear && month === 12;
