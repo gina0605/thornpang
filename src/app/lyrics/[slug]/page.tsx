@@ -3,6 +3,7 @@ import Image from "next/image";
 import { Song } from "@/types";
 import { createMetadata } from "@/common/seo";
 import data from "@/data/lyrics";
+import { Chevron } from "@/components/common/icons";
 
 export const generateStaticParams = () =>
   data.map((song: Song) => ({ slug: song.slug }));
@@ -68,12 +69,7 @@ export default ({ params: { slug } }: { params: PageParams }) => {
         >
           <div className="w-full flex items-center justify-between max-w-xl py-2 z-30">
             <Link href={`/lyrics/${data[leftIdx].slug}`} className="p-4 -m-2">
-              <Image
-                src="/icon/chevron-left.svg"
-                alt="left arrow"
-                width={24}
-                height={24}
-              />
+              <Chevron direction="left" />
             </Link>
             <div className="flex flex-col items-center">
               <p className="text-lg">{title}</p>
@@ -82,12 +78,7 @@ export default ({ params: { slug } }: { params: PageParams }) => {
               </p>
             </div>
             <Link href={`/lyrics/${data[rightIdx].slug}`} className="p-4 -m-2">
-              <Image
-                src="/icon/chevron-right.svg"
-                alt="right arrow"
-                width={24}
-                height={24}
-              />
+              <Chevron direction="right" />
             </Link>
           </div>
         </div>

@@ -1,8 +1,23 @@
 "use client";
 
 import { range } from "@/common/utils";
-import Image from "next/image";
+import Link from "next/link";
 import { useRouter } from "next/navigation";
+import { Chevron } from "../common/icons";
+
+interface ArrowButtonProps {
+  direction: string;
+  link?: string;
+}
+
+const ArrowButton = ({ direction, link }: ArrowButtonProps) =>
+  link ? (
+    <Link href={link}>
+      <Chevron direction={direction} className="h-full" />
+    </Link>
+  ) : (
+    <Chevron direction={direction} className="h-full opacity-30" />
+  );
 
 export interface MonthSelecterProps {
   year: number;
@@ -22,32 +37,27 @@ export const MonthSelecter = ({
   const isFirst = year === minYear && month === 1;
   const isLast = year === maxYear && month === 12;
 
-  const routerPush = (y: number | string, m: number | string) =>
-    router.push(`/schedule/${y}/${m}`);
+  const createUrl = (y: number | string, m: number | string) =>
+    `/schedule/${y}/${m}`;
 
   return (
     <div className="w-full max-w-xl px-4 h-14 flex justify-between font-pyeongchang text-xl font-semibold">
-      <Image
-        src="/icon/chevron-left.svg"
-        alt="left arrow"
-        width={24}
-        height={24}
-        className={isFirst ? "opacity-30" : "cursor-pointer"}
-        onClick={
+      <ArrowButton
+        direction="left"
+        link={
           isFirst
             ? undefined
-            : () =>
-                routerPush(
-                  month === 1 ? year - 1 : year,
-                  month === 1 ? 12 : month - 1
-                )
+            : createUrl(
+                month === 1 ? year - 1 : year,
+                month === 1 ? 12 : month - 1
+              )
         }
       />
       <div className="flex justify-center items-center space-x-2">
         <select
           value={year}
           className="customized-select"
-          onChange={(e) => routerPush(e.target.value, month)}
+          onChange={(e) => router.push(createUrl(e.target.value, month))}
         >
           {range(maxYear - minYear + 1, minYear).map((y) => (
             <option value={y} key={y}>
@@ -58,7 +68,7 @@ export const MonthSelecter = ({
         <select
           value={month}
           className="customized-select"
-          onChange={(e) => routerPush(year, e.target.value)}
+          onChange={(e) => router.push(createUrl(year, e.target.value))}
         >
           {range(12, 1).map((m) => (
             <option value={m} key={m}>
@@ -67,20 +77,15 @@ export const MonthSelecter = ({
           ))}
         </select>
       </div>
-      <Image
-        src="/icon/chevron-right.svg"
-        alt="right arrow"
-        width={24}
-        height={24}
-        className={isLast ? "opacity-30" : "cursor-pointer"}
-        onClick={
+      <ArrowButton
+        direction="right"
+        link={
           isLast
             ? undefined
-            : () =>
-                routerPush(
-                  month === 12 ? year + 1 : year,
-                  month === 12 ? 1 : month + 1
-                )
+            : createUrl(
+                month === 12 ? year + 1 : year,
+                month === 12 ? 1 : month + 1
+              )
         }
       />
     </div>
