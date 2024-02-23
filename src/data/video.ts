@@ -3,6 +3,8 @@ import { Video } from "@/types";
 export const replaceLogic = [
   { pattern: /언플러그드|unplug[^\s]*|acous[^\s]*/g, result: "어쿠" },
   { pattern: /doc[^\s]*/g, result: "다큐" },
+  { pattern: /(^|[^\d])(\d\d)년/g, result: "$120$2" },
+  { pattern: /(\d\d\d\d)년/g, result: "$1" },
   { pattern: /오시/g, result: "오렌지의" },
   { pattern: /빨피/g, result: "빨간피터" },
   { pattern: /도가미/g, result: "도롱뇽 아가미" },
