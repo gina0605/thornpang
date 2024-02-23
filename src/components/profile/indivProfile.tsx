@@ -50,8 +50,8 @@ export const IndivProfile = ({
 
   return (
     <div
-      className={`w-full max-w-4xl flex items-center space-x-4 px-6 justify-start md:-my-12 transition-opacity duration-1000 ease-out h-fit ${
-        left ? "flex-row" : "flex-row-reverse space-x-reverse"
+      className={`w-full max-w-4xl flex items-center px-6 justify-start md:-my-12 transition-opacity duration-1000 ease-out h-fit ${
+        left ? "flex-row" : "flex-row-reverse"
       } ${activated ? "opacity-100" : "opacity-0"}`}
       ref={setTarget}
     >
@@ -68,13 +68,15 @@ export const IndivProfile = ({
         </div>
       </div>
       <div
-        className={`font-sunbatang flex flex-col ${
+        className={`font-sunbatang flex flex-col px-4 md:px-5 ${
           left ? "items-start" : "items-end"
         }`}
       >
-        <p className="text-sm md:pb-1">{bday}</p>
-        <p className="text-2xl md:text-3xl font-bold">{name}</p>
-        <p className="md:text-xl -mt-1 md:mt-0">{session}</p>
+        <p className="text-sm md:text-base">{bday}</p>
+        <p className="text-2xl md:text-3xl font-bold -mx-0.5 md:-mx-1 my-0.5">
+          {name}
+        </p>
+        <p className="md:text-xl -mt-1 md:mt-0 font-bold">{session}</p>
         <div className="flex space-x-1 pt-2">
           {sns.map((x, idx) => (
             <SnsIcon sns={x} key={idx} />

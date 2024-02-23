@@ -48,12 +48,12 @@ export const Timeline = ({
   return (
     <div className="pl-12 w-full relative py-8 md:py-10" ref={ref}>
       <div
-        className={`h-fit font-sunbatang text-black transition-appear duration-1000 ease-out ${
+        className={`h-fit font-sunbatang transition-appear duration-1000 ease-out ${
           activated ? "translate-x-0 opacity-100" : "translate-x-4 opacity-0"
         }`}
       >
         <p className="text-rose-700">{date}</p>
-        <p className="font-sunbatang">{text}</p>
+        <p className="text-black">{text}</p>
       </div>
       {istop || (
         <div className="absolute bg-black w-2 top-0 mb-2 left-2 bottom-1/2" />

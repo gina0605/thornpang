@@ -50,7 +50,7 @@ export const ListItem = ({
           />
         </div>
         <div className="h-full flex flex-col grow p-2 md:p-2.5 justify-center">
-          <p className="font-sunbatang font-semibold -mb-1 md:mb-0">{title}</p>
+          <p className="font-sunbatang -mb-1 md:mb-0">{title}</p>
           {text}
         </div>
       </Link>
