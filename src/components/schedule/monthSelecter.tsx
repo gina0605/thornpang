@@ -4,6 +4,7 @@ import { range } from "@/common/utils";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { Chevron } from "../common/icons";
+import { useEffect } from "react";
 
 interface ArrowButtonProps {
   direction: string;
@@ -39,6 +40,13 @@ export const MonthSelecter = ({
 
   const createUrl = (y: number | string, m: number | string) =>
     `/schedule/${y}/${m}`;
+
+  useEffect(() => {
+    for (let y = minYear; y <= maxYear; y++)
+      if (y != year) router.prefetch(createUrl(y, month));
+    for (let m = 1; m <= 12; m++)
+      if (m != month) router.prefetch(createUrl(year, m));
+  }, []);
 
   return (
     <div className="w-full max-w-xl px-4 h-14 flex justify-between font-pyeongchang text-xl font-semibold">
