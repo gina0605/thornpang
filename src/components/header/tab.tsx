@@ -17,10 +17,10 @@ export const Tab = ({ text, link, exact }: TabProps) => {
       className="grow w-0 flex flex-col items-center h-full justify-center text-base"
     >
       <p
-        className={`text-center font-pyeongchang ${
+        className={`text-center font-pyeongchang font-bold ${
           (exact ? pathname === link : pathname.startsWith(link))
-            ? "text-rose-700 font-extrabold"
-            : "text-slate-500 font-bold"
+            ? "text-rose-700"
+            : "text-slate-500"
         }`}
       >
         {text}

@@ -16,8 +16,7 @@ const sunbatang = localFont({
 
 const pyeongchang = localFont({
   src: [
-    { path: "../font/PyeongChang-Regular.otf", weight: "400", style: "normal" },
-    { path: "../font/PyeongChang-Bold.otf", weight: "700", style: "normal" },
+    { path: "../font/PyeongChang-BoldA1.otf", weight: "700", style: "normal" },
   ],
   variable: "--font-pyeongchang",
 });

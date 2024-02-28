@@ -46,7 +46,7 @@ export const MonthSelecter = ({ minYear, maxYear }: MonthSelecterProps) => {
   }, []);
 
   return (
-    <div className="w-full max-w-xl px-4 h-14 flex justify-between font-pyeongchang text-xl font-semibold">
+    <div className="w-full max-w-xl px-4 h-14 flex justify-between font-pyeongchang text-xl font-bold">
       <ArrowButton
         direction="left"
         link={
