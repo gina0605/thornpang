@@ -1,7 +1,7 @@
-import { createMetadata } from "@/common/seo";
 import { flatten, range } from "@/common/utils";
-import { Modal } from "@/components/schedule/modal";
+import { createMetadata } from "@/common/seo";
 import { Schedule } from "@/types";
+import { ScheduleModal } from "@/components/schedule/scheduleModal";
 import data, { minYear, maxYear } from "@/data/schedule";
 
 const getSchedules = (year: number, month: number) =>
@@ -48,6 +48,9 @@ export default ({ params: { year, month, slug } }: { params: PageParams }) => {
   const schedule = getSchedule(year, month, slug);
 
   return (
-    <Modal schedule={schedule} closeLink={`/schedule/${year}/${month}/`} />
+    <ScheduleModal
+      schedule={schedule}
+      closeLink={`/schedule/${year}/${month}/`}
+    />
   );
 };

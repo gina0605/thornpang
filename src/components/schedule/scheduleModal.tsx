@@ -1,31 +1,17 @@
-import { Schedule } from "@/types";
 import Image from "next/image";
-import Link from "next/link";
+import { Schedule } from "@/types";
+import { Modal } from "@/components/common/modal";
 
 export interface ModalProps {
   schedule: Schedule;
   closeLink: string;
 }
 
-export const Modal = ({ schedule, closeLink }: ModalProps) => {
+export const ScheduleModal = ({ schedule, closeLink }: ModalProps) => {
   const { image, title, dateText, text, links } = schedule;
   return (
-    <div className="fixed inset-0 bg-black/65 flex items-center justify-center flex-col md:flex-row overflow-y-auto z-30">
-      <Link
-        className="fixed inset-0 z-30 cursor-default"
-        href={closeLink}
-        scroll={false}
-      />
-      <Link href={closeLink} scroll={false}>
-        <Image
-          src="/icon/x.svg"
-          width={36}
-          height={36}
-          className="top-2 right-2 fixed z-40"
-          alt="close button"
-        />
-      </Link>
-      <div className="w-[75vw] h-[106vw] max-w-[50vh] max-h-[70vh] md:w-[57vh] md:max-w-[57vh] md:h-[80vh] md:max-h-[80vh] relative shrink-0 rounded-t md:rounded-r-none md:rounded-l overflow-hidden z-40">
+    <Modal closeLink={closeLink}>
+      <div className="w-[75vw] h-[106vw] max-w-[50vh] max-h-[70vh] md:w-[50vw] md:h-[70vw] md:max-w-[57vh] md:max-h-[80vh] relative shrink-0 rounded-t md:rounded-r-none md:rounded-l overflow-hidden z-40">
         <Image
           src={`/schedule/${image}`}
           alt="schedule"
@@ -36,7 +22,7 @@ export const Modal = ({ schedule, closeLink }: ModalProps) => {
           sizes="(max-width: 768px) 75vw, 57vh"
         />
       </div>
-      <div className="w-[75vw] max-w-[50vh] md:max-w-80 md:w-80 md:h-[80vh] bg-white font-pretendard py-2 px-3 md:px-4 md:py-4 shrink rounded-b md:rounded-l-none md:rounded-r z-40">
+      <div className="w-[75vw] max-w-[50vh] md:w-80 md:max-w-80 md:h-[70vw] md:max-h-[80vh] bg-white font-pretendard py-2 px-3 md:px-4 md:py-4 shrink rounded-b md:rounded-l-none md:rounded-r z-40">
         <p className="text-lg font-semibold">{title}</p>
         <p className="text-sm -mt-1 md:mt-0 mb-1 md:mb-2">{dateText}</p>
         {text.map((t, idx) => (
@@ -50,6 +36,6 @@ export const Modal = ({ schedule, closeLink }: ModalProps) => {
           ))}
         </div>
       </div>
-    </div>
+    </Modal>
   );
 };
