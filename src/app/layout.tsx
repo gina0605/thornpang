@@ -22,6 +22,11 @@ const pyeongchang = localFont({
   variable: "--font-pyeongchang",
 });
 
+const yuniverse = localFont({
+  src: [{ path: "../font/YUniverse-B00.otf", weight: "400", style: "normal" }],
+  variable: "--font-yuniverse",
+});
+
 const pretendard = localFont({
   src: [
     {
@@ -81,7 +86,7 @@ export default ({
   return (
     <html
       lang="ko"
-      className={`${sunbatang.variable} ${pyeongchang.variable} ${pretendard.variable}`}
+      className={`${sunbatang.variable} ${pyeongchang.variable} ${pretendard.variable} ${yuniverse.variable}`}
     >
       <head>
         <link
@@ -121,9 +126,7 @@ export default ({
                 priority
               />
             </Link>
-            <p className="text-sm font-sunbatang font-light -mt-0.5">
-              팬사이트 by 어떤 쏜팡이
-            </p>
+            <p className="font-yuniverse -mt-0.5">팬사이트 by 어떤 쏜팡이</p>
           </div>
           <div className="flex w-full h-10 justify-center border border-slate-200">
             <div className="flex w-full max-w-4xl items-center">

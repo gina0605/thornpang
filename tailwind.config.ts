@@ -26,6 +26,7 @@ const config: Config = {
         sunbatang: ["var(--font-sunbatang)", "serif"],
         pyeongchang: ["var(--font-pyeongchang)", "sans-serif"],
         pretendard: ["var(--font-pretendard)", "sans-serif"],
+        yuniverse: ["var(--font-yuniverse)", "sans-serif"],
       },
       transitionProperty: {
         appear: "opacity translate",
