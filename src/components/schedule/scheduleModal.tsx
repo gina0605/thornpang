@@ -1,6 +1,6 @@
 import Image from "next/image";
 import { Schedule } from "@/types";
-import { Modal } from "@/components/common/modal";
+import { ServerModal } from "@/components/common/serverModal";
 
 export interface ScheduleModalProps {
   schedule: Schedule;
@@ -10,7 +10,7 @@ export interface ScheduleModalProps {
 export const ScheduleModal = ({ schedule, closeLink }: ScheduleModalProps) => {
   const { image, title, dateText, text, links } = schedule;
   return (
-    <Modal closeLink={closeLink}>
+    <ServerModal closeLink={closeLink}>
       <div className="w-[75vw] h-[106vw] max-w-[50vh] max-h-[70vh] md:w-[50vw] md:h-[70vw] md:max-w-[57vh] md:max-h-[80vh] relative shrink-0 rounded-t md:rounded-r-none md:rounded-l overflow-hidden z-40">
         <Image
           src={`/schedule/${image}`}
@@ -36,6 +36,6 @@ export const ScheduleModal = ({ schedule, closeLink }: ScheduleModalProps) => {
           ))}
         </div>
       </div>
-    </Modal>
+    </ServerModal>
   );
 };

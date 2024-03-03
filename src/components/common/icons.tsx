@@ -15,3 +15,17 @@ export const Chevron = ({ direction, className, size = 24 }: ChevronProps) => (
     className={className}
   />
 );
+
+export interface XProps {
+  size?: number;
+}
+
+export const X = ({ size = 36 }: XProps) => (
+  <Image
+    src="/icon/x.svg"
+    width={size}
+    height={size}
+    className="top-2 right-2 fixed z-40"
+    alt="close button"
+  />
+);

@@ -1,12 +1,12 @@
-import Image from "next/image";
 import Link from "next/link";
+import { X } from "./icons";
 
-export interface ModalProps {
+export interface ServerModalProps {
   children: React.ReactNode;
   closeLink: string;
 }
 
-export const Modal = ({ children, closeLink }: ModalProps) => (
+export const ServerModal = ({ children, closeLink }: ServerModalProps) => (
   <div className="fixed inset-0 bg-black/65 flex items-center justify-center flex-col md:flex-row overflow-y-auto z-30">
     <Link
       className="fixed inset-0 z-30 cursor-default"
@@ -14,13 +14,7 @@ export const Modal = ({ children, closeLink }: ModalProps) => (
       scroll={false}
     />
     <Link href={closeLink} scroll={false}>
-      <Image
-        src="/icon/x.svg"
-        width={36}
-        height={36}
-        className="top-2 right-2 fixed z-40"
-        alt="close button"
-      />
+      <X />
     </Link>
     {children}
   </div>

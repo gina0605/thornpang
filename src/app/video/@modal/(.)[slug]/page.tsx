@@ -1,5 +1,6 @@
-import { VideoModal } from "@/components/video/videoModal";
 import { Video } from "@/types";
+import { VideoModal } from "@/components/video/videoModal";
+import { ClientModal } from "@/components/common/clientModal";
 import data from "@/data/video";
 
 interface PageParams {
@@ -9,5 +10,9 @@ interface PageParams {
 export default ({ params: { slug } }: { params: PageParams }) => {
   const video = data.find((v) => v.slug === slug) as Video;
 
-  return <VideoModal video={video} closeLink="/" />;
+  return (
+    <ClientModal>
+      <VideoModal video={video} />
+    </ClientModal>
+  );
 };
