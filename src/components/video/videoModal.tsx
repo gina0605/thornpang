@@ -15,8 +15,8 @@ export const VideoModal = ({ video }: VideoModalProps) => {
   ];
 
   return (
-    <div className="w-full h-full max-h-[80vh] overflow-hidden flex flex-col items-center justify-center">
-      <DivUnclick className="w-[85vw] h-[48vw] max-w-[89vh] max-h-[50vh] relative shrink-0 rounded-t overflow-hidden z-40">
+    <div className="w-full h-full max-h-[80vh] flex flex-col items-center justify-center">
+      <DivUnclick className="w-[85vw] h-[48vw] max-w-[71vh] max-h-[40vh] relative shrink-0 rounded-t overflow-hidden z-40">
         <Image
           src={`/video/${thumbnail}`}
           alt="thumbnail"
@@ -27,7 +27,7 @@ export const VideoModal = ({ video }: VideoModalProps) => {
           sizes="(max-width: 768px) 75vw, 89vh"
         />
       </DivUnclick>
-      <DivUnclick className="w-[85vw] max-w-[89vh] bg-white font-pretendard px-4 py-3 shrink rounded-b z-40 overflow-y-auto">
+      <DivUnclick className="w-[85vw] max-w-[71vh] bg-white font-pretendard px-4 py-3 shrink rounded-b z-40 overflow-y-auto">
         <ModalBody
           title={`${title} - ${subtitle}`}
           date={date}

@@ -15,6 +15,7 @@ export const Row = ({
     <Link
       className="w-full flex items-start px-1.5 md:px-0 py-1 md:py-2 border-b border-slate-300"
       href={`/video/${slug}`}
+      scroll={false}
     >
       <div className="w-32 md:w-40 h-18 md:h-[90px] relative shrink-0">
         <Image
