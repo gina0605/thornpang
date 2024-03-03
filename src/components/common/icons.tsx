@@ -25,7 +25,7 @@ export const X = ({ size = 36 }: XProps) => (
     src="/icon/x.svg"
     width={size}
     height={size}
-    className="top-2 right-2 fixed z-40"
+    className="top-2 right-2 fixed z-40 cursor-pointer"
     alt="close button"
   />
 );

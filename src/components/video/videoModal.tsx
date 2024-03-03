@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { Video } from "@/types";
+import { DivUnclick } from "../common/divUnclick";
 
 export interface VideoModalProps {
   video: Video;
@@ -12,7 +13,7 @@ export const VideoModal = ({ video }: VideoModalProps) => {
 
   return (
     <div className="w-full h-full flex flex-col items-center justify-center">
-      <div className="w-[75vw] h-[42vw] max-w-[89vh] max-h-[50vh] relative shrink-0 rounded-t overflow-hidden z-40">
+      <DivUnclick className="w-[75vw] h-[42vw] max-w-[89vh] max-h-[50vh] relative shrink-0 rounded-t overflow-hidden z-40">
         <Image
           src={`/video/${thumbnail}`}
           alt="thumbnail"
@@ -22,8 +23,8 @@ export const VideoModal = ({ video }: VideoModalProps) => {
           className="object-fill"
           sizes="(max-width: 768px) 75vw, 89vh"
         />
-      </div>
-      <div className="w-[75vw] max-w-[89vh] bg-white font-pretendard py-2 px-3 shrink rounded-b z-40">
+      </DivUnclick>
+      <DivUnclick className="w-[75vw] max-w-[89vh] bg-white font-pretendard py-2 px-3 shrink rounded-b z-40">
         <p className="text-lg font-semibold">
           {title} - {subtitle}
         </p>
@@ -37,7 +38,7 @@ export const VideoModal = ({ video }: VideoModalProps) => {
         <a className="underline" target="_blank" href={link}>
           링크
         </a>
-      </div>
+      </DivUnclick>
     </div>
   );
 };
