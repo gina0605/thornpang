@@ -6,7 +6,7 @@ import { useEffect, useMemo, useRef, useState } from "react";
 export const Dday = () => {
   const [cnt, setCnt] = useState(0);
   const timer = useRef<NodeJS.Timeout | undefined>(undefined);
-  const result = Math.floor((Date.now() - 1261580400000) / 86400000);
+  const result = Math.floor((Date.now() - 1261580400000) / 86400000) + 1; // 1261580400000 is 2009.12.24 00:00 (KST)
   const [activated, setActivated] = useState(false);
 
   const onIntersect = useMemo(() => () => setActivated(true), []);
