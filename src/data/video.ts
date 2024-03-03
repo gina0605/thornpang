@@ -46,8 +46,8 @@ const genie = (link: string) => ({ text: "지니", link });
 const data: Video[] = [
   {
     title: "불구경 2022",
-    slug: "fire2022",
-    thumbnail: "2022_fire_live.webp",
+    slug: "2022-fire-live",
+    thumbnail: "2022_fire_live.jpg",
     subtitle: "라이브 콘서트 필름",
     setlist: [
       "The Whale",
@@ -75,8 +75,8 @@ const data: Video[] = [
   },
   {
     title: "불구경 2023",
-    slug: "fire2023-peter",
-    thumbnail: "2023_fire_peter.webp",
+    slug: "2023-fire-peter",
+    thumbnail: "2023_fire_peter.jpg",
     subtitle: "빨간 피터 POV",
     setlist: ["빨간 피터"],
     info: ["라이브", "불구경 2023", "POV"],

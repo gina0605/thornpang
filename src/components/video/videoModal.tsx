@@ -23,7 +23,7 @@ export const VideoModal = ({ video }: VideoModalProps) => {
           fill
           placeholder="blur"
           blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mPU2wQAARQA4liArccAAAAASUVORK5CYII="
-          className="object-fill"
+          className="object-cover"
           sizes="(max-width: 768px) 75vw, 89vh"
         />
       </DivUnclick>
