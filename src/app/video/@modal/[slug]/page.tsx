@@ -3,9 +3,6 @@ import { ServerModal } from "@/components/common/serverModal";
 import { VideoModal } from "@/components/video/videoModal";
 import data from "@/data/video";
 
-export const generateStaticParams = () => data.map(({ slug }) => ({ slug }));
-export const dynamicParams = false;
-
 interface PageParams {
   slug: string;
 }
