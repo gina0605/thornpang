@@ -44,11 +44,11 @@ export default ({
   };
 
   return (
-    <main className="w-full flex flex-col items-center">
+    <>
       <VideoSearchBar search={search} target={target} />
       <div className="w-full max-w-5xl flex flex-col md:px-1.5">
         {data.map((v) => (match(v) ? <Row video={v} key={v.link} /> : null))}
       </div>
-    </main>
+    </>
   );
 };

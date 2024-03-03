@@ -1,8 +1,5 @@
 import { MonthSelecter } from "@/components/schedule/monthSelecter";
-import data, { minYear, maxYear } from "@/data/schedule";
-
-const getSchedules = (year: number, month: number) =>
-  (data[year] ?? {})[month] ?? [];
+import { minYear, maxYear } from "@/data/schedule";
 
 export default ({
   children,

@@ -2,19 +2,19 @@ import Image from "next/image";
 import { Schedule } from "@/types";
 import { Modal } from "@/components/common/modal";
 
-export interface ModalProps {
+export interface ScheduleModalProps {
   schedule: Schedule;
   closeLink: string;
 }
 
-export const ScheduleModal = ({ schedule, closeLink }: ModalProps) => {
+export const ScheduleModal = ({ schedule, closeLink }: ScheduleModalProps) => {
   const { image, title, dateText, text, links } = schedule;
   return (
     <Modal closeLink={closeLink}>
       <div className="w-[75vw] h-[106vw] max-w-[50vh] max-h-[70vh] md:w-[50vw] md:h-[70vw] md:max-w-[57vh] md:max-h-[80vh] relative shrink-0 rounded-t md:rounded-r-none md:rounded-l overflow-hidden z-40">
         <Image
           src={`/schedule/${image}`}
-          alt="schedule"
+          alt="poster"
           fill
           placeholder="blur"
           blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mPU2wQAARQA4liArccAAAAASUVORK5CYII="

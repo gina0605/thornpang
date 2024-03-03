@@ -25,6 +25,7 @@ export interface Schedule {
 
 export interface Video {
   title: string;
+  slug: string;
   thumbnail: string;
   subtitle: string;
   setlist: string[];

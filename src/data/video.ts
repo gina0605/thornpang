@@ -41,6 +41,7 @@ export const replaceLogic = [
 const data: Video[] = [
   {
     title: "불구경 2022",
+    slug: "fire2022",
     thumbnail: "2022_fire_live.webp",
     subtitle: "라이브 콘서트 필름",
     setlist: [
@@ -69,6 +70,7 @@ const data: Video[] = [
   },
   {
     title: "불구경 2023",
+    slug: "fire2023-peter",
     thumbnail: "2023_fire_peter.webp",
     subtitle: "빨간 피터 POV",
     setlist: ["빨간 피터"],
