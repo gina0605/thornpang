@@ -25,14 +25,14 @@ export const ModalBody = ({ title, date, content, links }: ModalBodyProps) => (
           target="_blank"
           href={link}
           key={idx}
-          className="flex hover:bg-slate-100 rounded-sm px-1 w-fit -ml-1"
+          className="flex hover:bg-slate-100 rounded-sm px-1 w-fit -ml-1 items-center"
         >
           <Image
             src="/icon/link.svg"
             alt="link"
             width={16}
             height={16}
-            className="mr-1"
+            className="w-4 h-4 mr-1"
           />
           <p>{text}</p>
         </a>

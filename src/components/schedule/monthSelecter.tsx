@@ -13,11 +13,11 @@ interface ArrowButtonProps {
 
 const ArrowButton = ({ direction, link }: ArrowButtonProps) =>
   link ? (
-    <Link href={link}>
-      <Chevron direction={direction} className="h-full" />
+    <Link href={link} className="h-full flex items-center">
+      <Chevron direction={direction} className="w-6 h-6" />
     </Link>
   ) : (
-    <Chevron direction={direction} className="h-full opacity-30" />
+    <Chevron direction={direction} className="w-6 h-6 opacity-30" />
   );
 
 export interface MonthSelecterProps {
@@ -46,7 +46,7 @@ export const MonthSelecter = ({ minYear, maxYear }: MonthSelecterProps) => {
   }, []);
 
   return (
-    <div className="w-full max-w-xl px-4 h-14 flex justify-between font-pyeongchang text-xl font-bold">
+    <div className="w-full max-w-xl px-4 h-14 flex items-center justify-between font-pyeongchang text-xl font-bold">
       <ArrowButton
         direction="left"
         link={
