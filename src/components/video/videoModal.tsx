@@ -33,10 +33,22 @@ export const VideoModal = ({ video }: VideoModalProps) => {
         <p>{setlistText}</p>
         <p className="text-sm text-slate-500 mt-2 -mb-1 md:-mb-0.5">정보</p>
         <p>{infoText}</p>
-        <div className="flex text-slate-500 space-x-2 mt-2">
+        <div className="text-slate-500 mt-2 -ml-1 space-y-1">
           {links.map(({ text, link }) => (
-            <a className="underline" target="_blank" href={link} key={link}>
-              {text}
+            <a
+              target="_blank"
+              href={link}
+              key={link}
+              className="flex hover:bg-slate-100 rounded-sm px-1 w-fit"
+            >
+              <Image
+                src="/icon/link.svg"
+                alt="link"
+                width={16}
+                height={16}
+                className="mr-1"
+              />
+              <p>{text}</p>
             </a>
           ))}
         </div>
