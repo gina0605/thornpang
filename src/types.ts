@@ -19,7 +19,6 @@ export interface Schedule {
   image: string;
   title: string;
   dateText: string;
-  location: string;
   setlist: string;
   links: { text: string; link: string }[];
 }

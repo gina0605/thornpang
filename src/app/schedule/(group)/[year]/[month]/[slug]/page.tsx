@@ -40,11 +40,8 @@ export const generateMetadata = ({
 }: {
   params: PageParams;
 }) => {
-  const { title, dateText, location, setlist } = getSchedule(year, month, slug);
-  return createMetadata(
-    title,
-    `${dateText} · 장소: ${location} · 셋리스트: ${setlist}`
-  );
+  const { title, dateText, setlist } = getSchedule(year, month, slug);
+  return createMetadata(title, `${dateText} · 셋리스트: ${setlist}`);
 };
 
 export default ({ params: { year, month, slug } }: { params: PageParams }) => {
