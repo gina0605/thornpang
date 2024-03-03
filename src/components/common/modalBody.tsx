@@ -19,7 +19,7 @@ export const ModalBody = ({ title, date, content, links }: ModalBodyProps) => (
         <p>{text}</p>
       </>
     ))}
-    <div className="flex flex-col mt-3 space-y-0.5 text-slate-500">
+    <div className="flex flex-col mt-2 pt-2 space-y-0.5 text-slate-500 border-slate-300 border-t">
       {links.map(({ text, link }) => (
         <a
           target="_blank"
