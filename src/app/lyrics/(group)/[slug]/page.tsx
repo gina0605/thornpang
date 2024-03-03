@@ -2,9 +2,7 @@ import { Song } from "@/types";
 import { createMetadata } from "@/common/seo";
 import data from "@/data/lyrics";
 
-export const generateStaticParams = () =>
-  data.map((song: Song) => ({ slug: song.slug }));
-
+export const generateStaticParams = () => data.map(({ slug }) => ({ slug }));
 export const dynamicParams = false;
 
 interface PageParams {

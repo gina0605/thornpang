@@ -1,6 +1,15 @@
 import { createMetadata } from "@/common/seo";
+import { flatten, range } from "@/common/utils";
 import { Calendar } from "@/components/schedule/calendar";
-import data, { holidays } from "@/data/schedule";
+import data, { holidays, maxYear, minYear } from "@/data/schedule";
+
+export const generateStaticParams = () =>
+  flatten(
+    range(maxYear - minYear + 1, minYear).map((y) =>
+      range(12, 1).map((m) => ({ year: y.toString(), month: m.toString() }))
+    )
+  );
+export const dynamicParams = false;
 
 const getSchedules = (year: number, month: number) =>
   (data[year] ?? {})[month] ?? [];
