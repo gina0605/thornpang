@@ -7,6 +7,7 @@ import { ScheduleLoader } from "@/components/common/scheduleLoader";
 
 const sunbatang = localFont({
   src: [
+    { path: "../font/SunBatang-Light.otf", weight: "300", style: "normal" },
     { path: "../font/SunBatang-Medium.otf", weight: "400", style: "normal" },
     { path: "../font/SunBatang-Bold.otf", weight: "700", style: "normal" },
   ],
@@ -27,6 +28,11 @@ const yuniverse = localFont({
 
 const pretendard = localFont({
   src: [
+    {
+      path: "../font/Pretendard-Light.woff2",
+      weight: "300",
+      style: "normal",
+    },
     {
       path: "../font/Pretendard-Regular.subset.woff2",
       weight: "400",
