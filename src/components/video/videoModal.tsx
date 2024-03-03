@@ -7,9 +7,9 @@ export interface VideoModalProps {
 }
 
 export const VideoModal = ({ video }: VideoModalProps) => {
-  const { title, thumbnail, subtitle, setlist, info, link, date } = video;
+  const { title, thumbnail, subtitle, setlist, info, links, date } = video;
   const setlistText = setlist.join(", ");
-  const infoText = info.join(" / ");
+  const infoText = info.join(", ");
 
   return (
     <div className="w-full h-full flex flex-col items-center justify-center">
@@ -33,11 +33,17 @@ export const VideoModal = ({ video }: VideoModalProps) => {
           {"<"}셋리스트{">"}
         </p>
         <p>{setlistText}</p>
-        <p>정보</p>
+        <p className="mt-1">
+          {"<"}정보{">"}
+        </p>
         <p>{infoText}</p>
-        <a className="underline" target="_blank" href={link}>
-          링크
-        </a>
+        <div className="flex text-slate-500 space-x-2 mt-1">
+          {links.map(({ text, link }) => (
+            <a className="underline" target="_blank" href={link} key={link}>
+              {text}
+            </a>
+          ))}
+        </div>
       </DivUnclick>
     </div>
   );

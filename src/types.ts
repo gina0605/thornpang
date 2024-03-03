@@ -30,6 +30,6 @@ export interface Video {
   subtitle: string;
   setlist: string[];
   info: string[];
-  link: string;
+  links: { text: string; link: string }[];
   date: string;
 }

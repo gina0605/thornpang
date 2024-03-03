@@ -38,6 +38,11 @@ export const replaceLogic = [
   },
 ];
 
+const yt = (link: string) => ({ text: "유튜브", link });
+const melon = (link: string) => ({ text: "멜론", link });
+const fb = (link: string) => ({ text: "페이스북", link });
+const genie = (link: string) => ({ text: "지니", link });
+
 const data: Video[] = [
   {
     title: "불구경 2022",
@@ -65,7 +70,7 @@ const data: Video[] = [
       "은하 (피아노 버전)",
     ],
     info: ["불구경 2022", "라이브 콘서트 필름"],
-    link: "https://www.youtube.com/watch?v=M3DnmCFHB6o",
+    links: [yt("https://www.youtube.com/watch?v=M3DnmCFHB6o")],
     date: "2024.02.09",
   },
   {
@@ -75,7 +80,7 @@ const data: Video[] = [
     subtitle: "빨간 피터 POV",
     setlist: ["빨간 피터"],
     info: ["라이브", "불구경 2023", "POV"],
-    link: "https://www.youtube.com/watch?v=gEHLMNn8WT0",
+    links: [yt("https://www.youtube.com/watch?v=gEHLMNn8WT0")],
     date: "2024.01.26",
   },
 ];
