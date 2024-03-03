@@ -9,8 +9,13 @@ export interface ScheduleModalProps {
 }
 
 export const ScheduleModal = ({ schedule, closeLink }: ScheduleModalProps) => {
-  const { image, imageSquare, title, dateText, setlist, links } = schedule;
-  const content = [{ subtitle: "셋리스트", text: setlist }];
+  const { image, imageSquare, title, dateText, location, setlist, links } =
+    schedule;
+  const content = [
+    { subtitle: "장소", text: location },
+    { subtitle: "셋리스트", text: setlist },
+  ];
+
   return (
     <ServerModal closeLink={closeLink}>
       <div className="md:hidden w-[80vw] h-[80vw] max-w-[50vh] max-h-[50vh] relative shrink-0 rounded-t overflow-hidden z-40 bg-black/70">
