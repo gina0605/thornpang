@@ -28,16 +28,12 @@ export const VideoModal = ({ video }: VideoModalProps) => {
         <p className="text-lg font-semibold">
           {title} - {subtitle}
         </p>
-        <p className="text-sm -mt-1 md:mt-0 mb-1 md:mb-2">{date}</p>
-        <p>
-          {"<"}셋리스트{">"}
-        </p>
+        <p className="text-sm -mt-1 md:mt-0">{date}</p>
+        <p className="text-sm text-slate-500 mt-2 -mb-1 md:-mb-0.5">곡명</p>
         <p>{setlistText}</p>
-        <p className="mt-1">
-          {"<"}정보{">"}
-        </p>
+        <p className="text-sm text-slate-500 mt-2 -mb-1 md:-mb-0.5">정보</p>
         <p>{infoText}</p>
-        <div className="flex text-slate-500 space-x-2 mt-1">
+        <div className="flex text-slate-500 space-x-2 mt-2">
           {links.map(({ text, link }) => (
             <a className="underline" target="_blank" href={link} key={link}>
               {text}
