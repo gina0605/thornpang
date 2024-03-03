@@ -7,8 +7,7 @@ import { ScheduleLoader } from "@/components/common/scheduleLoader";
 
 const sunbatang = localFont({
   src: [
-    { path: "../font/SunBatang-Light.otf", weight: "300", style: "normal" },
-    { path: "../font/SunBatang-Medium.otf", weight: "500", style: "normal" },
+    { path: "../font/SunBatang-Medium.otf", weight: "400", style: "normal" },
     { path: "../font/SunBatang-Bold.otf", weight: "700", style: "normal" },
   ],
   variable: "--font-sunbatang",
@@ -29,48 +28,13 @@ const yuniverse = localFont({
 const pretendard = localFont({
   src: [
     {
-      path: "../font/Pretendard-Thin.subset.woff2",
-      weight: "100",
-      style: "normal",
-    },
-    {
-      path: "../font/Pretendard-ExtraLight.subset.woff2",
-      weight: "200",
-      style: "normal",
-    },
-    {
-      path: "../font/Pretendard-Light.subset.woff2",
-      weight: "300",
-      style: "normal",
-    },
-    {
       path: "../font/Pretendard-Regular.subset.woff2",
       weight: "400",
       style: "normal",
     },
     {
-      path: "../font/Pretendard-Medium.subset.woff2",
-      weight: "500",
-      style: "normal",
-    },
-    {
       path: "../font/Pretendard-SemiBold.subset.woff2",
       weight: "600",
-      style: "normal",
-    },
-    {
-      path: "../font/Pretendard-Bold.subset.woff2",
-      weight: "700",
-      style: "normal",
-    },
-    {
-      path: "../font/Pretendard-ExtraBold.subset.woff2",
-      weight: "800",
-      style: "normal",
-    },
-    {
-      path: "../font/Pretendard-Black.subset.woff2",
-      weight: "900",
       style: "normal",
     },
   ],
@@ -111,7 +75,7 @@ export default ({
         <meta name="theme-color" content="#ffffff" />
       </head>
       <ScheduleLoader />
-      <body className="bg-white">
+      <body className="bg-white font-normal">
         <header className="flex flex-col w-screen prevent-select">
           <div className="bg-black flex flex-col items-center h-20 p-2 text-white text-center">
             <Link href="/">
