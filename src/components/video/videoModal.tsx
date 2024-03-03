@@ -33,7 +33,7 @@ export const VideoModal = ({ video }: VideoModalProps) => {
         <p>{setlistText}</p>
         <p className="text-sm text-slate-500 mt-2 -mb-1 md:-mb-0.5">정보</p>
         <p>{infoText}</p>
-        <div className="text-slate-500 mt-2 pt-2 space-y-0.5 border-t border-slate-500 border-dotted">
+        <div className="flex flex-col mt-2 pt-2 space-y-0.5 border-t border-slate-300 text-slate-500">
           {links.map(({ text, link }) => (
             <a
               target="_blank"
