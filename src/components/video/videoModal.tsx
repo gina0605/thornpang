@@ -12,7 +12,7 @@ export const VideoModal = ({ video }: VideoModalProps) => {
 
   return (
     <div className="w-full h-full flex flex-col items-center justify-center">
-      <div className="w-[75vw] h-[106vw] max-w-[50vh] max-h-[70vh] relative shrink-0 rounded-t overflow-hidden z-40">
+      <div className="w-[75vw] h-[42vw] max-w-[89vh] max-h-[50vh] relative shrink-0 rounded-t overflow-hidden z-40">
         <Image
           src={`/video/${thumbnail}`}
           alt="thumbnail"
@@ -20,15 +20,17 @@ export const VideoModal = ({ video }: VideoModalProps) => {
           placeholder="blur"
           blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mPU2wQAARQA4liArccAAAAASUVORK5CYII="
           className="object-fill"
-          sizes="(max-width: 768px) 75vw, 50vh"
+          sizes="(max-width: 768px) 75vw, 89vh"
         />
       </div>
-      <div className="w-[75vw] max-w-[50vh] bg-white font-pretendard py-2 px-3 shrink rounded-b z-40">
+      <div className="w-[75vw] max-w-[89vh] bg-white font-pretendard py-2 px-3 shrink rounded-b z-40">
         <p className="text-lg font-semibold">
           {title} - {subtitle}
         </p>
         <p className="text-sm -mt-1 md:mt-0 mb-1 md:mb-2">{date}</p>
-        <p>셋리스트</p>
+        <p>
+          {"<"}셋리스트{">"}
+        </p>
         <p>{setlistText}</p>
         <p>정보</p>
         <p>{infoText}</p>
