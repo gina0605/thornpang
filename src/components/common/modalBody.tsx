@@ -10,7 +10,7 @@ export interface ModalBodyProps {
 export const ModalBody = ({ title, date, content, links }: ModalBodyProps) => (
   <>
     <p className="text-lg font-semibold">{title}</p>
-    <p className="text-sm -mt-1 -mb-0.5 md:my-0">{date}</p>
+    <p className="text-sm -mt-1 -mb-0.5 md:-mt-0.5 md:mb-0">{date}</p>
     {content.map(({ subtitle, text }) => (
       <>
         <p className="text-sm text-slate-500 mt-2 -mb-1 md:-mb-0.5">
@@ -19,7 +19,7 @@ export const ModalBody = ({ title, date, content, links }: ModalBodyProps) => (
         <p>{text}</p>
       </>
     ))}
-    <div className="grid grid-cols-2 mt-2 pt-3 pb-1 space-y-0.5 text-slate-500 border-slate-300 border-t">
+    <div className="flex flex-col mt-3 pt-3 pb-1 space-y-0.5 text-slate-500 border-slate-300 border-t">
       {links.map(({ text, link }, idx) => (
         <a
           target="_blank"
