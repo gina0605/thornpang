@@ -17,6 +17,7 @@ export interface Schedule {
   slug: string;
   dates: number[];
   image: string;
+  imageSquare?: string;
   title: string;
   dateText: string;
   setlist: string;
