@@ -1,3 +1,6 @@
-export const generateStaticParams = () => [{ slug: "fire2022" }];
+import data from "@/data/video";
+
+export const generateStaticParams = () => data.map(({ slug }) => ({ slug }));
+export const dynamicParams = false;
 
 export default () => <></>;
