@@ -20,8 +20,8 @@ export interface Schedule {
   imageSquare?: string;
   title: string;
   dateText: string;
-  location: string;
-  setlist: string;
+  location: string[];
+  setlist: string[];
   links: { text: string; link: string }[];
 }
 

@@ -3,7 +3,7 @@ import Image from "next/image";
 export interface ModalBodyProps {
   title: string;
   date: string;
-  content: { subtitle: string; text: string }[];
+  content: { subtitle: string; text: string[] }[];
   links: { text: string; link: string }[];
 }
 

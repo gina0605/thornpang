@@ -30,8 +30,8 @@ const data: { [key: number]: { [key: number]: Schedule[] } } = {
         title: "어쩌다 페스티벌",
         image: "202403_suddenly.jpeg",
         dateText: "2024.03.17",
-        location: "부산 소향씨어터 신한카드홀",
-        setlist: "-",
+        location: ["부산 소향씨어터 신한카드홀"],
+        setlist: ["-"],
         links: [
           {
             text: "인스타 공지",
