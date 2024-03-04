@@ -3,6 +3,9 @@ import { Video } from "@/types";
 export const replaceLogic = [
   { pattern: /언플러그드|unplug[^\s]*|acous[^\s]*/g, result: "어쿠" },
   { pattern: /doc[^\s]*/g, result: "다큐" },
+  { pattern: /piano/g, result: "피아노" },
+  { pattern: /버전|ver[^\s]+/g, result: "ver" },
+  { pattern: /데모/g, result: "demo" },
   { pattern: /(^|[^\d])(\d\d)년/g, result: "$120$2" },
   { pattern: /(\d\d\d\d)년/g, result: "$1" },
   { pattern: /오시/g, result: "오렌지의" },
@@ -67,7 +70,7 @@ const data: Video[] = [
       "빨간 피터",
       "시퍼런 봄",
       "이유",
-      "은하 (피아노 버전)",
+      "은하 (피아노 ver.)",
     ],
     info: ["불구경 2022", "라이브 콘서트 필름"],
     links: [yt("https://www.youtube.com/watch?v=M3DnmCFHB6o")],
