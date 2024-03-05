@@ -53,7 +53,7 @@ export default ({
   const filtered: Line[] = getFiltered();
 
   return (
-    <main className="w-screen flex flex-col items-center">
+    <main className="w-screen min-h-full-body flex flex-col items-center">
       <LyricsSearchBar param={param} />
       <div className="flex flex-col w-full">
         {param

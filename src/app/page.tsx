@@ -15,7 +15,7 @@ export default async () => {
   const data = await readJson("/src/data/profile.json");
 
   return (
-    <main className="w-screen flex flex-col items-center">
+    <main className="w-screen min-h-full-body flex flex-col items-center">
       <div className="w-full bg-gradient-to-b from-white to-gray-pfp flex flex-col items-center pb-8">
         <div className="w-full max-w-5xl">
           <AppleProfile />
