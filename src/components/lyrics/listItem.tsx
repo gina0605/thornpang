@@ -1,4 +1,4 @@
-import { ReactElement } from "react";
+import { ReactElement, RefObject } from "react";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -9,6 +9,7 @@ export interface ListItemProps {
   slug: string;
   className?: string;
   linkClassName?: string;
+  scrollRef?: RefObject<HTMLDivElement>;
 }
 
 export const ListItem = ({
@@ -18,6 +19,7 @@ export const ListItem = ({
   slug,
   className,
   linkClassName,
+  scrollRef,
 }: ListItemProps) => {
   let bgColor;
   if (album === "1") bgColor = "to-stammer";
@@ -29,6 +31,7 @@ export const ListItem = ({
   return (
     <div
       className={`w-full h-14 md:h-17 flex justify-center relative ${className} overflow-x-hidden`}
+      ref={scrollRef}
     >
       <div
         className={`absolute top-0 bottom-0 left-0 w-4 md:w-[calc(50vw_-_380px)] bg-gradient-to-l opacity-20 md:opacity-30 from-white ${bgColor}`}

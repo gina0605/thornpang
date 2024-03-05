@@ -2,7 +2,7 @@
 
 import { Song } from "@/types";
 import { ListItem } from "@/components/lyrics/listItem";
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 
 export interface SongItemProps {
   song: Song;
@@ -16,14 +16,22 @@ export const SongItem = ({
   move,
 }: SongItemProps) => {
   const [activated, setActivated] = useState(!move);
+  const ref = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     if (move) {
-      const timer = setTimeout(
-        () => setActivated(true),
-        idx * 90 - idx * idx * 0.8 - idx * idx * idx * 0.005
-      );
-      return () => clearTimeout(timer);
+      const timerFunc = (i: number) => i * 90 - i * i * 0.8 - i * i * i * 0.005;
+      if (idx <= 2) setTimeout(() => setActivated(true), timerFunc(idx));
+      else {
+        setTimeout(() => {
+          const bound = ref.current?.getBoundingClientRect();
+          const i = bound
+            ? Math.min(Math.floor(bound.top / bound.height) + 5, idx)
+            : idx;
+          console.log(i);
+          setTimeout(() => setActivated(true), Math.max(timerFunc(i) - 200, 0));
+        }, 200);
+      }
     }
   }, []);
 
@@ -47,6 +55,7 @@ export const SongItem = ({
             }`
           : ""
       }
+      scrollRef={ref}
     />
   );
 };
