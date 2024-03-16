@@ -17,8 +17,8 @@ export const ListItem = ({
   title,
   text,
   slug,
-  className,
-  linkClassName,
+  className = "",
+  linkClassName = "",
   scrollRef,
 }: ListItemProps) => {
   let bgColor;

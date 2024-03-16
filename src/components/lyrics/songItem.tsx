@@ -28,7 +28,6 @@ export const SongItem = ({
           const i = bound
             ? Math.min(Math.floor(bound.top / bound.height) + 5, idx)
             : idx;
-          console.log(i);
           setTimeout(() => setActivated(true), Math.max(timerFunc(i) - 200, 0));
         }, 200);
       }
