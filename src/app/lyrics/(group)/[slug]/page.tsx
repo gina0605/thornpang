@@ -28,7 +28,11 @@ export default ({ params: { slug } }: { params: PageParams }) => {
     <div className="w-full flex justify-center overflow-y-auto px-2">
       <div className="w-fit h-fit font-light pb-20 pt-6 md:pt-8">
         {lyrics.length ? (
-          lyrics.map((l, idx) => (l ? <p key={idx}>{l}</p> : <br key={idx} />))
+          <p>
+            {lyrics.map((l, idx) =>
+              l ? [<span>{l}</span>, <br />] : <br key={idx} />
+            )}
+          </p>
         ) : (
           <p className="text-slate-500">연주곡</p>
         )}
