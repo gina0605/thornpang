@@ -6,6 +6,7 @@ import { AppleProfile } from "@/components/profile/appleProfile";
 import { IndivProfile } from "@/components/profile/indivProfile";
 import { Timeline } from "@/components/profile/timeline";
 import { ThornProfile } from "@/components/profile/thornProfile";
+import { ExProfile } from "@/components/profile/exProfile";
 
 export const metadata = createMetadata(
   "",
@@ -72,6 +73,11 @@ export default async () => {
             key={idx}
           />
         ))}
+        <div className="flex w-full max-w-2xl px-6 justify-around mt-8 md:mt-20">
+          <ExProfile name="심재현" session="Bass" duration="2009~2024" />
+          <ExProfile name="한승찬" session="Guitar" duration="2012~2015" />
+          <ExProfile name="오정민" session="Guitar" duration="2009~2012" />
+        </div>
         <ThornProfile />
       </div>
     </main>
