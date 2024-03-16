@@ -1,10 +1,11 @@
+import { ALBUMS } from "@/data/constant";
+import { readJson } from "@/common/serverUtils";
+import { createMetadata } from "@/common/seo";
 import { Dday } from "@/components/profile/Dday";
 import { AppleProfile } from "@/components/profile/appleProfile";
 import { IndivProfile } from "@/components/profile/indivProfile";
 import { Timeline } from "@/components/profile/timeline";
 import { ThornProfile } from "@/components/profile/thornProfile";
-import { readJson } from "@/common/serverUtils";
-import { createMetadata } from "@/common/seo";
 
 export const metadata = createMetadata(
   "",
@@ -35,19 +36,27 @@ export default async () => {
           />
           <Timeline
             date="2010.07.17"
-            text="정규 1집 [난 자꾸 말을 더듬고 잠드는 법도 잊었네] 발매"
+            text={`정규 1집 [${ALBUMS.stammer}] 발매`}
             index={2}
           />
           <Timeline
             date="2014.06.12"
-            text="정규 2집 [이상기후] 발매"
+            text={`정규 2집 [${ALBUMS.weather}] 발매`}
             index={3}
           />
-          <Timeline date="2016.05.19" text="EP [서울병] 발매" index={4} />
-          <Timeline date="2019.07.04" text="정규 3집 [계몽] 발매" index={5} />
+          <Timeline
+            date="2016.05.19"
+            text={`EP [${ALBUMS.seoul}] 발매`}
+            index={4}
+          />
+          <Timeline
+            date="2019.07.04"
+            text={`정규 3집 [${ALBUMS.enlight}] 발매`}
+            index={5}
+          />
           <Timeline
             date="2023.08.28"
-            text="EP [동물] 발매"
+            text={`EP [${ALBUMS.animal}] 발매`}
             index={6}
             isbottom
           />

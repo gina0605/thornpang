@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { useSelectedLayoutSegment } from "next/navigation";
+import { ALBUMS } from "@/data/constant";
 import { Chevron } from "../common/icons";
 import data from "@/data/lyrics";
 
@@ -14,19 +15,19 @@ export const Title = () => {
 
   let albumTitle, bgColor;
   if (album === "1") {
-    albumTitle = "난 자꾸 말을 더듬고 잠드는 법도 잊었네";
+    albumTitle = ALBUMS.stammer;
     bgColor = "from-stammer/10";
   } else if (album === "2") {
-    albumTitle = "이상기후";
+    albumTitle = ALBUMS.weather;
     bgColor = "from-weather/10";
   } else if (album === "seoul") {
-    albumTitle = "서울병";
+    albumTitle = ALBUMS.seoul;
     bgColor = "from-seoul/10";
   } else if (album === "3") {
-    albumTitle = "계몽";
+    albumTitle = ALBUMS.enlight;
     bgColor = "from-enlight/10";
   } else if (album === "animal") {
-    albumTitle = "동물";
+    albumTitle = ALBUMS.animal;
     bgColor = "from-animal/10";
   }
 

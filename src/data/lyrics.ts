@@ -1,15 +1,16 @@
 import { Song } from "@/types";
+import { SONGS } from "./constant";
 
 const data: Song[] = [
   {
-    title: "피어나다",
+    title: SONGS.bloom,
     slug: "bloom",
     album: "1",
     info: "작곡 심재현",
     lyrics: [],
   },
   {
-    title: "오렌지의 시간",
+    title: SONGS.orange,
     slug: "orange",
     album: "1",
     info: "작사,작곡 윤성현",
@@ -42,7 +43,7 @@ const data: Song[] = [
     ],
   },
   {
-    title: "빨간 피터",
+    title: SONGS.peter,
     slug: "peter",
     album: "1",
     info: "작사,작곡 윤성현",
@@ -78,7 +79,7 @@ const data: Song[] = [
     ],
   },
   {
-    title: "아가미",
+    title: SONGS.gills,
     slug: "gills",
     album: "1",
     info: "작사,작곡 윤성현",
@@ -110,7 +111,7 @@ const data: Song[] = [
     ],
   },
   {
-    title: "도롱뇽",
+    title: SONGS.salamander,
     slug: "salamander",
     album: "1",
     info: "작사,작곡 윤성현",
@@ -169,7 +170,7 @@ const data: Song[] = [
     lyrics: [],
   },
   {
-    title: "너의 무리",
+    title: SONGS.mob,
     slug: "mob",
     album: "1",
     info: "작사,작곡 윤성현",
@@ -212,7 +213,7 @@ const data: Song[] = [
     ],
   },
   {
-    title: "플랑크톤",
+    title: SONGS.plankton,
     slug: "plankton",
     album: "1",
     info: "작사,작곡 윤성현",
@@ -253,7 +254,7 @@ const data: Song[] = [
     ],
   },
   {
-    title: "이유",
+    title: SONGS.reason,
     slug: "reason",
     album: "1",
     info: "작사,작곡 윤성현",
@@ -293,7 +294,7 @@ const data: Song[] = [
     ],
   },
   {
-    title: "매미는 비가 와도 운다",
+    title: SONGS.cicadas,
     slug: "cicadas",
     album: "1",
     info: "작사,작곡 윤성현",
@@ -345,7 +346,7 @@ const data: Song[] = [
     ],
   },
   {
-    title: "남극",
+    title: SONGS.antarctica,
     slug: "antarctica",
     album: "2",
     info: "작사,작곡 윤성현",
@@ -397,7 +398,7 @@ const data: Song[] = [
     ],
   },
   {
-    title: "시퍼런 봄",
+    title: SONGS.spring,
     slug: "spring",
     album: "2",
     info: "작사 윤성현 / 작곡 윤성현,심재현",
@@ -472,7 +473,7 @@ const data: Song[] = [
     ],
   },
   {
-    title: "피난",
+    title: SONGS.refuge,
     slug: "refuge",
     album: "2",
     info: "작사,작곡 윤성현",
@@ -529,7 +530,7 @@ const data: Song[] = [
     ],
   },
   {
-    title: "백치",
+    title: SONGS.idiot,
     slug: "idiot",
     album: "2",
     info: "작사,작곡 윤성현",
@@ -590,7 +591,7 @@ const data: Song[] = [
     ],
   },
   {
-    title: "살아있는 너의 밤",
+    title: SONGS.living,
     slug: "living",
     album: "2",
     info: "작사,작곡 윤성현",
@@ -640,7 +641,7 @@ const data: Song[] = [
     ],
   },
   {
-    title: "낯선 열대",
+    title: SONGS.tropics,
     slug: "tropics",
     album: "2",
     info: "작사,작곡 윤성현",
@@ -693,7 +694,7 @@ const data: Song[] = [
     ],
   },
   {
-    title: "암실",
+    title: SONGS.darkroom,
     slug: "darkroom",
     album: "2",
     info: "작사,작곡 윤성현",
@@ -713,7 +714,7 @@ const data: Song[] = [
     ],
   },
   {
-    title: "베란다",
+    title: SONGS.veranda,
     slug: "veranda",
     album: "2",
     info: "작사,작곡 윤성현",
@@ -745,7 +746,7 @@ const data: Song[] = [
     ],
   },
   {
-    title: "아지랑이",
+    title: SONGS.shimmer,
     slug: "shimmer",
     album: "2",
     info: "작사,작곡 윤성현",
@@ -800,7 +801,7 @@ const data: Song[] = [
     ],
   },
   {
-    title: "물가의 라이온",
+    title: SONGS.lion,
     slug: "lion",
     album: "2",
     info: "작사,작곡 윤성현",
@@ -865,7 +866,7 @@ const data: Song[] = [
     ],
   },
   {
-    title: "한낮",
+    title: SONGS.noon,
     slug: "noon",
     album: "seoul",
     info: "작사,작곡 윤성현",
@@ -919,7 +920,7 @@ const data: Song[] = [
     ],
   },
   {
-    title: "석류의 맛",
+    title: SONGS.pomegranate,
     slug: "pomegranate",
     album: "seoul",
     info: "작사,작곡 윤성현",
@@ -981,7 +982,7 @@ const data: Song[] = [
     ],
   },
   {
-    title: "어려운 달",
+    title: SONGS.difficult,
     slug: "difficult",
     album: "seoul",
     info: "작사,작곡 윤성현",
@@ -1034,7 +1035,7 @@ const data: Song[] = [
     ],
   },
   {
-    title: "장마전선",
+    title: SONGS.rain,
     slug: "rain",
     album: "seoul",
     info: "작사,작곡 윤성현",
@@ -1081,7 +1082,7 @@ const data: Song[] = [
     ],
   },
   {
-    title: "서울",
+    title: SONGS.seoul,
     slug: "seoul",
     album: "seoul",
     info: "작사,작곡 윤성현",
@@ -1139,7 +1140,7 @@ const data: Song[] = [
     ],
   },
   {
-    title: "마술",
+    title: SONGS.witchcraft,
     slug: "witchcraft",
     album: "3",
     info: "작사,작곡 윤성현",
@@ -1183,7 +1184,7 @@ const data: Song[] = [
     ],
   },
   {
-    title: "수성의 하루",
+    title: SONGS.mercury,
     slug: "mercury",
     album: "3",
     info: "작사 윤성현 / 작곡 윤성현,심재현",
@@ -1249,7 +1250,7 @@ const data: Song[] = [
     ],
   },
   {
-    title: "2월",
+    title: SONGS.february,
     slug: "february",
     album: "3",
     info: "작사,작곡 윤성현",
@@ -1303,7 +1304,7 @@ const data: Song[] = [
     ],
   },
   {
-    title: "로마네스크",
+    title: SONGS.romanesque,
     slug: "romanesque",
     album: "3",
     info: "작사 윤성현 / 작곡 홍동균",
@@ -1364,7 +1365,7 @@ const data: Song[] = [
     ],
   },
   {
-    title: "위에서 그러했듯이 아래에서도",
+    title: SONGS.above,
     slug: "above",
     album: "3",
     info: "작사 윤성현 / 작곡 심재현,윤성현",
@@ -1402,7 +1403,7 @@ const data: Song[] = [
     ],
   },
   {
-    title: "기린",
+    title: SONGS.kirin,
     slug: "kirin",
     album: "3",
     info: "작사,작곡 윤성현",
@@ -1441,7 +1442,7 @@ const data: Song[] = [
     ],
   },
   {
-    title: "넓은 밤",
+    title: SONGS.nightwalk,
     slug: "nightwalk",
     album: "3",
     info: "작사,작곡 윤성현",
@@ -1480,7 +1481,7 @@ const data: Song[] = [
     ],
   },
   {
-    title: "뭍",
+    title: SONGS.shore,
     slug: "shore",
     album: "3",
     info: "작사,작곡 윤성현",
@@ -1506,7 +1507,7 @@ const data: Song[] = [
     ],
   },
   {
-    title: "은하",
+    title: SONGS.galaxy,
     slug: "galaxy",
     album: "3",
     info: "작사,작곡 윤성현",
@@ -1558,7 +1559,7 @@ const data: Song[] = [
     ],
   },
   {
-    title: "검은 별",
+    title: SONGS.black,
     slug: "black",
     album: "3",
     info: "작사,작곡 윤성현",
@@ -1603,7 +1604,7 @@ const data: Song[] = [
     ],
   },
   {
-    title: "멸종",
+    title: SONGS.extinction,
     slug: "extinction",
     album: "animal",
     info: "작사,작곡 윤성현",
@@ -1666,7 +1667,7 @@ const data: Song[] = [
     ],
   },
   {
-    title: "할시온",
+    title: SONGS.halcyon,
     slug: "halcyon",
     album: "animal",
     info: "작사,작곡 윤성현",
@@ -1717,7 +1718,7 @@ const data: Song[] = [
     ],
   },
   {
-    title: "살",
+    title: SONGS.flesh,
     slug: "flesh",
     album: "animal",
     info: "작사 윤성현 / 작곡 홍동균,윤성현",
@@ -1771,7 +1772,7 @@ const data: Song[] = [
     ],
   },
   {
-    title: "파리의 왕",
+    title: SONGS.flies,
     slug: "flies",
     album: "animal",
     info: "작사 윤성현 / 작곡 심재현",
@@ -1846,7 +1847,7 @@ const data: Song[] = [
     ],
   },
   {
-    title: "게와 수돗물",
+    title: SONGS.crab,
     slug: "crab",
     album: "animal",
     info: "작사,작곡 윤성현",
