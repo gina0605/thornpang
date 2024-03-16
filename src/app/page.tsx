@@ -73,7 +73,7 @@ export default async () => {
             key={idx}
           />
         ))}
-        <div className="flex w-full max-w-2xl px-6 justify-around mt-8 md:mt-20">
+        <div className="flex w-full max-w-2xl px-6 justify-around mt-10 md:mt-26">
           <ExProfile name="심재현" session="Bass" duration="2009~2024" />
           <ExProfile name="한승찬" session="Guitar" duration="2012~2015" />
           <ExProfile name="오정민" session="Guitar" duration="2009~2012" />
