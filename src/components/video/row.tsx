@@ -29,8 +29,8 @@ export const Row = ({
         />
       </div>
       <div className="w-0 grow flex flex-col justify-center font-pretendard pr-1 pl-2 md:pl-3 pt-0.5 md:pt-2">
-        <p>{title}</p>
-        <p className="md:pb-1.5 md:pt-1">{subtitle}</p>
+        <p className="text-nowrap truncate">{title}</p>
+        <p className="md:pb-1.5 md:pt-1 text-nowrap truncate">{subtitle}</p>
         <p className="text-nowrap truncate grow text-slate-500 text-sm">
           {setlistText}
         </p>
