@@ -135,7 +135,7 @@ const data: VideoRaw[] = [
     ],
     info: [I.fire(2022), "라이브 콘서트 필름"],
     links: [yt("https://www.youtube.com/watch?v=M3DnmCFHB6o")],
-    date: "2024.02.09",
+    date: "2024. 02. 09",
   },
   {
     title: I.fire(2023),
@@ -144,7 +144,7 @@ const data: VideoRaw[] = [
     setlist: [S.peter],
     info: [I.live, I.fire(2023), "POV"],
     links: [yt("https://www.youtube.com/watch?v=gEHLMNn8WT0")],
-    date: "2024.01.26",
+    date: "2024. 01. 26",
   },
   {
     title: I.fire(2023),
@@ -152,7 +152,7 @@ const data: VideoRaw[] = [
     setlist: [S.flies, S.noon, S.mercury, S.cicadas, S.extinction],
     info: [I.live, I.fire(2023)],
     links: [yt("https://www.youtube.com/watch?v=BrPyTb65Fhc")],
-    date: "2024.1.12",
+    date: "2024. 01. 12",
   },
   {
     title: "[동물] 라이브 세션",
@@ -160,7 +160,7 @@ const data: VideoRaw[] = [
     setlist: [S.crab],
     info: ["라이브 세션"],
     links: [yt("https://www.youtube.com/watch?v=p0ewNfkvasA")],
-    date: "2023.9.22",
+    date: "2023. 09. 22",
   },
   {
     title: "[동물] 라이브 세션",
@@ -168,7 +168,7 @@ const data: VideoRaw[] = [
     setlist: [S.flesh],
     info: ["라이브 세션"],
     links: [yt("https://www.youtube.com/watch?v=QidaDWIjkxo")],
-    date: "2023.9.15",
+    date: "2023. 09. 15",
   },
   {
     title: "[동물] 라이브 세션",
@@ -176,7 +176,7 @@ const data: VideoRaw[] = [
     setlist: [S.halcyon],
     info: ["라이브 세션"],
     links: [yt("https://www.youtube.com/watch?v=v0xlhHBJWEQ")],
-    date: "2023.9.8",
+    date: "2023. 09. 08",
   },
   {
     title: "[동물] 라이브 세션",
@@ -184,7 +184,7 @@ const data: VideoRaw[] = [
     setlist: [S.flies],
     info: ["라이브 세션"],
     links: [yt("https://www.youtube.com/watch?v=1m7UuGN67S0")],
-    date: "2023.9.1",
+    date: "2023. 09. 01",
   },
   {
     title: "[동물] 라이브 세션",
@@ -192,7 +192,7 @@ const data: VideoRaw[] = [
     setlist: [S.extinction],
     info: ["라이브 세션"],
     links: [yt("https://www.youtube.com/watch?v=R7bnVUiU25k")],
-    date: "2023.8.30",
+    date: "2023. 08. 30",
   },
   {
     title: "Music Video",
@@ -200,7 +200,7 @@ const data: VideoRaw[] = [
     setlist: [S.crab],
     info: [I.mv],
     links: [yt("https://www.youtube.com/watch?v=e5Zgh8nTuQM")],
-    date: "2023.8.28",
+    date: "2023. 08. 28",
   },
   {
     title: "Music Video",
@@ -208,7 +208,7 @@ const data: VideoRaw[] = [
     setlist: [S.extinction],
     info: [I.mv],
     links: [yt("https://www.youtube.com/watch?v=aezBwpaHxD8")],
-    date: "2023.8.28",
+    date: "2023. 08. 28",
   },
   {
     title: "Teaser",
@@ -216,7 +216,7 @@ const data: VideoRaw[] = [
     setlist: [S.crab],
     info: [I.teas],
     links: [yt("https://www.youtube.com/watch?v=wV9g8tQPmHA")],
-    date: "2023.8.27",
+    date: "2023. 08. 27",
   },
   {
     title: "Teaser",
@@ -224,7 +224,7 @@ const data: VideoRaw[] = [
     setlist: [S.extinction],
     info: [I.teas],
     links: [yt("https://www.youtube.com/watch?v=7DaPiJofNuM")],
-    date: "2023.8.25",
+    date: "2023. 08. 25",
   },
   {
     title: "Official Trailer",
@@ -233,7 +233,7 @@ const data: VideoRaw[] = [
     setlist: [S.extinction, S.halcyon, S.flesh, S.flies, S.crab],
     info: [ALBUMS.animal, I.teas],
     links: [yt("https://www.youtube.com/watch?v=9n-sNfA1_oo")],
-    date: "2023.8.24",
+    date: "2023. 08. 24",
   },
   {
     title: "Teaser",
@@ -242,7 +242,7 @@ const data: VideoRaw[] = [
     setlist: [S.extinction],
     info: [ALBUMS.animal, I.teas],
     links: [yt("https://www.youtube.com/watch?v=t_ip-79a18A")],
-    date: "2023.8.11",
+    date: "2023. 08. 11",
   },
   {
     title: "검은 별 콘서트",
@@ -250,7 +250,7 @@ const data: VideoRaw[] = [
     setlist: [S.reason],
     info: [I.live, "검은 별 콘서트"],
     links: [yt("https://www.youtube.com/watch?v=f7N6cQgU9U0")],
-    date: "2023.5.12",
+    date: "2023. 05. 12",
   },
   {
     title: "검은 별 콘서트",
@@ -258,7 +258,7 @@ const data: VideoRaw[] = [
     setlist: [S.mercury, S.cicadas],
     info: [I.live, "검은 별 콘서트"],
     links: [yt("https://www.youtube.com/watch?v=Dbuskg7PpP8")],
-    date: "2023.5.5",
+    date: "2023. 05. 05",
   },
   {
     title: "검은 별 콘서트",
@@ -266,7 +266,7 @@ const data: VideoRaw[] = [
     setlist: [S.shimmer],
     info: [I.live, "검은 별 콘서트"],
     links: [yt("https://www.youtube.com/watch?v=ft8c6Chysvo")],
-    date: "2023.4.28",
+    date: "2023. 04. 28",
   },
   {
     title: I.fire(2022),
@@ -274,7 +274,7 @@ const data: VideoRaw[] = [
     setlist: [S.spring],
     info: [I.live, I.fire(2022)],
     links: [yt("https://www.youtube.com/watch?v=MXUKC6_Hg6w")],
-    date: "2023.3.24",
+    date: "2023. 03. 24",
   },
   {
     title: I.fire(2022),
@@ -283,7 +283,7 @@ const data: VideoRaw[] = [
     setlist: [S.peter],
     info: [I.fire(2022), "라이브 콘서트 필름", "예고편"],
     links: [yt("https://www.youtube.com/watch?v=j4XNfyL41KY")],
-    date: "2023.2.23",
+    date: "2023. 02. 23",
   },
   {
     title: I.fire(2022),
@@ -291,7 +291,7 @@ const data: VideoRaw[] = [
     setlist: [S.peter],
     info: [I.live, I.fire(2022)],
     links: [yt("https://www.youtube.com/watch?v=9Ubt7vZN7ook")],
-    date: "2023.1.20",
+    date: "2023. 01. 20",
   },
   {
     title: "석류의 맛 콘서트",
@@ -299,7 +299,7 @@ const data: VideoRaw[] = [
     setlist: [S.black],
     info: [I.live, "석류의 맛 콘서트"],
     links: [yt("https://www.youtube.com/watch?v=KtgaZh6AmB4")],
-    date: "2022.4.15",
+    date: "2022. 04. 15",
   },
   {
     title: "석류의 맛 콘서트",
@@ -307,7 +307,7 @@ const data: VideoRaw[] = [
     setlist: [S.nightwalk, S.tropics, S.plankton],
     info: [I.live, "석류의 맛 콘서트"],
     links: [yt("https://www.youtube.com/watch?v=pGNJuXJ9tvA")],
-    date: "2022.4.8",
+    date: "2022. 04. 08",
   },
   {
     title: "석류의 맛 콘서트",
@@ -315,7 +315,7 @@ const data: VideoRaw[] = [
     setlist: [S.galaxy],
     info: [I.live, "석류의 맛 콘서트"],
     links: [yt("https://www.youtube.com/watch?v=NCWbIRQufCE")],
-    date: "2022.4.1",
+    date: "2022. 04. 01",
   },
   {
     title: I.fire(2021),
@@ -324,7 +324,7 @@ const data: VideoRaw[] = [
     setlist: [S.whale, S.witchcraft, S.noon, S.kirin, S.refuge],
     info: [I.live, I.fire(2021)],
     links: [yt("https://www.youtube.com/watch?v=wTlomm71cOs")],
-    date: "2022.1.14",
+    date: "2022. 01. 14",
   },
   {
     title: "피카레스크",
@@ -332,7 +332,7 @@ const data: VideoRaw[] = [
     setlist: [S.february],
     info: [I.live, "피카레스크 콘서트"],
     links: [yt("https://www.youtube.com/watch?v=sn0oFGWwLbQ")],
-    date: "2021.9.9",
+    date: "2021. 09. 09",
   },
   {
     title: "피카레스크",
@@ -340,7 +340,7 @@ const data: VideoRaw[] = [
     setlist: [S.galaxy],
     info: [I.live, "피카레스크 콘서트"],
     links: [yt("https://www.youtube.com/watch?v=Cqh6Qk-Ls0o")],
-    date: "2021.9.2",
+    date: "2021. 09. 02",
   },
   {
     title: "피카레스크",
@@ -348,7 +348,7 @@ const data: VideoRaw[] = [
     setlist: [S.shore, S.black],
     info: [I.live, "피카레스크 콘서트"],
     links: [yt("https://www.youtube.com/watch?v=2QM6sI6pwIk")],
-    date: "2021.8.26",
+    date: "2021. 08. 26",
   },
   {
     title: "피카레스크",
@@ -356,7 +356,7 @@ const data: VideoRaw[] = [
     setlist: [S.above],
     info: [I.live, "피카레스크 콘서트"],
     links: [yt("https://www.youtube.com/watch?v=7885ao2y3nE")],
-    date: "2021.8.19",
+    date: "2021. 08. 19",
   },
   {
     title: "피카레스크",
@@ -364,7 +364,7 @@ const data: VideoRaw[] = [
     setlist: [S.kirin],
     info: [I.live, "피카레스크 콘서트"],
     links: [yt("https://www.youtube.com/watch?v=XdmVkbd0q-k")],
-    date: "2021.8.12",
+    date: "2021. 08. 12",
   },
   {
     title: I.fire(2020),
@@ -373,7 +373,7 @@ const data: VideoRaw[] = [
     setlist: [S.black],
     info: [I.fire(2020), I.highlight],
     links: [yt("https://www.youtube.com/watch?v=Wb3sx5Bm0vw")],
-    date: "2020.12.31",
+    date: "2020. 12. 31",
   },
   {
     title: I.fire(2020),
@@ -395,7 +395,7 @@ const data: VideoRaw[] = [
     ],
     info: [I.fire(2020), I.behind],
     links: [yt("https://www.youtube.com/watch?v=Td8GYHl808I")],
-    date: "2020.12.24",
+    date: "2020. 12. 24",
   },
   {
     title: I.fire(2020),
@@ -403,7 +403,7 @@ const data: VideoRaw[] = [
     setlist: [S.living],
     info: [I.live, I.fire(2020)],
     links: [yt("https://www.youtube.com/watch?v=HvWWnE3MK3o")],
-    date: "2020.12.8",
+    date: "2020. 12. 08",
   },
   {
     title: I.fire(2020),
@@ -411,7 +411,7 @@ const data: VideoRaw[] = [
     setlist: [S.idiot],
     info: [I.live, I.fire(2020)],
     links: [yt("https://www.youtube.com/watch?v=BgNWYni9jiI")],
-    date: "2020.11.26",
+    date: "2020. 11. 26",
   },
   {
     title: "Unplugged Live",
@@ -419,7 +419,7 @@ const data: VideoRaw[] = [
     setlist: [S.galaxy],
     info: [I.live, I.acoustic],
     links: [yt("https://www.youtube.com/watch?v=feiILsMaHBI")],
-    date: "2020.11.7",
+    date: "2020. 11. 07",
   },
   {
     title: "Unplugged Live",
@@ -428,7 +428,7 @@ const data: VideoRaw[] = [
     setlist: [`${S.cicadas} (초기 가사)`],
     info: [I.live, I.acoustic],
     links: [yt("https://www.youtube.com/watch?v=Wvi8fZP8vOI")],
-    date: "2020.11.2",
+    date: "2020. 11. 02",
   },
   {
     title: "물의 기억",
@@ -446,7 +446,7 @@ const data: VideoRaw[] = [
     ],
     info: ["물의 기억 콘서트", I.behind],
     links: [yt("https://www.youtube.com/watch?v=hJpm4fBKHXI")],
-    date: "2020.9.9",
+    date: "2020. 09. 09",
   },
   {
     title: "물의 기억",
@@ -455,7 +455,7 @@ const data: VideoRaw[] = [
     setlist: [S.shore],
     info: ["물의 기억 콘서트", I.highlight],
     links: [yt("https://www.youtube.com/watch?v=GsJVVKU3NEE")],
-    date: "2020.9.2",
+    date: "2020. 09. 02",
   },
   {
     title: "물의 기억",
@@ -463,7 +463,7 @@ const data: VideoRaw[] = [
     setlist: [S.shore, S.witchcraft],
     info: [I.live, "물의 기억 콘서트"],
     links: [yt("https://www.youtube.com/watch?v=UJrDe0pXg3M")],
-    date: "2020.7.28",
+    date: "2020. 07. 28",
   },
   {
     title: "물의 기억",
@@ -471,7 +471,7 @@ const data: VideoRaw[] = [
     setlist: [S.pomegranate],
     info: [I.live, "물의 기억 콘서트"],
     links: [yt("https://www.youtube.com/watch?v=DnfGa7wZUJY")],
-    date: "2020.7.15",
+    date: "2020. 07. 15",
   },
   {
     title: "물의 기억",
@@ -479,7 +479,7 @@ const data: VideoRaw[] = [
     setlist: [S.salamander, S.gills],
     info: [I.live, "물의 기억 콘서트"],
     links: [yt("https://www.youtube.com/watch?v=qSsO9CIUchA")],
-    date: "2020.7.8",
+    date: "2020. 07. 08",
   },
   {
     title: "미니 토크 콘서트 (with 커피)",
@@ -488,7 +488,7 @@ const data: VideoRaw[] = [
     setlist: [],
     info: ["미니 토크 콘서트", "커피", I.highlight],
     links: [yt("https://www.youtube.com/watch?v=prA0KmBbPxc")],
-    date: "2020.4.29",
+    date: "2020. 04. 29",
   },
   {
     title: "미니 토크 콘서트 (with 커피)",
@@ -497,7 +497,7 @@ const data: VideoRaw[] = [
     setlist: [S.february],
     info: [I.live, I.acoustic],
     links: [yt("https://www.youtube.com/watch?v=NuYKA3keWR0")],
-    date: "2020.4.24",
+    date: "2020. 04. 24",
   },
   {
     title: "미니 토크 콘서트 (with 커피)",
@@ -506,7 +506,7 @@ const data: VideoRaw[] = [
     setlist: [S.romanesque],
     info: [I.live, I.acoustic],
     links: [yt("https://www.youtube.com/watch?v=xfhp4_rg40o")],
-    date: "2020.4.22",
+    date: "2020. 04. 22",
   },
   {
     title: "은하 콘서트",
@@ -515,7 +515,7 @@ const data: VideoRaw[] = [
     setlist: [`${S.witchcraft} (inst.)`],
     info: [I.live, "은하 콘서트"],
     links: [yt("https://www.youtube.com/watch?v=kJ15MniZSKo")],
-    date: "2020.3.9",
+    date: "2020. 03. 09",
   },
   {
     title: `${I.east} - Taiwan`,
@@ -524,7 +524,7 @@ const data: VideoRaw[] = [
     setlist: [S.february, S.galaxy, S.whale, S.witchcraft, S.spring],
     info: [I.east, "Taiwan", I.behind],
     links: [yt("https://www.youtube.com/watch?v=N2UeB9s8bKw")],
-    date: "2020.2.24",
+    date: "2020. 02. 24",
   },
   {
     title: "은하 콘서트",
@@ -532,7 +532,7 @@ const data: VideoRaw[] = [
     setlist: [S.shimmer],
     info: [I.live, "은하 콘서트"],
     links: [yt("https://www.youtube.com/watch?v=TXcGr7BOKas")],
-    date: "2020.2.18",
+    date: "2020. 02. 18",
   },
   {
     title: `${I.east} - Japan`,
@@ -541,7 +541,7 @@ const data: VideoRaw[] = [
     setlist: [S.galaxy, S.witchcraft, S.whale, S.mercury, S.black],
     info: [I.east, "Japan", I.behind],
     links: [yt("https://www.youtube.com/watch?v=DZLNEs7-ZaU")],
-    date: "2020.2.10",
+    date: "2020. 02. 10",
   },
   {
     title: "은하 콘서트",
@@ -549,7 +549,7 @@ const data: VideoRaw[] = [
     setlist: [S.veranda],
     info: [I.live, "은하 콘서트"],
     links: [yt("https://www.youtube.com/watch?v=g2AACJuWlDU")],
-    date: "2020.2.4",
+    date: "2020. 02. 04",
   },
   {
     title: `${I.east} - Korea`,
@@ -558,7 +558,7 @@ const data: VideoRaw[] = [
     setlist: [S.romanesque, S.witchcraft],
     info: [I.east, "Korea", I.behind],
     links: [yt("https://www.youtube.com/watch?v=Kl4sWOqiOmE")],
-    date: "2020.1.15",
+    date: "2020. 01. 15",
   },
   {
     title: "은하 콘서트",
@@ -567,7 +567,7 @@ const data: VideoRaw[] = [
     setlist: [S.black],
     info: ["은하 콘서트", I.teas],
     links: [yt("https://www.youtube.com/watch?v=6-NxlwRV3lE")],
-    date: "2019.12.16",
+    date: "2019. 12. 16",
   },
   {
     title: `${I.east} - Taiwan`,
@@ -575,7 +575,7 @@ const data: VideoRaw[] = [
     setlist: [S.spring],
     info: [I.live, I.east, "Taiwan"],
     links: [yt("https://www.youtube.com/watch?v=-kqxdq-15Ck")],
-    date: "2019.12.9",
+    date: "2019. 12. 09",
   },
   {
     title: I.fire(2019),
@@ -584,7 +584,7 @@ const data: VideoRaw[] = [
     setlist: [S.lion],
     info: [I.live, S.lion, "360˚"],
     links: [yt("https://www.youtube.com/watch?v=mshLepZT5zw")],
-    date: "2019.11.28",
+    date: "2019. 11. 28",
   },
   {
     title: `${I.east} - Japan`,
@@ -592,7 +592,7 @@ const data: VideoRaw[] = [
     setlist: [S.romanesque],
     info: [I.live, I.east, "Japan"],
     links: [yt("https://www.youtube.com/watch?v=zmCwK4aC4U0")],
-    date: "2019.11.26",
+    date: "2019. 11. 26",
   },
   {
     title: I.fire(2019),
@@ -601,7 +601,7 @@ const data: VideoRaw[] = [
     setlist: [S.black],
     info: [I.fire(2019), I.highlight],
     links: [yt("https://www.youtube.com/watch?v=YhVqKDJGiiY")],
-    date: "2019.11.21",
+    date: "2019. 11. 21",
   },
   {
     title: `${I.east} - Korea`,
@@ -609,7 +609,7 @@ const data: VideoRaw[] = [
     setlist: [S.witchcraft],
     info: [I.live, I.east, "Korea"],
     links: [yt("https://www.youtube.com/watch?v=ZXeImxCMhNw")],
-    date: "2019.11.19",
+    date: "2019. 11. 19",
   },
   {
     title: "Headphone Enlightenment Session",
@@ -617,7 +617,7 @@ const data: VideoRaw[] = [
     setlist: [S.february, S.kirin, S.galaxy, S.black],
     info: [I.live, "headphone enlightenment session"],
     links: [yt("https://www.youtube.com/watch?v=yqOUH3SpGTA")],
-    date: "2019.11.6",
+    date: "2019. 11. 06",
   },
   {
     title: I.east,
@@ -626,7 +626,7 @@ const data: VideoRaw[] = [
     setlist: [S.kirin],
     info: [I.interview],
     links: [yt("https://www.youtube.com/watch?v=mUlQVv6MJj0")],
-    date: "2019.10.31",
+    date: "2019. 10. 31",
   },
   {
     title: "Headphone Enlightenment Session",
@@ -635,7 +635,7 @@ const data: VideoRaw[] = [
     setlist: [S.black],
     info: ["headphone enlightenment session", I.teas],
     links: [yt("https://www.youtube.com/watch?v=hagtBfDx_ew")],
-    date: "2019.10.30",
+    date: "2019. 10. 30",
   },
 ];
 
