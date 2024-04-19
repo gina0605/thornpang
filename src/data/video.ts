@@ -1,5 +1,5 @@
 import { Video } from "@/types";
-import { SONGS } from "./constant";
+import { SONGS as S } from "./constant";
 
 export const replaceLogic = [
   { pattern: /언플러그드|unplug[^\s]*|acous[^\s]*/g, result: "어쿠" },
@@ -7,6 +7,10 @@ export const replaceLogic = [
   { pattern: /piano/g, result: "피아노" },
   { pattern: /버전|ver[^\s]+/g, result: "ver" },
   { pattern: /데모/g, result: "demo" },
+  { pattern: /live/g, result: "라이브" },
+  { pattern: /session/g, result: "세션" },
+  { pattern: /뮤비|mv|music\s*video/g, result: "뮤직비디오" },
+  { pattern: /teaser|트레일러|trailer/g, result: "티저" },
   { pattern: /(^|[^\d])(\d\d)년/g, result: "$120$2" },
   { pattern: /(\d\d\d\d)년/g, result: "$1" },
   { pattern: /오시/g, result: "오렌지의" },
@@ -47,30 +51,54 @@ const melon = (link: string) => ({ text: "멜론", link });
 const fb = (link: string) => ({ text: "페이스북", link });
 const genie = (link: string) => ({ text: "지니", link });
 
-const data: Video[] = [
+interface VideoRaw {
+  title: string;
+  subtitle?: string;
+  slug: string;
+  thumbnail?: string;
+  setlist: string[];
+  info: string[];
+  links: { text: string; link: string }[];
+  date: string;
+}
+
+const processVideo = (data: VideoRaw[]) =>
+  data.map(
+    ({ title, slug, thumbnail, subtitle, setlist, info, links, date }) => ({
+      title,
+      subtitle: subtitle ?? setlist.join(" / "),
+      slug,
+      thumbnail: thumbnail ?? slug + ".jpg",
+      setlist,
+      info,
+      links,
+      date,
+    })
+  );
+
+const data: VideoRaw[] = [
   {
     title: "불구경 2022",
-    slug: "2022-fire-live",
-    thumbnail: "2022_fire_live.jpg",
     subtitle: "라이브 콘서트 필름",
+    slug: "2022-fire-live",
     setlist: [
-      SONGS.whale,
-      SONGS.witchcraft,
-      SONGS.kirin,
-      SONGS.living,
-      SONGS.salamander,
-      SONGS.gills,
-      SONGS.rain,
-      SONGS.antarctica,
-      SONGS.shimmer,
-      SONGS.bloom,
-      SONGS.romanesque,
-      SONGS.february,
-      SONGS.seoul,
-      SONGS.noon,
-      SONGS.peter,
-      SONGS.spring,
-      SONGS.reason,
+      S.whale,
+      S.witchcraft,
+      S.kirin,
+      S.living,
+      S.salamander,
+      S.gills,
+      S.rain,
+      S.antarctica,
+      S.shimmer,
+      S.bloom,
+      S.romanesque,
+      S.february,
+      S.seoul,
+      S.noon,
+      S.peter,
+      S.spring,
+      S.reason,
       "은하 (피아노 ver.)",
     ],
     info: ["불구경 2022", "라이브 콘서트 필름"],
@@ -79,14 +107,119 @@ const data: Video[] = [
   },
   {
     title: "불구경 2023",
-    slug: "2023-fire-peter",
-    thumbnail: "2023_fire_peter.jpg",
     subtitle: "빨간 피터 POV",
-    setlist: [SONGS.peter],
+    slug: "2023-fire-peter",
+    setlist: [S.peter],
     info: ["라이브", "불구경 2023", "POV"],
     links: [yt("https://www.youtube.com/watch?v=gEHLMNn8WT0")],
     date: "2024.01.26",
   },
+  {
+    title: "불구경 2023",
+    slug: "2023-fire",
+    setlist: [S.flies, S.noon, S.mercury, S.cicadas, S.extinction],
+    info: ["라이브", "불구경 2023"],
+    links: [yt("https://www.youtube.com/watch?v=BrPyTb65Fhc")],
+    date: "2024.1.12",
+  },
+  {
+    title: "[동물] 라이브 세션",
+    slug: "live-crab",
+    setlist: [S.crab],
+    info: ["라이브 세션"],
+    links: [yt("https://www.youtube.com/watch?v=p0ewNfkvasA")],
+    date: "2023.9.22",
+  },
+  {
+    title: "[동물] 라이브 세션",
+    slug: "live-flesh",
+    setlist: [S.flesh],
+    info: ["라이브 세션"],
+    links: [yt("https://www.youtube.com/watch?v=QidaDWIjkxo")],
+    date: "2023.9.15",
+  },
+  {
+    title: "[동물] 라이브 세션",
+    slug: "live-halcyon",
+    setlist: [S.halcyon],
+    info: ["라이브 세션"],
+    links: [yt("https://www.youtube.com/watch?v=v0xlhHBJWEQ")],
+    date: "2023.9.8",
+  },
+  {
+    title: "[동물] 라이브 세션",
+    slug: "live-flies",
+    setlist: [S.flies],
+    info: ["라이브 세션"],
+    links: [yt("https://www.youtube.com/watch?v=1m7UuGN67S0")],
+    date: "2023.9.1",
+  },
+  {
+    title: "[동물] 라이브 세션",
+    slug: "live-extinction",
+    setlist: [S.extinction],
+    info: ["라이브 세션"],
+    links: [yt("https://www.youtube.com/watch?v=R7bnVUiU25k")],
+    date: "2023.8.30",
+  },
+  {
+    title: "Music Video",
+    slug: "mv-crab",
+    setlist: [S.crab],
+    info: ["뮤직비디오"],
+    links: [yt("https://www.youtube.com/watch?v=e5Zgh8nTuQM")],
+    date: "2023.8.28",
+  },
+  {
+    title: "Music Video",
+    slug: "mv-extinction",
+    setlist: [S.extinction],
+    info: ["뮤직비디오"],
+    links: [yt("https://www.youtube.com/watch?v=aezBwpaHxD8")],
+    date: "2023.8.28",
+  },
+  {
+    title: "Teaser",
+    slug: "teaser-crab",
+    setlist: [S.crab],
+    info: ["티저"],
+    links: [yt("https://www.youtube.com/watch?v=wV9g8tQPmHA")],
+    date: "2023.8.27",
+  },
+  {
+    title: "Teaser",
+    slug: "teaser-extinction",
+    setlist: [S.extinction],
+    info: ["티저"],
+    links: [yt("https://www.youtube.com/watch?v=7DaPiJofNuM")],
+    date: "2023.8.25",
+  },
+  {
+    title: "Official Trailer",
+    subtitle: "동물",
+    slug: "trailer-animal",
+    setlist: [S.extinction, S.halcyon, S.flesh, S.flies, S.crab],
+    info: ["동물", "티저"],
+    links: [yt("https://www.youtube.com/watch?v=9n-sNfA1_oo")],
+    date: "2023.8.24",
+  },
+  {
+    title: "Teaser",
+    subtitle: "동물",
+    slug: "teaser-animal",
+    setlist: [S.extinction],
+    info: ["동물", "티저"],
+    links: [yt("https://www.youtube.com/watch?v=t_ip-79a18A")],
+    date: "2023.8.11",
+  },
+  {
+    title: "검은 별 콘서트",
+    slug: "black-reason",
+    setlist: [S.reason],
+    info: ["라이브", "검은 별 콘서트"],
+    links: [yt("https://www.youtube.com/watch?v=f7N6cQgU9U0")],
+    date: "2023.5.12",
+  },
 ];
 
-export default data;
+export default processVideo(data);
