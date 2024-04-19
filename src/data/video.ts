@@ -3,9 +3,10 @@ import { SONGS as S, ALBUMS } from "./constant";
 
 export const replaceLogic = [
   {
-    pattern: /언플러그[^\s]*|unplug[^\s]*|acous[^\s]*|어쿠[^s]*/g,
+    pattern: /언플러그[^\s]*|unplug[^\s]*|acou[^\s]*|어쿠[^s]*/g,
     result: "어쿠",
   },
+  { pattern: /inst[^\s]*/g, result: "inst" },
   { pattern: /doc[^\s]*/g, result: "다큐" },
   { pattern: /piano/g, result: "피아노" },
   { pattern: /버전|ver[^\s]+/g, result: "ver" },
