@@ -10,7 +10,10 @@ export interface VideoModalProps {
 export const VideoModal = ({ video }: VideoModalProps) => {
   const { title, thumbnail, subtitle, setlist, info, links, date } = video;
   const content = [
-    { subtitle: "곡명", text: [setlist.join(", ")] },
+    {
+      subtitle: "곡명",
+      text: [setlist.length === 0 ? "-" : setlist.join(", ")],
+    },
     { subtitle: "정보", text: [info.join(", ")] },
   ];
 

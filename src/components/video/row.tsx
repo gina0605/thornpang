@@ -9,7 +9,7 @@ export interface RowProps {
 export const Row = ({
   video: { title, slug, thumbnail, subtitle, setlist },
 }: RowProps) => {
-  const setlistText = setlist.join(", ");
+  const setlistText = setlist.length === 0 ? "-" : setlist.join(", ");
 
   return (
     <Link
