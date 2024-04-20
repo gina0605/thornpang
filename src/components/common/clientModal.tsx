@@ -12,7 +12,7 @@ export const ClientModal = ({ children }: ClientModalProps) => {
 
   return (
     <div
-      className="fixed inset-0 bg-black/65 flex items-center justify-center z-30"
+      className="fixed inset-0 bg-black/65 flex items-center justify-center z-30 no-doc-scroll"
       onClick={() => router.back()}
     >
       <X />

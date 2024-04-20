@@ -7,7 +7,7 @@ export interface ServerModalProps {
 }
 
 export const ServerModal = ({ children, closeLink }: ServerModalProps) => (
-  <div className="fixed inset-0 bg-black/65 flex items-center justify-center z-30">
+  <div className="fixed inset-0 bg-black/65 flex items-center justify-center z-30 no-doc-scroll">
     <Link
       className="fixed inset-0 z-30 cursor-default"
       href={closeLink}

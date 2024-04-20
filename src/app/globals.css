@@ -44,3 +44,7 @@ p {
   background: transparent;
   cursor: pointer;
 }
+
+:root:has(.no-doc-scroll) {
+  overflow:hidden;
+}
