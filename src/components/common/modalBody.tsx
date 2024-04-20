@@ -9,8 +9,8 @@ export interface ModalBodyProps {
 
 export const ModalBody = ({ title, date, content, links }: ModalBodyProps) => (
   <>
-    <p className="text-lg font-semibold">{title}</p>
-    <p className="text-sm -mt-1 -mb-0.5 md:-mt-0.5 md:mb-0">{date}</p>
+    <p className="text-lg font-semibold leading-tight">{title}</p>
+    <p className="text-sm -mt-1 -mb-0.5 md:-mt-0 md:mb-0">{date}</p>
     {content.map(({ subtitle, text }, idx) => [
       <p className="text-sm text-slate-500 mt-2 -mb-1 md:-mb-0.5" key={idx * 2}>
         {subtitle}
