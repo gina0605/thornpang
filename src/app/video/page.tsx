@@ -25,12 +25,14 @@ export default ({
           search.toLowerCase().replaceAll(/[\s.,()\[\]~!?\-\/]+/g, " ")
         )
         .split(" ")
+        .map((k) => (k === "살" ? "살살" : k))
     : [];
 
   const normalizeStr = (s: string[]) =>
     s
       .map((v) => v.replaceAll(/[\s()]+/g, ""))
       .join(" ")
+      .replaceAll(/살[^아]|살$/g, "살살")
       .toLowerCase();
 
   const match = ({ setlist, info }: Video) => {
