@@ -21,6 +21,8 @@ export const replaceLogic = [
     result: "상상실현페스티벌",
   },
   { pattern: /jumf/g, result: "전주얼티밋뮤직페스티벌" },
+  { pattern: /let.?s\s?rock/g, result: "렛츠락" },
+  { pattern: /festival/g, result: "페스티벌" },
   {
     pattern: /언플러그[^\s]*|unplug[^\s]*|acou[^\s]*|어쿠[^s]*/g,
     result: "어쿠",
@@ -90,6 +92,7 @@ export const replaceLogic = [
   { pattern: /파왕/g, result: "파리의왕" },
   { pattern: /게돗물/g, result: "게와수돗물" },
   { pattern: /우밤당낮/g, result: "우리의밤은" },
+  { pattern: /로렌스/g, result: "lawrence" },
   {
     pattern: /문방사우/g,
     result: "시퍼런봄 빨간피터 매미는비 물가의라",
@@ -217,7 +220,8 @@ const data: VideoRaw[] = [
     date: "2024. 01. 26",
   },
   {
-    title: "클럽 제로 콜라보 뮤직비디오",
+    title: "콜라보 뮤직비디오",
+    subtitle: "클럽 제로",
     slug: "collab-above",
     setlist: [S.above],
     info: [I.collab, "클럽 제로", I.mv],
@@ -231,6 +235,15 @@ const data: VideoRaw[] = [
     info: [I.live, I.fire(2023)],
     links: [yt("https://www.youtube.com/watch?v=BrPyTb65Fhc")],
     date: "2024. 01. 12",
+  },
+  {
+    title: "인디신콘서트",
+    subtitle: "공연 뮤직비디오",
+    slug: "indiesin-mv",
+    setlist: [S.shimmer],
+    info: ["인디신 콘서트", I.highlight],
+    links: [yt("https://www.youtube.com/watch?v=IOIE8r2xZB4")],
+    date: "2023. 09. 26",
   },
   {
     title: "[동물] 라이브 세션",
@@ -725,6 +738,14 @@ const data: VideoRaw[] = [
   },
   {
     title: "난장 (2021년)",
+    slug: "nanjang-2021-galaxy",
+    setlist: [S.galaxy],
+    info: [I.live, "문화콘서트 난장"],
+    links: [yt("https://www.youtube.com/watch?v=JtVeKYRYVW4")],
+    date: "2021. 04. 24",
+  },
+  {
+    title: "난장 (2021년)",
     slug: "nanjang-2021-february",
     setlist: [S.february],
     info: [I.live, "문화콘서트 난장"],
@@ -737,14 +758,6 @@ const data: VideoRaw[] = [
     setlist: [S.kirin],
     info: [I.live, "문화콘서트 난장"],
     links: [yt("https://www.youtube.com/watch?v=6JzhBjwDxY0")],
-    date: "2021. 04. 24",
-  },
-  {
-    title: "난장 (2021년)",
-    slug: "nanjang-2021-galaxy",
-    setlist: [S.galaxy],
-    info: [I.live, "문화콘서트 난장"],
-    links: [yt("https://www.youtube.com/watch?v=JtVeKYRYVW4")],
     date: "2021. 04. 24",
   },
   {
@@ -994,7 +1007,7 @@ const data: VideoRaw[] = [
     subtitle: "Highlight",
     slug: "galaxy-highlight",
     setlist: [`${S.witchcraft} (inst.)`],
-    info: [I.live, "은하 콘서트"],
+    info: ["은하 콘서트", I.highlight],
     links: [yt("https://www.youtube.com/watch?v=kJ15MniZSKo")],
     date: "2020. 03. 09",
   },
@@ -1706,7 +1719,17 @@ const data: VideoRaw[] = [
     date: "2016. 01. 07",
   },
   {
-    title: "위로공단 콜라보 뮤직비디오",
+    title: "렛츠락 페스티벌 2015",
+    subtitle: "인터뷰",
+    slug: "letsrock-2015-interview",
+    setlist: [],
+    info: ["렛츠락 페스티벌", I.interview],
+    links: [yt("https://www.youtube.com/watch?v=CK389dA3Sww")],
+    date: "2015. 09. 06",
+  },
+  {
+    title: "콜라보 뮤직비디오",
+    subtitle: "위로공단",
     slug: "collab-shimmer",
     setlist: [S.shimmer],
     info: [I.collab, "위로공단", I.mv],
@@ -1809,7 +1832,7 @@ const data: VideoRaw[] = [
     slug: "equator-refuge",
     thumbnail: "equator-refuge.jpeg",
     setlist: [S.refuge],
-    info: [I.live, "적도 접근"],
+    info: [I.live, "적도 접근 콘서트"],
     links: [melon("https://www.melon.com/video/detail2.htm?mvId=50130568")],
     date: "2014. 12. 04",
   },
@@ -1904,7 +1927,8 @@ const data: VideoRaw[] = [
     date: "2014. 08. 13",
   },
   {
-    title: "프랭크 콜라보 뮤직비디오",
+    title: "콜라보 뮤직비디오",
+    subtitle: "프랭크",
     slug: "collab-antarctica",
     setlist: [S.antarctica],
     info: [I.collab, "프랭크", I.mv],
@@ -1937,6 +1961,7 @@ const data: VideoRaw[] = [
   },
   {
     title: `${ALBUMS.stammer} 콘서트`,
+    subtitle: "Merry christmas Mr. Lawrence",
     slug: "stammer-lawrence",
     setlist: ["Merry christmas Mr. Lawrence (커버)"],
     info: [I.live, `${ALBUMS.stammer} 콘서트`, "커버"],
@@ -1944,7 +1969,7 @@ const data: VideoRaw[] = [
     date: "2014. 08. 05",
   },
   {
-    title: "낯선열대 뮤비 촬영현장",
+    title: "낯선 열대 뮤비 촬영현장",
     subtitle: "윤성현",
     slug: "tropics-behind-yoon",
     thumbnail: "tropics-behind-yoon.jpeg",
@@ -1954,7 +1979,7 @@ const data: VideoRaw[] = [
     date: "2014. 07, 29",
   },
   {
-    title: "낯선열대 뮤비 촬영현장",
+    title: "낯선 열대 뮤비 촬영현장",
     subtitle: "한승찬",
     slug: "tropics-behind-han",
     thumbnail: "tropics-behind-han.jpeg",
@@ -1964,7 +1989,7 @@ const data: VideoRaw[] = [
     date: "2014. 07, 29",
   },
   {
-    title: "낯선열대 뮤비 촬영현장",
+    title: "낯선 열대 뮤비 촬영현장",
     subtitle: "방요셉",
     slug: "tropics-behind-bang",
     thumbnail: "tropics-behind-bang.jpeg",
@@ -1974,7 +1999,7 @@ const data: VideoRaw[] = [
     date: "2014. 07, 28",
   },
   {
-    title: "낯선열대 뮤비 촬영현장",
+    title: "낯선 열대 뮤비 촬영현장",
     subtitle: "심재현",
     slug: "tropics-behind-sim",
     thumbnail: "tropics-behind-sim.jpeg",
