@@ -47,7 +47,7 @@ export const SONGS = {
   flesh: "살",
   flies: "파리의 왕",
   crab: "게와 수돗물",
-  allergie: "알레르기",
+  allergy: "알레르기",
   ourNight: "우리의 밤은 당신의 낮보다 아름답다",
   pinocchio: "피노키오",
   whale: "The Whale",
