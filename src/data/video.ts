@@ -7,9 +7,20 @@ export const replaceLogic = [
   { pattern: /all\s?that(\s?music)?/g, result: "올댓뮤직" },
   { pattern: /밴시/g, result: "밴드의시대" },
   { pattern: /(엠|M)\s?긱스/g, result: "m gigs" },
+  { pattern: /ebs\s?space/g, result: "ebs스페이스" },
+  { pattern: /기타네트/g, result: "guitarnet" },
   { pattern: /flo/g, result: "플로" },
   { pattern: /mu\s?[:]?\s?con/g, result: "뮤콘" },
   { pattern: /live[.]?\s?on/g, result: "라이브온" },
+  {
+    pattern: /((밴드|band)\s?)?(디스커버리|discovery)/g,
+    result: "밴드디스커버리",
+  },
+  {
+    pattern: /상실페/g,
+    result: "상상실현페스티벌",
+  },
+  { pattern: /jumf/g, result: "전주얼티밋뮤직페스티벌" },
   {
     pattern: /언플러그[^\s]*|unplug[^\s]*|acou[^\s]*|어쿠[^s]*/g,
     result: "어쿠",
@@ -153,6 +164,22 @@ const processVideo = (data: VideoRaw[]): Video[] =>
 
 const data: VideoRaw[] = [
   {
+    title: "Guitarnet",
+    slug: "guitarnet-extinction",
+    setlist: [S.extinction],
+    info: ["Guitarnet"],
+    links: [yt("https://www.youtube.com/watch?v=fFV1ROXwbic")],
+    date: "2024. 04. 12",
+  },
+  {
+    title: "Guitarnet",
+    slug: "guitarnet-flesh",
+    setlist: [S.flesh],
+    info: ["Guitarnet"],
+    links: [yt("https://www.youtube.com/watch?v=aUw03m-OqDA")],
+    date: "2024. 03. 08",
+  },
+  {
     title: "불구경 2022",
     subtitle: "라이브 콘서트 필름",
     slug: "fire-2022-live",
@@ -188,6 +215,14 @@ const data: VideoRaw[] = [
     info: [I.live, I.fire(2023), "POV"],
     links: [yt("https://www.youtube.com/watch?v=gEHLMNn8WT0")],
     date: "2024. 01. 26",
+  },
+  {
+    title: "클럽 제로 콜라보 뮤직비디오",
+    slug: "collab-above",
+    setlist: [S.above],
+    info: [I.collab, "클럽 제로", I.mv],
+    links: [yt("https://www.youtube.com/watch?v=cdFv2nUdSOM")],
+    date: "2024. 01. 18",
   },
   {
     title: I.fire(2023),
@@ -293,7 +328,11 @@ const data: VideoRaw[] = [
     setlist: [S.crab],
     info: [I.teas],
     links: [
-      yt("https://www.youtube.com/watch?v=wV9g8tQPmHA"),
+      ytthorn("https://www.youtube.com/watch?v=wV9g8tQPmHA"),
+      {
+        text: "유튜브 (@1theK)",
+        link: "https://www.youtube.com/watch?v=rYKiyWqt-_o",
+      },
       melon("https://www.melon.com/video/detail2.htm?mvId=50264354"),
     ],
     date: "2023. 08. 27",
@@ -304,7 +343,11 @@ const data: VideoRaw[] = [
     setlist: [S.extinction],
     info: [I.teas],
     links: [
-      yt("https://www.youtube.com/watch?v=7DaPiJofNuM"),
+      ytthorn("https://www.youtube.com/watch?v=7DaPiJofNuM"),
+      {
+        text: "유튜브 (@1theK)",
+        link: "https://www.youtube.com/watch?v=uZrb8XcDU0o",
+      },
       melon("https://www.melon.com/video/detail2.htm?mvId=50264353"),
     ],
     date: "2023. 08. 25",
@@ -320,6 +363,46 @@ const data: VideoRaw[] = [
       melon("https://www.melon.com/video/detail2.htm?mvId=50264332"),
     ],
     date: "2023. 08. 24",
+  },
+  {
+    title: "JUMF 2023",
+    slug: "jumf-2023-cicadas",
+    setlist: [S.cicadas],
+    info: [I.live, "전주얼티밋뮤직페스티벌 2023"],
+    links: [yt("https://www.youtube.com/watch?v=07ksXV3loZk")],
+    date: "2023. 08. 21",
+  },
+  {
+    title: "JUMF 2023",
+    slug: "jumf-2023-spring",
+    setlist: [S.spring],
+    info: [I.live, "전주얼티밋뮤직페스티벌 2023"],
+    links: [yt("https://www.youtube.com/watch?v=BAKT-mKas-w")],
+    date: "2023. 08. 21",
+  },
+  {
+    title: "JUMF 2023",
+    slug: "jumf-2023-noon",
+    setlist: [S.noon],
+    info: [I.live, "전주얼티밋뮤직페스티벌 2023"],
+    links: [yt("https://www.youtube.com/watch?v=i76i9lbp94c")],
+    date: "2023. 08. 21",
+  },
+  {
+    title: "JUMF 2023",
+    slug: "jumf-2023-peter",
+    setlist: [S.peter],
+    info: [I.live, "전주얼티밋뮤직페스티벌 2023"],
+    links: [yt("https://www.youtube.com/watch?v=497pJbcKVPw")],
+    date: "2023. 08. 21",
+  },
+  {
+    title: "JUMF 2023",
+    slug: "jumf-2023-kirin",
+    setlist: [S.kirin],
+    info: [I.live, "전주얼티밋뮤직페스티벌 2023"],
+    links: [yt("https://www.youtube.com/watch?v=RZ2Ik825O8k")],
+    date: "2023. 08. 21",
   },
   {
     title: "Teaser",
@@ -341,6 +424,15 @@ const data: VideoRaw[] = [
     info: [I.interview, I.behind, "뮤콘 2023"],
     links: [yt("https://www.youtube.com/watch?v=uVSaQK6QqMM")],
     date: "2023. 07. 31",
+  },
+  {
+    title: "JUMF 2023",
+    subtitle: "인터뷰",
+    slug: "jumf-2023-interview",
+    setlist: [],
+    info: [I.interview, "전주얼티밋뮤직페스티벌 2023"],
+    links: [yt("https://www.youtube.com/watch?v=j2s_Kdq-TEU")],
+    date: "2023. 07. 29",
   },
   {
     title: "뮤콘 2023",
@@ -441,7 +533,16 @@ const data: VideoRaw[] = [
     slug: "liveon-final",
     setlist: [S.february, S.shimmer, S.black],
     info: [I.live, "라이브온 파이널"],
-    links: [yt("https://www.youtube.com/watch?v=V48kFtmaO4E")],
+    links: [
+      {
+        text: "유튜브 (@KOCCAMUSIC)",
+        link: "https://www.youtube.com/watch?v=V48kFtmaO4E",
+      },
+      {
+        text: "유튜브 (@liveonarirang)",
+        link: "https://www.youtube.com/watch?v=duEY6ZmvvpE",
+      },
+    ],
     date: "2022. 03. 05",
   },
   {
@@ -463,6 +564,31 @@ const data: VideoRaw[] = [
     info: [I.live, "뮤콘 2021"],
     links: [yt("https://www.youtube.com/watch?v=jmrRkqxy9E8")],
     date: "2021. 11. 28",
+  },
+  {
+    title: "라이브온",
+    slug: "liveon-kirin",
+    setlist: [S.kirin],
+    info: [I.live, "라이브온"],
+    links: [yt("https://www.youtube.com/watch?v=RhDBpKt_SXM")],
+    date: "2021. 11. 26",
+  },
+  {
+    title: "라이브온",
+    slug: "liveon-galaxy",
+    setlist: [S.galaxy],
+    info: [I.live, "라이브온"],
+    links: [yt("https://www.youtube.com/watch?v=tYvIBhoPWno")],
+    date: "2021. 11. 23",
+  },
+  {
+    title: "라이브온",
+    subtitle: "공연 생중계",
+    slug: "liveon-live",
+    setlist: [S.kirin, S.nightwalk, S.seoul, S.galaxy],
+    info: [I.live, "라이브온", "공연 생중계"],
+    links: [yt("https://www.youtube.com/watch?v=AOImxu5Rp8A")],
+    date: "2021. 11. 1",
   },
   {
     title: "뮤콘 2021 SHOWCASE",
@@ -662,6 +788,14 @@ const data: VideoRaw[] = [
     date: "2020. 12. 24",
   },
   {
+    title: "Guitarnet",
+    slug: "guitarnet-february",
+    setlist: [S.february],
+    info: ["Guitarnet"],
+    links: [yt("https://www.youtube.com/watch?v=FpZ_Ot6NyVg")],
+    date: "2020. 12. 16",
+  },
+  {
     title: I.fire(2020),
     slug: "fire-2020-living",
     setlist: [S.living],
@@ -750,6 +884,14 @@ const data: VideoRaw[] = [
     setlist: [S.shore],
     info: ["물의 기억 콘서트", I.highlight],
     links: [yt("https://www.youtube.com/watch?v=GsJVVKU3NEE")],
+    date: "2020. 09. 02",
+  },
+  {
+    title: "Guitarnet",
+    slug: "guitarnet-romanesque",
+    setlist: [S.romanesque],
+    info: ["Guitarnet"],
+    links: [yt("https://www.youtube.com/watch?v=zT1qRc4t_Nw")],
     date: "2020. 09. 02",
   },
   {
@@ -1484,7 +1626,16 @@ const data: VideoRaw[] = [
     slug: "allthat-seoul",
     setlist: [S.seoul],
     info: [I.live, "올댓뮤직"],
-    links: [yt("https://www.youtube.com/watch?v=y5zJVubb6GE")],
+    links: [
+      {
+        text: "유튜브 (@ALLTHATSTUDIOTV)",
+        link: "https://www.youtube.com/watch?v=y5zJVubb6GE",
+      },
+      {
+        text: "유튜브 (@KBSKpop)",
+        link: "https://www.youtube.com/watch?v=7RjFrvOBUtM",
+      },
+    ],
     date: "2016. 09. 01",
   },
   {
@@ -1492,7 +1643,16 @@ const data: VideoRaw[] = [
     slug: "allthat-cicadas",
     setlist: [S.cicadas],
     info: [I.live, "올댓뮤직"],
-    links: [yt("https://www.youtube.com/watch?v=2LJppcpt17c")],
+    links: [
+      {
+        text: "유튜브 (@ALLTHATSTUDIOTV)",
+        link: "https://www.youtube.com/watch?v=2LJppcpt17c",
+      },
+      {
+        text: "유튜브 (@KBSKpop)",
+        link: "https://www.youtube.com/watch?v=X0k67Jn_ulc",
+      },
+    ],
     date: "2016. 09. 01",
   },
   {
@@ -1687,6 +1847,46 @@ const data: VideoRaw[] = [
     date: "2014. 09. 30",
   },
   {
+    title: "EBS 스페이스 공감",
+    slug: "ebs-spring",
+    setlist: [S.spring],
+    info: [I.live, "EBS 스페이스 공감"],
+    links: [yt("https://www.youtube.com/watch?v=SZGAJaJS8kE")],
+    date: "2014. 09. 23",
+  },
+  {
+    title: "EBS 스페이스 공감",
+    slug: "ebs-tropics",
+    setlist: [S.tropics],
+    info: [I.live, "EBS 스페이스 공감"],
+    links: [yt("https://www.youtube.com/watch?v=trzjj2P4IPE")],
+    date: "2014. 09. 23",
+  },
+  {
+    title: "EBS 스페이스 공감",
+    slug: "ebs-idiot",
+    setlist: [S.idiot],
+    info: [I.live, "EBS 스페이스 공감"],
+    links: [yt("https://www.youtube.com/watch?v=AhFGd9_JdOk")],
+    date: "2014. 09. 23",
+  },
+  {
+    title: "EBS 스페이스 공감",
+    slug: "ebs-shimmer",
+    setlist: [S.shimmer],
+    info: [I.live, "EBS 스페이스 공감"],
+    links: [yt("https://www.youtube.com/watch?v=4z70t_PTkUQ")],
+    date: "2014. 09. 23",
+  },
+  {
+    title: "EBS 스페이스 공감",
+    slug: "ebs-cicadas",
+    setlist: [S.cicadas],
+    info: [I.live, "EBS 스페이스 공감"],
+    links: [yt("https://www.youtube.com/watch?v=rS-qyYh5wAk")],
+    date: "2014. 09. 23",
+  },
+  {
     title: "이상기후 콘서트",
     slug: "weather-darkroom",
     thumbnail: "weather-darkroom.jpeg",
@@ -1694,6 +1894,14 @@ const data: VideoRaw[] = [
     info: [I.live, "이상기후 콘서트"],
     links: [melon("https://www.melon.com/video/detail2.htm?mvId=50128430")],
     date: "2014. 09. 18",
+  },
+  {
+    title: "EBS 스페이스 공감",
+    slug: "ebs-refuge",
+    setlist: [S.refuge, S.lion],
+    info: [I.live, "EBS 스페이스 공감"],
+    links: [yt("https://www.youtube.com/watch?v=noiIaEiG8TA")],
+    date: "2014. 08. 13",
   },
   {
     title: "프랭크 콜라보 뮤직비디오",
@@ -1814,6 +2022,15 @@ const data: VideoRaw[] = [
     date: "2013. 12. 23",
   },
   {
+    title: "상상실현페스티벌 2013",
+    subtitle: "인터뷰",
+    slug: "sangsang-interview",
+    setlist: [S.peter],
+    info: ["상상실현페스티벌", I.interview],
+    links: [yt("https://www.youtube.com/watch?v=6PQVF-UeZwM")],
+    date: "2013. 10. 15",
+  },
+  {
     title: "올댓뮤직",
     slug: "allthat-reason",
     setlist: [S.reason],
@@ -1869,6 +2086,14 @@ const data: VideoRaw[] = [
     info: ["M GIGS", I.teas],
     links: [yt("https://www.youtube.com/watch?v=oZ3tMPYfKUA")],
     date: "2013. 08. 26",
+  },
+  {
+    title: "밴드 디스커버리",
+    slug: "discovery-refuge",
+    setlist: [S.refuge],
+    info: [I.live, "밴드 디스커버리", "상상실현페스티벌"],
+    links: [yt("https://www.youtube.com/watch?v=pbEi5Uw3Dqk")],
+    date: "2013. 08. 14",
   },
   {
     title: "Music Video",
