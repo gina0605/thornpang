@@ -19,12 +19,16 @@ export const ScheduleModal = ({ schedule, closeLink }: ScheduleModalProps) => {
   return (
     <ServerModal closeLink={closeLink}>
       <div className="flex flex-col md:flex-row max-h-[80vh]">
-        <div className="md:hidden w-[80vw] h-[80vw] max-w-[50vh] max-h-[50vh] relative shrink-0 rounded-t overflow-hidden z-40">
+        <div
+          className={`md:hidden w-[80vw] h-[80vw] max-w-[50vh] max-h-[50vh] relative shrink-0 rounded-t overflow-hidden z-40 ${
+            imageSquare ? "" : "bg-black/70"
+          }`}
+        >
           <Image
             src={`/schedule/${imageSquare ?? image}`}
             alt="poster"
             fill
-            placeholder="blur"
+            placeholder={imageSquare ? "blur" : "empty"}
             blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mPU2wQAARQA4liArccAAAAASUVORK5CYII="
             className={imageSquare ? "object-fill" : "object-contain"}
             sizes="80vw"
