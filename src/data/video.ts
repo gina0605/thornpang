@@ -6,7 +6,7 @@ export const replaceLogic = [
     pattern: /언플러그[^\s]*|unplug[^\s]*|acou[^\s]*|어쿠[^s]*/g,
     result: "어쿠",
   },
-  { pattern: /inst[^\s]*/g, result: "inst" },
+  { pattern: /inst[^\s]*|인스트[^\s]*/g, result: "inst" },
   { pattern: /doc[^\s]*/g, result: "다큐" },
   { pattern: /piano/g, result: "피아노" },
   { pattern: /버전|ver[^\s]+/g, result: "ver" },
@@ -207,7 +207,16 @@ const data: VideoRaw[] = [
     slug: "mv-crab",
     setlist: [S.crab],
     info: [I.mv],
-    links: [yt("https://www.youtube.com/watch?v=e5Zgh8nTuQM")],
+    links: [
+      {
+        text: "유튜브 (@thornappleofficial)",
+        link: "https://www.youtube.com/watch?v=e5Zgh8nTuQM",
+      },
+      {
+        text: "유튜브 (@1theK)",
+        link: "https://www.youtube.com/watch?v=IOYRNyDszx4",
+      },
+    ],
     date: "2023. 08. 28",
   },
   {
@@ -215,7 +224,16 @@ const data: VideoRaw[] = [
     slug: "mv-extinction",
     setlist: [S.extinction],
     info: [I.mv],
-    links: [yt("https://www.youtube.com/watch?v=aezBwpaHxD8")],
+    links: [
+      {
+        text: "유튜브 (@thornappleofficial)",
+        link: "https://www.youtube.com/watch?v=aezBwpaHxD8",
+      },
+      {
+        text: "유튜브 (@1theK)",
+        link: "https://www.youtube.com/watch?v=OniwRMIHsps",
+      },
+    ],
     date: "2023. 08. 28",
   },
   {
@@ -646,8 +664,15 @@ const data: VideoRaw[] = [
     date: "2019. 10. 30",
   },
   {
+    title: "Music Video",
+    slug: "mv-romanesque",
+    setlist: [S.romanesque],
+    info: [I.mv],
+    links: [yt("https://www.youtube.com/watch?v=d9iPnELxm3M")],
+    date: "2019. 10. 07",
+  },
+  {
     title: "Teaser",
-    subtitle: S.romanesque,
     slug: "teaser-romanesque",
     setlist: [S.romanesque],
     info: [I.teas],
@@ -662,6 +687,14 @@ const data: VideoRaw[] = [
     info: ["마술 콘서트", I.highlight],
     links: [yt("https://www.youtube.com/watch?v=zV5Fa-xf5TA")],
     date: "2019. 08. 09",
+  },
+  {
+    title: "Music Video",
+    slug: "mv-galaxy",
+    setlist: [S.galaxy],
+    info: [I.mv],
+    links: [yt("https://www.youtube.com/watch?v=8fCfMCozRhA")],
+    date: "2019. 07. 04",
   },
   {
     title: "Teaser",
@@ -737,6 +770,14 @@ const data: VideoRaw[] = [
     info: [I.live, I.fire(2018)],
     links: [yt("https://www.youtube.com/watch?v=969Hz5rFjvQ")],
     date: "2018. 10. 09",
+  },
+  {
+    title: "Music Video",
+    slug: "mv-seoul",
+    setlist: [S.seoul],
+    info: [I.mv],
+    links: [yt("https://www.youtube.com/watch?v=4H2G9NWVo3Q")],
+    date: "2016. 05. 19",
   },
   {
     title: "6",
@@ -850,6 +891,22 @@ const data: VideoRaw[] = [
     info: [I.live, `${ALBUMS.stammer} 콘서트`, "커버"],
     links: [yt("https://www.youtube.com/watch?v=kTTYjbaStsI")],
     date: "2014. 08. 05",
+  },
+  {
+    title: "Music Video",
+    slug: "mv-tropics",
+    setlist: [S.tropics],
+    info: [I.mv],
+    links: [yt("https://www.youtube.com/watch?v=U6IuopxXHyg")],
+    date: "2014. 06. 11",
+  },
+  {
+    title: "Music Video",
+    slug: "mv-cicadas",
+    setlist: [S.cicadas],
+    info: [I.mv],
+    links: [yt("https://www.youtube.com/watch?v=ySVlvfWm1Hc")],
+    date: "2013. 08. 05",
   },
 ];
 
