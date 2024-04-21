@@ -20,6 +20,8 @@ export const replaceLogic = [
   { pattern: /(highlight|sketch|스케치)(\s?film)?/g, result: "하이라이트" },
   { pattern: /interview/g, result: "인터뷰" },
   { pattern: /film/g, result: "필름" },
+  { pattern: /review/g, result: "리뷰" },
+  { pattern: /video/g, result: "영상" },
   { pattern: /mini/g, result: "미니" },
   { pattern: /talk/g, result: "토크" },
   { pattern: /concert/g, result: "콘서트" },
@@ -64,15 +66,24 @@ export const replaceLogic = [
   { pattern: /난자말/g, result: "난자꾸말" },
   { pattern: /춤별|춤추는\s별/g, result: "춤추는별" },
   { pattern: /물기|물의\s기억/g, result: "물의기억" },
+  { pattern: /오밤/g, result: "오늘도밤이야" },
   {
     pattern:
-      /(라이온|열대|상기후|퍼런봄|려운달|한낮|6|서울병|서울|계몽|뭍|마술|은하|넓은밤|하루|에서도|류의맛|검은별|동물)\s콘/g,
+      /(라이온|열대|상기후|퍼런봄|려운달|한낮|6|서울병|서울|계몽|뭍|마술|은하|넓은밤|하루|에서도|류의맛|검은별|동물|밤이야)\s콘/g,
     result: "$1콘",
   },
   { pattern: /영상/g, result: "" },
 ];
 
 const yt = (link: string) => ({ text: "유튜브", link });
+const ytthorn = (link: string) => ({
+  text: "유튜브 (@thornappleofficial)",
+  link,
+});
+const ytmint = (link: string) => ({
+  text: "유튜브 (@MintPaper_)",
+  link,
+});
 const melon = (link: string) => ({ text: "멜론", link });
 const fb = (link: string) => ({ text: "페이스북", link });
 const genie = (link: string) => ({ text: "지니", link });
@@ -208,10 +219,7 @@ const data: VideoRaw[] = [
     setlist: [S.crab],
     info: [I.mv],
     links: [
-      {
-        text: "유튜브 (@thornappleofficial)",
-        link: "https://www.youtube.com/watch?v=e5Zgh8nTuQM",
-      },
+      ytthorn("https://www.youtube.com/watch?v=e5Zgh8nTuQM"),
       {
         text: "유튜브 (@1theK)",
         link: "https://www.youtube.com/watch?v=IOYRNyDszx4",
@@ -225,10 +233,7 @@ const data: VideoRaw[] = [
     setlist: [S.extinction],
     info: [I.mv],
     links: [
-      {
-        text: "유튜브 (@thornappleofficial)",
-        link: "https://www.youtube.com/watch?v=aezBwpaHxD8",
-      },
+      ytthorn("https://www.youtube.com/watch?v=aezBwpaHxD8"),
       {
         text: "유튜브 (@1theK)",
         link: "https://www.youtube.com/watch?v=OniwRMIHsps",
@@ -772,6 +777,53 @@ const data: VideoRaw[] = [
     date: "2018. 10. 09",
   },
   {
+    title: "뭍 콘서트",
+    subtitle: "Highlight",
+    slug: "shore-highlight",
+    setlist: [`${S.bloom} (피아노 ver.)`],
+    info: ["뭍 콘서트", I.highlight],
+    links: [yt("https://www.youtube.com/watch?v=5c7y0IhaMlo")],
+    date: "2018. 09. 03",
+  },
+  {
+    title: "계몽 콘서트",
+    subtitle: "Highlight",
+    slug: "enlight-highlight",
+    setlist: [S.spring],
+    info: ["계몽 콘서트", I.highlight],
+    links: [yt("https://www.youtube.com/watch?v=5yokXM65zHc")],
+    date: "2018. 01. 12",
+  },
+  {
+    title: "'병病' 3연작",
+    subtitle: "Review Video",
+    slug: "illness-review",
+    setlist: [
+      S.antarctica,
+      S.salamander,
+      S.seoul,
+      S.shimmer,
+      S.pomegranate,
+      S.living,
+      S.refuge,
+      S.orange,
+      S.peter,
+      S.spring,
+      S.reason,
+      `${S.spring} (피아노 ver.)`,
+    ],
+    info: [
+      "병 3연작",
+      "어스름녘 콘서트",
+      "옮는 꿈 콘서트",
+      I.fire(2016),
+      "리뷰 영상",
+      I.highlight,
+    ],
+    links: [yt("https://www.youtube.com/watch?v=5757QBDfOEs")],
+    date: "2016. 10. 11",
+  },
+  {
     title: "Music Video",
     slug: "mv-seoul",
     setlist: [S.seoul],
@@ -785,7 +837,10 @@ const data: VideoRaw[] = [
     slug: "6-highlight",
     setlist: [S.idiot],
     info: ["6 콘서트", I.highlight],
-    links: [yt("https://www.youtube.com/watch?v=me2YsbdpZN8")],
+    links: [
+      ytthorn("https://www.youtube.com/watch?v=me2YsbdpZN8"),
+      ytmint("https://www.youtube.com/watch?v=syBx-iNV7Yg"),
+    ],
     date: "2016. 01. 14",
   },
   {
@@ -811,7 +866,10 @@ const data: VideoRaw[] = [
     slug: "difficult-highlight",
     setlist: [S.living],
     info: ["어려운 달 콘서트", I.highlight],
-    links: [yt("https://www.youtube.com/watch?v=5rfCewuBw58")],
+    links: [
+      ytthorn("https://www.youtube.com/watch?v=5rfCewuBw58"),
+      ytmint("https://www.youtube.com/watch?v=pwI5261jgdQ"),
+    ],
     date: "2015. 06. 15",
   },
   {
@@ -847,7 +905,10 @@ const data: VideoRaw[] = [
     slug: "spring-highlight",
     setlist: [S.spring],
     info: ["시퍼런 봄 콘서트", I.highlight],
-    links: [yt("https://www.youtube.com/watch?v=0AUJxmK3p4I")],
+    links: [
+      ytthorn("https://www.youtube.com/watch?v=0AUJxmK3p4I"),
+      ytmint("https://youtube.com/watch?v=ZnofJQ79SG8"),
+    ],
     date: "2015. 03. 27",
   },
   {
@@ -858,6 +919,15 @@ const data: VideoRaw[] = [
     info: ["합주"],
     links: [yt("https://www.youtube.com/watch?v=Ij9OfqVDSWM")],
     date: "2015. 03. 10",
+  },
+  {
+    title: "오늘도 밤이야",
+    subtitle: "Highlight",
+    slug: "night-highlight",
+    setlist: [S.veranda],
+    info: ["오늘도 밤이야 콘서트", I.highlight],
+    links: [yt("https://www.youtube.com/watch?v=6kQtruv6OF0")],
+    date: "2015. 01. 14",
   },
   {
     title: "스튜디오 라이브",
@@ -899,6 +969,15 @@ const data: VideoRaw[] = [
     info: [I.mv],
     links: [yt("https://www.youtube.com/watch?v=U6IuopxXHyg")],
     date: "2014. 06. 11",
+  },
+  {
+    title: `${ALBUMS.stammer} 콘서트`,
+    subtitle: "Highlight",
+    slug: "stammer-highlight",
+    setlist: [S.cicadas, S.lion],
+    info: [`${ALBUMS.stammer} 콘서트`, I.highlight],
+    links: [yt("https://www.youtube.com/watch?v=08Ii8qCdUQ0")],
+    date: "2014. 01. 14",
   },
   {
     title: "Music Video",
