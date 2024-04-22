@@ -286,6 +286,16 @@ const data: VideoRaw[] = [
     date: "2023. 08. 30",
   },
   {
+    title: "게와 수돗물 뮤비",
+    subtitle: "비하인드",
+    slug: "mv-behind-crab",
+    thumbnail: "mv-behind-crab.jpeg",
+    setlist: [S.crab],
+    info: [I.mv, I.behind],
+    links: [genie("https://www.genie.co.kr/detail/mediaInfo?xvnm=240409")],
+    date: "2023. 08. 28",
+  },
+  {
     title: "멸종 뮤비",
     subtitle: "비하인드",
     slug: "mv-behind-extinction",
@@ -317,6 +327,7 @@ const data: VideoRaw[] = [
         link: "https://www.youtube.com/watch?v=IOYRNyDszx4",
       },
       melon("https://www.melon.com/video/detail2.htm?mvId=50264379"),
+      genie("https://www.genie.co.kr/detail/mediaInfo?xvnm=240400"),
     ],
     date: "2023. 08. 28",
   },
@@ -332,6 +343,7 @@ const data: VideoRaw[] = [
         link: "https://www.youtube.com/watch?v=OniwRMIHsps",
       },
       melon("https://www.melon.com/video/detail2.htm?mvId=50264378"),
+      genie("https://www.genie.co.kr/detail/mediaInfo?xvnm=240399"),
     ],
     date: "2023. 08. 28",
   },
@@ -347,6 +359,7 @@ const data: VideoRaw[] = [
         link: "https://www.youtube.com/watch?v=rYKiyWqt-_o",
       },
       melon("https://www.melon.com/video/detail2.htm?mvId=50264354"),
+      genie("https://www.genie.co.kr/detail/mediaInfo?xvnm=240391"),
     ],
     date: "2023. 08. 27",
   },
@@ -362,6 +375,7 @@ const data: VideoRaw[] = [
         link: "https://www.youtube.com/watch?v=uZrb8XcDU0o",
       },
       melon("https://www.melon.com/video/detail2.htm?mvId=50264353"),
+      genie("https://www.genie.co.kr/detail/mediaInfo?xvnm=240390"),
     ],
     date: "2023. 08. 25",
   },
@@ -1142,6 +1156,7 @@ const data: VideoRaw[] = [
     links: [
       yt("https://www.youtube.com/watch?v=d9iPnELxm3M"),
       melon("https://www.melon.com/video/detail2.htm?mvId=50209752"),
+      genie("https://www.genie.co.kr/detail/mediaInfo?xvnm=182720"),
     ],
     date: "2019. 10. 07",
   },
@@ -1190,8 +1205,19 @@ const data: VideoRaw[] = [
     links: [
       yt("https://www.youtube.com/watch?v=8fCfMCozRhA"),
       melon("https://www.melon.com/video/detail2.htm?mvId=50205386"),
+      genie("https://www.genie.co.kr/detail/mediaInfo?xvnm=178204"),
     ],
     date: "2019. 07. 04",
+  },
+  {
+    title: "[계몽] 발매",
+    subtitle: "인사 영상",
+    slug: "enlight-interview",
+    thumbnail: "enlight-interview.jpeg",
+    setlist: [],
+    info: [ALBUMS.enlight, I.interview],
+    links: [genie("https://www.genie.co.kr/detail/mediaInfo?xvnm=178099")],
+    date: "2019. 07. 02",
   },
   {
     title: "Teaser",
@@ -1400,7 +1426,7 @@ const data: VideoRaw[] = [
     thumbnail: "shore-preview.jpeg",
     setlist: [I.acou(S.cicadas)],
     info: ["뭍 콘서트", I.teas],
-    links: [yt("https://www.melon.com/video/detail2.htm?mvId=50186774")],
+    links: [melon("https://www.melon.com/video/detail2.htm?mvId=50185580")],
     date: "2018. 05. 29",
   },
   {
@@ -1540,6 +1566,7 @@ const data: VideoRaw[] = [
     links: [
       yt("https://www.youtube.com/watch?v=t-PQbR9rOE8"),
       melon("https://www.melon.com/video/detail2.htm?mvId=50168848"),
+      genie("https://www.genie.co.kr/detail/mediaInfo?xvnm=137594"),
     ],
     date: "2017. 07. 05",
   },
@@ -1551,6 +1578,7 @@ const data: VideoRaw[] = [
     links: [
       yt("https://www.youtube.com/watch?v=dY91_KvxuRo"),
       melon("https://www.melon.com/video/detail2.htm?mvId=50156746"),
+      genie("https://www.genie.co.kr/detail/mediaInfo?xvnm=137596"),
     ],
     date: "2016. 11. 02",
   },
@@ -1573,6 +1601,7 @@ const data: VideoRaw[] = [
     links: [
       yt("https://www.youtube.com/watch?v=NtO3SbPXWgQ"),
       melon("https://www.melon.com/video/detail2.htm?mvId=50156061"),
+      genie("https://www.genie.co.kr/detail/mediaInfo?xvnm=137597"),
     ],
     date: "2016. 10. 19",
   },
@@ -1676,6 +1705,7 @@ const data: VideoRaw[] = [
     links: [
       yt("https://www.youtube.com/watch?v=4H2G9NWVo3Q"),
       melon("https://www.melon.com/video/detail2.htm?mvId=50149625"),
+      genie("https://www.genie.co.kr/detail/mediaInfo?xvnm=127398"),
     ],
     date: "2016. 05. 19",
   },
@@ -1736,6 +1766,7 @@ const data: VideoRaw[] = [
     links: [
       yt("https://www.youtube.com/watch?v=t-V4qxJAocw"),
       melon("https://www.melon.com/video/detail2.htm?mvId=50138411"),
+      genie("https://www.genie.co.kr/detail/mediaInfo?xvnm=121883"),
     ],
     date: "2015. 08. 02",
   },
@@ -1935,6 +1966,7 @@ const data: VideoRaw[] = [
     links: [
       yt("https://www.youtube.com/watch?v=ETPJ0NkBEF8"),
       melon("https://www.melon.com/video/detail2.htm?mvId=50128400"),
+      genie("https://www.genie.co.kr/detail/mediaInfo?xvnm=110574"),
     ],
     date: "2015. 08, 02",
   },
@@ -2025,6 +2057,7 @@ const data: VideoRaw[] = [
     links: [
       yt("https://www.youtube.com/watch?v=U6IuopxXHyg"),
       melon("https://www.melon.com/video/detail2.htm?mvId=50125654"),
+      genie("https://www.genie.co.kr/detail/mediaInfo?xvnm=107427"),
     ],
     date: "2014. 06. 11",
   },
