@@ -1917,10 +1917,10 @@ const data: VideoRaw[] = [
   },
   {
     title: "EBS 스페이스 공감",
-    slug: "ebs-spring",
-    setlist: [S.spring],
+    slug: "ebs-shimmer",
+    setlist: [S.shimmer],
     info: [I.live, "EBS 스페이스 공감"],
-    links: [yt("https://www.youtube.com/watch?v=SZGAJaJS8kE")],
+    links: [yt("https://www.youtube.com/watch?v=4z70t_PTkUQ")],
     date: "2014. 09. 23",
   },
   {
@@ -1941,10 +1941,10 @@ const data: VideoRaw[] = [
   },
   {
     title: "EBS 스페이스 공감",
-    slug: "ebs-shimmer",
-    setlist: [S.shimmer],
+    slug: "ebs-spring",
+    setlist: [S.spring],
     info: [I.live, "EBS 스페이스 공감"],
-    links: [yt("https://www.youtube.com/watch?v=4z70t_PTkUQ")],
+    links: [yt("https://www.youtube.com/watch?v=SZGAJaJS8kE")],
     date: "2014. 09. 23",
   },
   {
@@ -1966,6 +1966,19 @@ const data: VideoRaw[] = [
   },
   {
     title: "EBS 스페이스 공감",
+    subtitle: "방송 다시보기",
+    slug: "ebs-live",
+    thumbnail: "ebs-live.jpeg",
+    setlist: [S.darkroom, S.cicadas, S.spring, S.idiot, S.tropics, S.shimmer],
+    info: [I.live, "EBS 스페이스 공감"],
+    links: [
+      { text: "EBS", link: "https://www.youtube.com/watch?v=L7QGm8bvVCc" },
+    ],
+    date: "2014. 08. 15",
+  },
+  {
+    title: "EBS 스페이스 공감",
+    subtitle: "미방송 영상",
     slug: "ebs-refuge",
     setlist: [S.refuge, S.lion],
     info: [I.live, "EBS 스페이스 공감"],
