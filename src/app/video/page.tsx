@@ -48,7 +48,7 @@ export default ({
   return (
     <>
       <VideoSearchBar search={search} target={target} />
-      <div className="w-full max-w-5xl flex flex-col md:px-1.5">
+      <div className="w-full max-w-4xl flex flex-col md:px-1.5">
         {data.map((v) => (match(v) ? <Row video={v} key={v.slug} /> : null))}
       </div>
     </>

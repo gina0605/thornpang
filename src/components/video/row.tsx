@@ -7,7 +7,7 @@ export interface RowProps {
 }
 
 export const Row = ({
-  video: { title, slug, thumbnail, subtitle, setlist },
+  video: { title, slug, thumbnail, subtitle, setlist, date },
 }: RowProps) => {
   const setlistText = setlist.length === 0 ? "-" : setlist.join(", ");
 
@@ -29,7 +29,12 @@ export const Row = ({
         />
       </div>
       <div className="w-0 grow flex flex-col justify-center font-pretendard pr-1 pl-2 md:pl-3 pt-0.5 md:pt-2">
-        <p className="text-nowrap truncate">{title}</p>
+        <div className="flex w-full">
+          <p className="w-0 flex-grow text-nowrap truncate">{title}</p>
+          <p className="flex-shrink-0 text-no-wrap text-sm text-slate-500 md:-mt-2">
+            {date}
+          </p>
+        </div>
         <p className="md:pb-1.5 md:pt-1 text-nowrap truncate">{subtitle}</p>
         <p className="text-nowrap truncate grow text-slate-500 text-sm">
           {setlistText}
