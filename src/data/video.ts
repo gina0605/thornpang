@@ -2195,7 +2195,7 @@ const data: VideoRaw[] = [
   {
     title: "밴드 디스커버리",
     slug: "discovery-refuge",
-    setlist: [S.refuge],
+    setlist: [S.refuge, S.peter],
     info: [I.live, "밴드 디스커버리", "상상실현페스티벌"],
     links: [yt("https://www.youtube.com/watch?v=pbEi5Uw3Dqk")],
     date: "2013. 08. 14",
