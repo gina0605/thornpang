@@ -7,9 +7,9 @@ export const AppleProfile = () => {
   const [visible, setVisible] = useState(false);
 
   return (
-    <div className="w-full pt-[75%] relative">
+    <div className="w-full pt-[66%] relative">
       <Image
-        src="/profile/apple.jpeg"
+        src="/profile/apple3.jpeg"
         alt="THORNAPPLE profile picture"
         fill
         style={{ objectFit: "contain" }}

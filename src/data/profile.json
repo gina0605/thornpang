@@ -7,21 +7,6 @@
     "sns": []
   },
   {
-    "image": "sim.jpeg",
-    "name": "심재현",
-    "bday": "1987.01.12",
-    "session": "Bass",
-    "sns": [
-      {
-        "link": "https://www.instagram.com/simjaehyun213/",
-        "type": "instagram"
-      },
-      { "link": "https://soundcloud.com/simjaehyun", "type": "soundcloud" },
-      { "link": "https://soundcloud.com/eboutique", "type": "soundcloud" },
-      { "link": "https://www.youtube.com/@ebclick2", "type": "youtube" }
-    ]
-  },
-  {
     "image": "hong.jpeg",
     "name": "홍동균",
     "bday": "1988.04.10",
