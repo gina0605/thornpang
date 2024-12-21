@@ -17,7 +17,7 @@ export default async () => {
 
   return (
     <main className="w-screen min-h-full-body flex flex-col items-center">
-      <div className="w-full bg-gradient-to-b from-white to-gray-pfp flex flex-col items-center pb-8">
+      <div className="w-full bg-gradient-to-b from-white to-gray-pfp flex flex-col items-center">
         <div className="w-full max-w-5xl">
           <AppleProfile />
         </div>
@@ -73,6 +73,21 @@ export default async () => {
           />
         ))}
         <ThornProfile />
+        <div className="flex flex-col w-screen items-center text-center font-pretendard text-xs pt-20 pb-4">
+          <p>
+            해당 사이트는 개인이 만든 것으로 쏜애플 및 MPMG와 관련이 없습니다.
+          </p>
+          <p>모든 이미지의 저작권은 쏜애플 및 MPMG에 있습니다.</p>
+          <p>
+            개발자 연락처:{" "}
+            <a
+              href="mailto:twinklepurple1117@gmail.com?subject=[쏜애플 팬사이트]"
+              className="underline"
+            >
+              twinklepurple1117@gmail.com
+            </a>
+          </p>
+        </div>
       </div>
     </main>
   );
