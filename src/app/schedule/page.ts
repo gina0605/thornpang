@@ -1,6 +1,6 @@
-import { redirect } from "next/navigation";
+"use client";
 
-export const revalidate = 15;
+import { redirect } from "next/navigation";
 
 export default () => {
   const d = new Date(Date.now() + 32400000);
