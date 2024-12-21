@@ -14,10 +14,11 @@ export const ScheduleModal = ({
   schedule,
   closeLink,
 }: ScheduleModalProps) => {
-  const { image, imageSquare, title, location, setlist, links } = schedule;
+  const { image, imageSquare, title, location, setlist, etc, links } = schedule;
   const content = [
-    { subtitle: "장소", text: location },
-    { subtitle: "셋리스트", text: setlist },
+    ...(location ? [{ subtitle: "장소", text: location }] : []),
+    ...(setlist ? [{ subtitle: "셋리스트", text: setlist }] : []),
+    ...(etc ? [{ subtitle: "", text: etc }] : []),
   ];
 
   return (

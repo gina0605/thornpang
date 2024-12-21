@@ -15,9 +15,11 @@ export const ModalBody = ({ title, date, content, links }: ModalBodyProps) => (
       <p className="text-sm text-slate-500 mt-2 -mb-1 md:-mb-0.5" key={idx * 2}>
         {subtitle}
       </p>,
-      <p className="leading-snug md:leading-normal" key={idx * 2 + 1}>
-        {text}
-      </p>,
+      ...text.map((t) => (
+        <p className="leading-snug md:leading-normal" key={idx * 2 + 1}>
+          {text}
+        </p>
+      )),
     ])}
     <div className="flex flex-col mt-3 pt-3 space-y-0.5 text-slate-500 border-slate-300 border-t">
       {links.map(({ text, link }, idx) => (

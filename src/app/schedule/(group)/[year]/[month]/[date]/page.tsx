@@ -32,11 +32,11 @@ export const generateMetadata = ({
 }: {
   params: PageParams;
 }) => {
-  const { title, setlist } = getSchedule(year, month, date);
-  return createMetadata(
-    title,
-    `일자: ${year}. ${month}. ${date} · 셋리스트: ${setlist.join(", ")}`
-  );
+  const { title, setlist, etc } = getSchedule(year, month, date);
+  const dateText = `일자: ${year}. ${month}. ${date}`;
+  const setlistText = setlist ? ` · 셋리스트: ${setlist.join(", ")}` : "";
+  const etcText = etc ? ` · ${etc.join(", ")}` : "";
+  return createMetadata(title, dateText + setlistText + etcText);
 };
 
 export default ({ params: { year, month, date } }: { params: PageParams }) => {
