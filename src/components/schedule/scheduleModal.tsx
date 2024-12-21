@@ -4,13 +4,17 @@ import { ServerModal } from "@/components/common/serverModal";
 import { ModalBody } from "../common/modalBody";
 
 export interface ScheduleModalProps {
+  dateText: string;
   schedule: Schedule;
   closeLink: string;
 }
 
-export const ScheduleModal = ({ schedule, closeLink }: ScheduleModalProps) => {
-  const { image, imageSquare, title, dateText, location, setlist, links } =
-    schedule;
+export const ScheduleModal = ({
+  dateText,
+  schedule,
+  closeLink,
+}: ScheduleModalProps) => {
+  const { image, imageSquare, title, location, setlist, links } = schedule;
   const content = [
     { subtitle: "장소", text: location },
     { subtitle: "셋리스트", text: setlist },

@@ -12,7 +12,7 @@ export const generateStaticParams = () =>
 export const dynamicParams = false;
 
 const getSchedules = (year: number, month: number) =>
-  (data[year] ?? {})[month] ?? [];
+  (data[year] ?? {})[month] ?? {};
 
 interface PageParams {
   year: string;
@@ -27,8 +27,8 @@ export const generateMetadata = ({
   const schedules = getSchedules(parseInt(year), parseInt(month));
   return createMetadata(
     `${year}년 ${month}월 일정`,
-    schedules
-      .map(({ title, dates }) => `${dates.join(", ")}일: ${title}`)
+    Object.entries(schedules)
+      .map(([date, { title }]) => `${date}일: ${title}`)
       .join(" · ")
   );
 };

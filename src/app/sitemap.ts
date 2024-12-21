@@ -16,8 +16,8 @@ export default () => [
       range(maxYear - minYear + 1, minYear).map((y) =>
         range(12, 1).map((m) => [
           makeRoute(`/schedule/${y}/${m}`),
-          ...((scheduleData[y] ?? {})[m] ?? []).map(({ slug }) =>
-            makeRoute(`/schedule/${y}/${m}/${slug}`)
+          ...Object.entries((scheduleData[y] ?? {})[m] ?? {}).map(
+            ([date, schedule]) => makeRoute(`/schedule/${y}/${m}/${date}`)
           ),
         ])
       )

@@ -21,26 +21,24 @@ export const holidays: Record<
   },
 };
 
-const data: { [key: number]: { [key: number]: Schedule[] } } = {
-  2024: {
-    3: [
-      {
-        slug: "suddenly",
-        dates: [17],
-        title: "어쩌다 페스티벌",
-        image: "202403_suddenly.jpeg",
-        dateText: "2024. 03. 17",
-        location: ["부산 소향씨어터 신한카드홀"],
-        setlist: ["-"],
-        links: [
-          {
-            text: "인스타 공지",
-            link: "https://www.instagram.com/p/C3CqhVbrnph",
-          },
-        ],
+const data: { [key: number]: { [key: number]: { [key: number]: Schedule } } } =
+  {
+    2024: {
+      3: {
+        17: {
+          title: "어쩌다 페스티벌",
+          image: "202403_suddenly.jpeg",
+          location: ["부산 소향씨어터 신한카드홀"],
+          setlist: ["-"],
+          links: [
+            {
+              text: "인스타 공지",
+              link: "https://www.instagram.com/p/C3CqhVbrnph",
+            },
+          ],
+        },
       },
-    ],
-  },
-};
+    },
+  };
 
 export default data;

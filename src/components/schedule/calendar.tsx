@@ -57,7 +57,7 @@ const CalendarCell = ({
     </div>
   ) : schedule ? (
     <Link
-      href={`/schedule/${year}/${month}/${schedule.slug}`}
+      href={`/schedule/${year}/${month}/${d.getDate()}`}
       className={outerClassName}
       scroll={false}
     >
@@ -83,7 +83,7 @@ const CalendarCell = ({
 export interface CalendarProps {
   year: number;
   month: number;
-  schedules: Schedule[];
+  schedules: Record<number, Schedule>;
   holidays: Record<number, string>;
 }
 
@@ -95,17 +95,6 @@ export const Calendar = ({
 }: CalendarProps) => {
   const first = new Date(year, month - 1);
   const monthLength = new Date(year, month, 0).getDate();
-
-  const getScheduleDict = () => {
-    const result: Record<number, number> = {};
-    schedules.forEach((s, idx) =>
-      s.dates.forEach((d) => {
-        result[d] = idx;
-      })
-    );
-    return result;
-  };
-  const scheduleDict = getScheduleDict();
 
   return (
     <div className="w-full max-w-3xl font-sunbatang mb-8">
@@ -126,7 +115,7 @@ export const Calendar = ({
             year={year}
             month={month}
             day={x}
-            schedule={schedules[scheduleDict[x]]}
+            schedule={schedules[x]}
             holiday={holidays[x]}
             out={x < 1 || x > monthLength}
             key={idx}

@@ -14,12 +14,9 @@ export interface Line {
 }
 
 export interface Schedule {
-  slug: string;
-  dates: number[];
   image: string;
   imageSquare?: string;
   title: string;
-  dateText: string;
   location: string[];
   setlist: string[];
   links: { text: string; link: string }[];
