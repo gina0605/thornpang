@@ -27,7 +27,7 @@ const data: { [key: number]: { [key: number]: { [key: number]: Schedule } } } =
       3: {
         17: {
           title: "어쩌다 페스티벌",
-          image: "202403_suddenly.jpeg",
+          imageR: "202403_suddenly.jpeg",
           location: ["부산 소향씨어터 신한카드홀"],
           setlist: ["-"],
           links: [
@@ -40,9 +40,9 @@ const data: { [key: number]: { [key: number]: { [key: number]: Schedule } } } =
       },
       12: {
         24: {
-          title: "쏜탄절",
-          image: "thornapple-r.png",
-          imageSquare: "thornapple-s.png",
+          title: "2024 쏜탄절",
+          imageR: "thornapple-r.png",
+          imageS: "thornapple-s.png",
           etc: ["데뷔 15주년 축하합니다!!"],
           links: [],
         },

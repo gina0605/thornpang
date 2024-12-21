@@ -14,7 +14,8 @@ export const ScheduleModal = ({
   schedule,
   closeLink,
 }: ScheduleModalProps) => {
-  const { image, imageSquare, title, location, setlist, etc, links } = schedule;
+  const { imageR, imageS, imageA, title, location, setlist, etc, links } =
+    schedule;
   const content = [
     ...(location ? [{ subtitle: "장소", text: location }] : []),
     ...(setlist ? [{ subtitle: "셋리스트", text: setlist }] : []),
@@ -26,31 +27,31 @@ export const ScheduleModal = ({
       <div className="flex flex-col md:flex-row max-h-[80vh]">
         <div
           className={`md:hidden w-[80vw] h-[80vw] max-w-[50vh] max-h-[50vh] relative shrink-0 rounded-t overflow-hidden z-40 ${
-            imageSquare ? "" : "bg-black/70"
+            imageS ? "" : "bg-black/70"
           }`}
         >
           <Image
-            src={`/schedule/${imageSquare ?? image}`}
+            src={`/schedule/${imageS ?? imageA ?? imageR ?? "apple-s.png"}`}
             alt="poster"
             fill
-            placeholder={imageSquare ? "blur" : "empty"}
+            placeholder={imageS ? "blur" : "empty"}
             blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mPU2wQAARQA4liArccAAAAASUVORK5CYII="
-            className={imageSquare ? "object-fill" : "object-contain"}
+            className={imageS ? "object-fill" : "object-contain"}
             sizes="80vw"
           />
         </div>
         <div
           className={`hidden md:block w-[50vw] h-[70vw] max-w-[57vh] max-h-[80vh] relative shrink-0 rounded-l overflow-hidden z-40 ${
-            image ? "" : "bg-black/70"
+            imageR ? "" : "bg-black/70"
           }`}
         >
           <Image
-            src={`/schedule/${image ?? imageSquare}`}
+            src={`/schedule/${imageR ?? imageA ?? imageS ?? "apple-r.png"}`}
             alt="poster"
             fill
             placeholder="blur"
             blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mPU2wQAARQA4liArccAAAAASUVORK5CYII="
-            className={image ? "object-fill" : "object-contain"}
+            className={imageR ? "object-fill" : "object-contain"}
             sizes="57vh"
           />
         </div>
