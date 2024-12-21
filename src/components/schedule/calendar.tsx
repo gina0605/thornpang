@@ -63,7 +63,7 @@ const CalendarCell = ({
     >
       <CalendarCellIner red={red} day={day} holiday={holiday} />
       <Image
-        src={`/schedule/${schedule.image}`}
+        src={`/schedule/${schedule.image ?? schedule.imageSquare}`}
         fill
         className="object-fill -z-20"
         alt={schedule.title}

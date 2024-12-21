@@ -14,7 +14,7 @@ export interface Line {
 }
 
 export interface Schedule {
-  image: string;
+  image?: string;
   imageSquare?: string;
   title: string;
   location?: string[];

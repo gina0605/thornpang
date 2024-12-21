@@ -39,14 +39,18 @@ export const ScheduleModal = ({
             sizes="80vw"
           />
         </div>
-        <div className="hidden md:block w-[50vw] h-[70vw] max-w-[57vh] max-h-[80vh] relative shrink-0 rounded-l overflow-hidden z-40">
+        <div
+          className={`hidden md:block w-[50vw] h-[70vw] max-w-[57vh] max-h-[80vh] relative shrink-0 rounded-l overflow-hidden z-40 ${
+            image ? "" : "bg-black/70"
+          }`}
+        >
           <Image
-            src={`/schedule/${image}`}
+            src={`/schedule/${image ?? imageSquare}`}
             alt="poster"
             fill
             placeholder="blur"
             blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mPU2wQAARQA4liArccAAAAASUVORK5CYII="
-            className="object-fill"
+            className={image ? "object-fill" : "object-contain"}
             sizes="57vh"
           />
         </div>
