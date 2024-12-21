@@ -18,7 +18,7 @@ export const ScheduleModal = ({
   const content = [
     ...(location ? [{ subtitle: "장소", text: location }] : []),
     ...(setlist ? [{ subtitle: "셋리스트", text: setlist }] : []),
-    ...(etc ? [{ subtitle: "", text: etc }] : []),
+    ...(etc ? [{ subtitle: "-", text: etc }] : []),
   ];
 
   return (

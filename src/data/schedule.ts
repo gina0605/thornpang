@@ -38,6 +38,15 @@ const data: { [key: number]: { [key: number]: { [key: number]: Schedule } } } =
           ],
         },
       },
+      12: {
+        24: {
+          title: "쏜탄절",
+          image: "thornapple-r.png",
+          imageSquare: "thornapple-s.png",
+          etc: ["데뷔 15주년 축하합니다!!"],
+          links: [],
+        },
+      },
     },
   };
 

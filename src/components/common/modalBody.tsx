@@ -21,24 +21,28 @@ export const ModalBody = ({ title, date, content, links }: ModalBodyProps) => (
         </p>
       )),
     ])}
-    <div className="flex flex-col mt-3 pt-3 space-y-0.5 text-slate-500 border-slate-300 border-t">
-      {links.map(({ text, link }, idx) => (
-        <a
-          target="_blank"
-          href={link}
-          key={idx}
-          className="flex hover:bg-slate-100 rounded-sm px-1 w-fit -ml-1 items-center"
-        >
-          <Image
-            src="/icon/link.svg"
-            alt="link"
-            width={16}
-            height={16}
-            className="w-4 h-4 mr-1"
-          />
-          <p>{text}</p>
-        </a>
-      ))}
-    </div>
+    {links.length ? (
+      <div className="flex flex-col mt-3 pt-3 space-y-0.5 text-slate-500 border-slate-300 border-t">
+        {links.map(({ text, link }, idx) => (
+          <a
+            target="_blank"
+            href={link}
+            key={idx}
+            className="flex hover:bg-slate-100 rounded-sm px-1 w-fit -ml-1 items-center"
+          >
+            <Image
+              src="/icon/link.svg"
+              alt="link"
+              width={16}
+              height={16}
+              className="w-4 h-4 mr-1"
+            />
+            <p>{text}</p>
+          </a>
+        ))}
+      </div>
+    ) : (
+      <></>
+    )}
   </>
 );
