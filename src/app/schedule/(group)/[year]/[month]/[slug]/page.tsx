@@ -3,19 +3,19 @@ import { createMetadata } from "@/common/seo";
 import { ScheduleModal } from "@/components/schedule/scheduleModal";
 import data, { getScheduleYM } from "@/data/schedule";
 
+const getSlug = ({ date, slug }: Schedule) => slug ?? `${date}`;
+
 export const generateStaticParams = ({
   params: { year, month },
 }: {
-  params: { year: number; month: number };
+  params: { year: string; month: string };
 }) =>
-  getScheduleYM(year, month).map(({ slug }) => ({
+  getScheduleYM(parseInt(year), parseInt(month)).map((s) => ({
     year,
     month,
-    slug,
+    slug: getSlug(s),
   }));
 export const dynamicParams = false;
-
-const getSlug = ({ date, slug }: Schedule) => slug ?? `${date}`;
 
 interface PageParams {
   year: string;
