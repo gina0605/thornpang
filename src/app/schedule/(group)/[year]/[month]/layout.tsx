@@ -1,7 +1,7 @@
 import { createMetadata } from "@/common/seo";
 import { flatten, range } from "@/common/utils";
 import { Calendar } from "@/components/schedule/calendar";
-import data, { holidays, maxYear, minYear } from "@/data/schedule";
+import { getScheduleYM, holidays, maxYear, minYear } from "@/data/schedule";
 
 export const generateStaticParams = () =>
   flatten(
@@ -10,9 +10,6 @@ export const generateStaticParams = () =>
     )
   );
 export const dynamicParams = false;
-
-const getSchedules = (year: number, month: number) =>
-  (data[year] ?? {})[month] ?? {};
 
 interface PageParams {
   year: string;
@@ -24,12 +21,10 @@ export const generateMetadata = ({
 }: {
   params: PageParams;
 }) => {
-  const schedules = getSchedules(parseInt(year), parseInt(month));
+  const schedules = getScheduleYM(parseInt(year), parseInt(month));
   return createMetadata(
     `${year}년 ${month}월 일정`,
-    Object.entries(schedules)
-      .map(([date, { title }]) => `${date}일: ${title}`)
-      .join(" · ")
+    schedules.map(({ date, title }) => `${date}일: ${title}`).join(" · ")
   );
 };
 
@@ -42,7 +37,7 @@ export default ({
 }>) => {
   const y = parseInt(year),
     m = parseInt(month);
-  const schedules = getSchedules(y, m);
+  const schedules = getScheduleYM(y, m);
   const thisHolidays = (holidays[y] ?? {})[m] ?? {};
 
   return (

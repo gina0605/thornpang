@@ -14,6 +14,9 @@ export interface Line {
 }
 
 export interface Schedule {
+  year: number;
+  month: number;
+  date: number;
   imageR?: string;
   imageS?: string;
   imageA?: string;

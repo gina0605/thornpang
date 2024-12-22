@@ -21,33 +21,37 @@ export const holidays: Record<
   },
 };
 
-const data: { [key: number]: { [key: number]: { [key: number]: Schedule } } } =
+const data: Schedule[] = [
   {
-    2024: {
-      3: {
-        17: {
-          title: "어쩌다 페스티벌",
-          imageR: "202403_suddenly.jpeg",
-          location: ["부산 소향씨어터 신한카드홀"],
-          setlist: ["-"],
-          links: [
-            {
-              text: "인스타 공지",
-              link: "https://www.instagram.com/p/C3CqhVbrnph",
-            },
-          ],
-        },
+    year: 2024,
+    month: 3,
+    date: 17,
+    title: "어쩌다 페스티벌",
+    imageR: "202403_suddenly.jpeg",
+    location: ["부산 소향씨어터 신한카드홀"],
+    setlist: ["-"],
+    links: [
+      {
+        text: "인스타 공지",
+        link: "https://www.instagram.com/p/C3CqhVbrnph",
       },
-      12: {
-        24: {
-          title: "2024 쏜탄절",
-          imageR: "thornapple-r.png",
-          imageS: "thornapple-s.png",
-          etc: ["데뷔 15주년 축하합니다!!"],
-          links: [],
-        },
-      },
-    },
-  };
+    ],
+  },
+  {
+    year: 2024,
+    month: 12,
+    date: 24,
+    title: "2024 쏜탄절",
+    imageR: "thornapple-r.png",
+    imageS: "thornapple-s.png",
+    etc: ["데뷔 15주년 축하합니다!!"],
+    links: [],
+  },
+];
 
 export default data;
+
+export const getScheduleYM = (y: number, m: number) =>
+  data.filter(({ year, month }) => year === y && month === m);
+export const getScheduleYMD = (y: number, m: number, d: number) =>
+  data.find(({ year, month, date }) => year === y && month === m && date === d);

@@ -1,7 +1,7 @@
-import { Schedule } from "@/types";
-import { range } from "@/common/utils";
 import Image from "next/image";
 import Link from "next/link";
+import { Schedule } from "@/types";
+import { range } from "@/common/utils";
 
 interface CalendarCellInnerProps {
   red: boolean;
@@ -85,7 +85,7 @@ const CalendarCell = ({
 export interface CalendarProps {
   year: number;
   month: number;
-  schedules: Record<number, Schedule>;
+  schedules: Schedule[];
   holidays: Record<number, string>;
 }
 
@@ -117,7 +117,7 @@ export const Calendar = ({
             year={year}
             month={month}
             day={x}
-            schedule={schedules[x]}
+            schedule={schedules.find(({ date }) => date === x)}
             holiday={holidays[x]}
             out={x < 1 || x > monthLength}
             key={idx}
