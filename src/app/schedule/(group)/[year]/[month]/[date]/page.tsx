@@ -51,7 +51,7 @@ export default ({ params: { year, month, date } }: { params: PageParams }) => {
     year: prvY,
     month: prvM,
     date: prvD,
-  } = data[idx === data.length - 1 ? 0 : idx + 1];
+  } = data[idx === 0 ? data.length - 1 : idx - 1];
 
   return (
     <ScheduleModal

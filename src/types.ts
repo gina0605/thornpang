@@ -23,7 +23,7 @@ export interface Schedule {
   title: string;
   location?: string[];
   setlist?: string[];
-  etc?: string[];
+  etc?: { subtitle: string; text: string[] }[];
   links: { text: string; link: string }[];
 }
 
