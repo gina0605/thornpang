@@ -74,10 +74,11 @@ export default async () => {
         ))}
         <ThornProfile />
         <div className="flex flex-col w-screen items-center text-center font-pretendard text-xs pt-20 pb-4">
+          <p>본 사이트는 개인이 제작한 것으로, 쏜애플 및 MPMG와 무관합니다.</p>
           <p>
-            해당 사이트는 개인이 만든 것으로 쏜애플 및 MPMG와 관련이 없습니다.
+            사이트에 사용된 모든 이미지의 저작권은 쏜애플, MPMG 및 해당 권리
+            보유자에게 귀속됩니다.
           </p>
-          <p>모든 이미지의 저작권은 쏜애플 및 MPMG에 있습니다.</p>
           <p>
             개발자 연락처:{" "}
             <a
