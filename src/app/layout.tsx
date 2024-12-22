@@ -1,6 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import localFont from "next/font/local";
+import { Analytics } from "@vercel/analytics/react";
 import "./globals.css";
 import { Tab } from "@/components/header/tab";
 import { ScheduleLoader } from "@/components/common/scheduleLoader";
@@ -107,6 +108,7 @@ export default ({
           </div>
         </header>
         {children}
+        <Analytics />
       </body>
     </html>
   );
