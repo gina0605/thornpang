@@ -19,12 +19,14 @@ const CalendarCellIner = ({ red, day, holiday }: CalendarCellInnerProps) => (
       </p>
       <div className="absolute top-1 bottom-1 -left-px -right-px bg-white bg-opacity-50 rounded -z-10" />
     </div>
-    <div className="w-fit h-fit relative" key="info">
-      <p className="relative text-center text-rose-700 text-xs -mt-1 px-0.5 break-normal">
-        {holiday}
-      </p>
-      <div className="absolute inset-0 -top-1 bg-white bg-opacity-50 rounded -z-10" />
-    </div>
+    {holiday && (
+      <div className="w-fit h-fit relative" key="info">
+        <p className="relative text-center text-rose-700 text-xs -mt-1 px-0.5 break-normal">
+          {holiday}
+        </p>
+        <div className="absolute inset-0 -top-1 bg-white bg-opacity-50 rounded -z-10" />
+      </div>
+    )}
   </>
 );
 
