@@ -51,4 +51,5 @@ export const SONGS = {
   ourNight: "우리의 밤은 당신의 낮보다 아름답다",
   pinocchio: "피노키오",
   whale: "The Whale",
+  glow: "야광",
 };
