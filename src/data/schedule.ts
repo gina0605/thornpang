@@ -524,6 +524,15 @@ const data: Schedule[] = [
   },
   {
     year: 2024,
+    month: 11,
+    date: 10,
+    slug: "Bang",
+    title: "방요셉 생일",
+    etc: [{ subtitle: "-", text: ["요셉님 생일 축하드려요!"] }],
+    links: [],
+  },
+  {
+    year: 2024,
     month: 12,
     date: 14,
     title: "도시전설 콘서트",

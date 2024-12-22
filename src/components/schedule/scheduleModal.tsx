@@ -29,7 +29,10 @@ export const ScheduleModal = ({
       ? [
           {
             subtitle: "셋리스트",
-            text: setlist.map((x, idx) => `${idx + 1}. ${x}`),
+            text:
+              setlist.length === 0
+                ? ["-"]
+                : setlist.map((x, idx) => `${idx + 1}. ${x}`),
           },
         ]
       : []),
@@ -41,12 +44,14 @@ export const ScheduleModal = ({
         <Link
           className="absolute inset-y-1/2 -left-8 md:-left-10 z-40"
           href={prvLink}
+          scroll={false}
         >
           <Chevron direction="left" className="invert w-8 h-8" />
         </Link>
         <Link
           className="absolute inset-y-1/2 -right-8 md:-right-10 z-40"
           href={nxtLink}
+          scroll={false}
         >
           <Chevron direction="right" className="invert w-8 h-8" />
         </Link>

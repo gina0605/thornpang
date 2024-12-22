@@ -17,6 +17,7 @@ export interface Schedule {
   year: number;
   month: number;
   date: number;
+  slug?: string;
   imageR?: string;
   imageS?: string;
   imageA?: string;
