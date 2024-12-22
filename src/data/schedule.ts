@@ -53,5 +53,3 @@ export default data;
 
 export const getScheduleYM = (y: number, m: number) =>
   data.filter(({ year, month }) => year === y && month === m);
-export const getScheduleYMD = (y: number, m: number, d: number) =>
-  data.find(({ year, month, date }) => year === y && month === m && date === d);

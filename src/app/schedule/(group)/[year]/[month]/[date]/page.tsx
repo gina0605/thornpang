@@ -1,6 +1,6 @@
 import { createMetadata } from "@/common/seo";
 import { ScheduleModal } from "@/components/schedule/scheduleModal";
-import { getScheduleYM, getScheduleYMD } from "@/data/schedule";
+import data, { getScheduleYM } from "@/data/schedule";
 
 export const generateStaticParams = ({
   params: { year, month },
@@ -25,10 +25,11 @@ export const generateMetadata = ({
 }: {
   params: PageParams;
 }) => {
-  const { title, setlist, etc } = getScheduleYMD(
-    parseInt(year),
-    parseInt(month),
-    parseInt(date)
+  const { title, setlist, etc } = data.find(
+    (s) =>
+      s.year === parseInt(year) &&
+      s.month === parseInt(month) &&
+      s.date === parseInt(date)
   )!;
   const dateText = `일자: ${year}. ${month}. ${date}`;
   const setlistText = setlist ? ` · 셋리스트: ${setlist.join(", ")}` : "";
@@ -37,17 +38,28 @@ export const generateMetadata = ({
 };
 
 export default ({ params: { year, month, date } }: { params: PageParams }) => {
-  const schedule = getScheduleYMD(
-    parseInt(year),
-    parseInt(month),
-    parseInt(date)
-  )!;
+  const idx = data.findIndex(
+    ({ year: y, month: m, date: d }) =>
+      y === parseInt(year) && m === parseInt(month) && d === parseInt(date)
+  );
+  const {
+    year: nxtY,
+    month: nxtM,
+    date: nxtD,
+  } = data[idx === data.length - 1 ? 0 : idx + 1];
+  const {
+    year: prvY,
+    month: prvM,
+    date: prvD,
+  } = data[idx === data.length - 1 ? 0 : idx + 1];
 
   return (
     <ScheduleModal
       dateText={`${year}. ${month.padStart(2, "0")}. ${date.padStart(2, "0")}`}
-      schedule={schedule}
+      schedule={data[idx]}
       closeLink={`/schedule/${year}/${month}/`}
+      nxtLink={`/schedule/${nxtY}/${nxtM}/${nxtD}`}
+      prvLink={`/schedule/${prvY}/${prvM}/${prvD}`}
     />
   );
 };
