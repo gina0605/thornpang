@@ -146,7 +146,7 @@ const data_2023: Schedule[] = [
     month: 3,
     date: 11,
     title: "불구경 2022 라이브 콘서트 필름 무대인사",
-    imageR: "202310-film-r.jpg",
+    imageR: "202303-film-r.jpg",
     location: ["CGV 인천", "CGV 홍대"],
     links: [
       {
@@ -657,6 +657,7 @@ const data_2023: Schedule[] = [
     month: 10,
     date: 9,
     title: "EP [동물] 발매 기념 팬사인회",
+    imageS: "202310-sign-s.jpg",
     links: [],
   },
   {
@@ -1739,10 +1740,7 @@ const data_2024: Schedule[] = [
     ],
     links: [
       I.Notice("https://www.instagram.com/p/DBs8Wo0S4SQ"),
-      {
-        text: "시퍼런 봄 영상",
-        link: "https://www.instagram.com/p/DDjxxdpSVWV/",
-      },
+      I.Vid("https://www.instagram.com/p/DDjxxdpSVWV/", S.spring),
       I.Photo("https://www.instagram.com/p/DDmi-yEy9Im"),
       I.Vid("https://www.instagram.com/p/DDmj17-SB3X/", "DAY 2"),
       I.Photo("https://www.instagram.com/p/DDt20vhyZgN", "DAY 2"),
