@@ -2716,7 +2716,9 @@ const data_2024: Schedule[] = [
     links: [
       I.FNotice("https://www.instagram.com/p/C21mXcWrgux"),
       I.Zone("https://www.instagram.com/p/C5s0tMgpK_3/"),
-      I.Photo("https://www.instagram.com/p/C5s45BGpp1o/"),
+      I.Photo("https://www.instagram.com/p/C5s45BGpp1o/", "단체 사진"),
+      I.Vid("https://www.instagram.com/reel/C5s6dCXJjAz/"),
+      I.Photo("https://www.instagram.com/p/C6tW4asrU1i", "비하인드"),
     ],
   },
   {
@@ -3149,11 +3151,12 @@ const data_2024: Schedule[] = [
     ],
     links: [
       I.Notice("https://www.instagram.com/p/DBs8Wo0S4SQ"),
-      I.Vid("https://www.instagram.com/p/DCHFMYdNGyT/", S.spring),
+      I.Vid("https://www.instagram.com/p/DDjxxdpSVWV/", S.spring),
       I.Photo("https://www.instagram.com/p/DDmi-yEy9Im"),
       I.Vid("https://www.instagram.com/p/DDkFK98S_64/", "DAY 1"),
       I.Photo("https://www.instagram.com/p/DDkCXGQy655", "DAY 1"),
       I.Photo("https://www.instagram.com/p/DDwavofyEoz", "리허설"),
+      I.Vid("https://www.instagram.com/p/DD_0kCWSQxb/", S.peter),
     ],
   },
   {
@@ -3195,6 +3198,7 @@ const data_2024: Schedule[] = [
       I.Vid("https://www.instagram.com/p/DDmj17-SB3X/", "DAY 2"),
       I.Photo("https://www.instagram.com/p/DDt20vhyZgN", "DAY 2"),
       I.Photo("https://www.instagram.com/p/DDwavofyEoz", "리허설"),
+      I.Vid("https://www.instagram.com/p/DD_0kCWSQxb/", S.peter),
     ],
   },
   {
@@ -3234,7 +3238,17 @@ const data_2024: Schedule[] = [
     title: "Someday Festival 부산",
     imageS: "202412-busan-s.jpg",
     location: ["부산 BEXCO 제1전시장"],
-    setlist: [],
+    setlist: [
+      S.mercury,
+      S.lion,
+      S.tropics,
+      S.flesh,
+      S.seoul,
+      S.cicadas,
+      S.peter,
+      S.extinction,
+      S.spring,
+    ],
     links: [],
   },
   {

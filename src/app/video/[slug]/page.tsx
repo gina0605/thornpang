@@ -33,7 +33,7 @@ export default ({ params: { slug } }: { params: PageParams }) => {
   return (
     <>
       <VideoSearchBar search="" target="all" />
-      <div className="w-full max-w-5xl flex flex-col md:px-1.5">
+      <div className="w-full max-w-4xl flex flex-col md:px-1.5">
         {data.map((v) => (
           <Row video={v} key={v.slug} />
         ))}
