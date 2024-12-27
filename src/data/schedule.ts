@@ -3157,6 +3157,7 @@ const data_2024: Schedule[] = [
       I.Photo("https://www.instagram.com/p/DDkCXGQy655", "DAY 1"),
       I.Photo("https://www.instagram.com/p/DDwavofyEoz", "리허설"),
       I.Vid("https://www.instagram.com/p/DD_0kCWSQxb/", S.peter),
+      I.Vid("https://www.instagram.com/p/DECYeZ3yXuD/", S.veranda),
     ],
   },
   {
@@ -3193,12 +3194,12 @@ const data_2024: Schedule[] = [
     ],
     links: [
       I.Notice("https://www.instagram.com/p/DBs8Wo0S4SQ"),
-      I.Vid("https://www.instagram.com/p/DDjxxdpSVWV/", S.spring),
       I.Photo("https://www.instagram.com/p/DDmi-yEy9Im"),
       I.Vid("https://www.instagram.com/p/DDmj17-SB3X/", "DAY 2"),
       I.Photo("https://www.instagram.com/p/DDt20vhyZgN", "DAY 2"),
       I.Photo("https://www.instagram.com/p/DDwavofyEoz", "리허설"),
       I.Vid("https://www.instagram.com/p/DD_0kCWSQxb/", S.peter),
+      I.Vid("https://www.instagram.com/p/DECYeZ3yXuD/", S.veranda),
     ],
   },
   {
@@ -3249,7 +3250,7 @@ const data_2024: Schedule[] = [
       S.extinction,
       S.spring,
     ],
-    links: [],
+    links: [I.FNotice("https://www.instagram.com/p/DC1CoXMuO2Q/")],
   },
   {
     year: 2024,
