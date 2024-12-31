@@ -27,7 +27,7 @@ const I = {
 };
 
 export const minYear = 2020;
-export const maxYear = 2024;
+export const maxYear = 2025;
 
 export const holidays: Record<
   number,
@@ -86,6 +86,15 @@ export const holidays: Record<
     8: { 15: "광복절" },
     9: { 16: "", 17: "추석", 18: "" },
     10: { 3: "개천절", 9: "한글날" },
+    12: { 25: "크리스마스" },
+  },
+  2025: {
+    1: { 1: "신정", 28: "", 29: "설날", 30: "" },
+    3: { 1: "삼일절" },
+    5: { 5: "어린이날 / 부처님 오신 날", 6: "대체공휴일" },
+    6: { 6: "현충일" },
+    8: { 15: "광복절" },
+    10: { 3: "개천절", 5: "", 6: "추석", 7: "", 8: "대체공휴일", 9: "한글날" },
     12: { 25: "크리스마스" },
   },
 };
@@ -3259,8 +3268,17 @@ const data_2024: Schedule[] = [
     title: "카운트다운 판타지 2024-2025",
     imageS: "202412-cdf-s.jpg",
     location: ["일산 KINTEX"],
-    setlist: [],
-    links: [],
+    setlist: [
+      S.extinction,
+      S.noon,
+      S.living,
+      S.nightwalk,
+      S.black,
+      S.peter,
+      S.spring,
+      S.crab,
+    ],
+    links: [I.FNotice("https://www.instagram.com/p/DCbVzPmSPD1/")],
   },
 ];
 
