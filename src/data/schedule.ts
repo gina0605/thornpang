@@ -3167,6 +3167,7 @@ const data_2024: Schedule[] = [
       I.Photo("https://www.instagram.com/p/DDwavofyEoz", "리허설"),
       I.Vid("https://www.instagram.com/p/DD_0kCWSQxb/", S.peter),
       I.Vid("https://www.instagram.com/p/DECYeZ3yXuD/", S.veranda),
+      I.Vid("https://www.instagram.com/reel/DEetZwDyaIX/", S.cicadas),
     ],
   },
   {
@@ -3209,6 +3210,7 @@ const data_2024: Schedule[] = [
       I.Photo("https://www.instagram.com/p/DDwavofyEoz", "리허설"),
       I.Vid("https://www.instagram.com/p/DD_0kCWSQxb/", S.peter),
       I.Vid("https://www.instagram.com/p/DECYeZ3yXuD/", S.veranda),
+      I.Vid("https://www.instagram.com/reel/DEetZwDyaIX/", S.cicadas),
     ],
   },
   {
@@ -3278,7 +3280,11 @@ const data_2024: Schedule[] = [
       S.spring,
       S.crab,
     ],
-    links: [I.FNotice("https://www.instagram.com/p/DCbVzPmSPD1/")],
+    links: [
+      I.FNotice("https://www.instagram.com/p/DCbVzPmSPD1/"),
+      I.Hi("https://www.instagram.com/p/DEestOSy4hV/"),
+      I.Vid("https://www.instagram.com/p/DEetH6vST7_/"),
+    ],
   },
 ];
 
