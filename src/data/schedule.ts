@@ -3288,12 +3288,56 @@ const data_2024: Schedule[] = [
   },
 ];
 
+const data_2025: Schedule[] = [
+  {
+    year: 2025,
+    month: 1,
+    date: 8,
+    slug: "Yoon",
+    title: "윤성현 생일",
+    imageA: "yoon.jpeg",
+    etc: [{ subtitle: "-", text: ["성현님 생일 축하드려요!"] }],
+    links: [],
+  },
+  {
+    year: 2025,
+    month: 4,
+    date: 10,
+    slug: "Hong",
+    title: "홍동균 생일",
+    imageA: "hong.jpeg",
+    etc: [{ subtitle: "-", text: ["동균님 생일 축하드려요!"] }],
+    links: [],
+  },
+  {
+    year: 2025,
+    month: 11,
+    date: 10,
+    slug: "Bang",
+    title: "방요셉 생일",
+    imageA: "bang.jpeg",
+    etc: [{ subtitle: "-", text: ["요셉님 생일 축하드려요!"] }],
+    links: [],
+  },
+  {
+    year: 2025,
+    month: 12,
+    date: 24,
+    title: "2025 쏜탄절",
+    imageR: "thornapple-r.png",
+    imageS: "thornapple-s.png",
+    etc: [{ subtitle: "-", text: ["데뷔 16주년 축하합니다!!"] }],
+    links: [],
+  },
+];
+
 const data = [
   ...data_2020,
   ...data_2021,
   ...data_2022,
   ...data_2023,
   ...data_2024,
+  ...data_2025,
 ];
 
 export default data;
