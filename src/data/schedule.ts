@@ -3168,6 +3168,7 @@ const data_2024: Schedule[] = [
       I.Vid("https://www.instagram.com/p/DD_0kCWSQxb/", S.peter),
       I.Vid("https://www.instagram.com/p/DECYeZ3yXuD/", S.veranda),
       I.Vid("https://www.instagram.com/reel/DEetZwDyaIX/", S.cicadas),
+      I.Vid("https://www.instagram.com/reel/DEhS2N0SOE4/", S.extinction),
     ],
   },
   {
@@ -3211,6 +3212,7 @@ const data_2024: Schedule[] = [
       I.Vid("https://www.instagram.com/p/DD_0kCWSQxb/", S.peter),
       I.Vid("https://www.instagram.com/p/DECYeZ3yXuD/", S.veranda),
       I.Vid("https://www.instagram.com/reel/DEetZwDyaIX/", S.cicadas),
+      I.Vid("https://www.instagram.com/reel/DEhS2N0SOE4/", S.extinction),
     ],
   },
   {
