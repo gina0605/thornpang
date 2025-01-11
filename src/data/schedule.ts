@@ -3286,6 +3286,7 @@ const data_2024: Schedule[] = [
       I.FNotice("https://www.instagram.com/p/DCbVzPmSPD1/"),
       I.Hi("https://www.instagram.com/p/DEestOSy4hV/"),
       I.Vid("https://www.instagram.com/p/DEetH6vST7_/"),
+      I.Photo("https://www.mintpaper.co.kr/festivals/142/extras/4336"),
     ],
   },
 ];
@@ -3299,7 +3300,7 @@ const data_2025: Schedule[] = [
     title: "윤성현 생일",
     imageA: "yoon.jpeg",
     etc: [{ subtitle: "-", text: ["성현님 생일 축하드려요!"] }],
-    links: [],
+    links: [I.Inst("https://www.instagram.com/p/DEjHmqayK9m/")],
   },
   {
     year: 2025,
