@@ -3324,6 +3324,16 @@ const data_2025: Schedule[] = [
   },
   {
     year: 2025,
+    month: 3,
+    date: 29,
+    title: "THE GLOW 2024",
+    imageS: "202503-glow-s.jpg",
+    location: ["일산 KINTEX"],
+    setlist: [],
+    links: [I.FNotice("https://www.instagram.com/p/DEzJgLJSVjQ/")],
+  },
+  {
+    year: 2025,
     month: 4,
     date: 10,
     slug: "Hong",
