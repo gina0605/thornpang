@@ -3327,7 +3327,7 @@ const data_2025: Schedule[] = [
   {
     year: 2025,
     month: 3,
-    date: 29,
+    date: 30,
     title: "THE GLOW 2024",
     imageS: "202503-glow-s.jpg",
     location: ["일산 KINTEX"],
