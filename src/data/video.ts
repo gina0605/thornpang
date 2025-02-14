@@ -171,7 +171,15 @@ const processVideo = (data: VideoRaw[]): Video[] =>
 const data: VideoRaw[] = [
   {
     title: "도시전설 콘서트",
-    slug: "city",
+    slug: "city-mercury",
+    setlist: [S.mercury, S.lion, S.orange],
+    info: [I.live, "도시전설 콘서트"],
+    links: [yt("https://www.youtube.com/watch?v=_MbWBeZ0yAE")],
+    date: "2025. 02. 14",
+  },
+  {
+    title: "도시전설 콘서트",
+    slug: "city-darkroom",
     setlist: [S.darkroom, S.living],
     info: [I.live, "도시전설 콘서트"],
     links: [yt("https://www.youtube.com/watch?v=KFPNGMcgAIw")],
