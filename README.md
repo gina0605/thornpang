@@ -53,17 +53,22 @@ Pages to render
 
 <details>
 <summary>details for video search logic</summary>
+
 - Search keywords are made from the search string input of user.
+
   1. Search string, which is input by the user is changed into lower case.
   2. Special characters in the search string is changed into " "(single whitespace).
   3. Substitutions are done to the search string according to [replaceLogic](/src/data/video.ts).
   4. Search string is split by whitespace into keywords.
   5. Keyword "살" is changed to "살살" because the song "살" needs to be distinguished with "살아있는 너의 밤"
+
 - Search data (which is a list of keywords joined with a whitespace) is made from the setlist and/or info of each video.
+
   1. Whitespace and special characters (brackets) are removed.
   2. The keywords are joined with a whitespace
   3. "살" is substituted to "살살".
   4. The string is changed into lowercase.
+
 - If every search keywords should be present in the search data, the video is a hit and is shown on the list.
 </details>
 

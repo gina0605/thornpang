@@ -2,6 +2,7 @@ import { Video } from "@/types";
 import { SONGS as S, ALBUMS } from "./constant";
 
 export const replaceLogic = [
+  { pattern: /타마/g, result: "tama" },
   { pattern: /on\s?stage\s?plus/g, result: "온스테이지플러스" },
   { pattern: /on\s?stage/g, result: "온스테이지" },
   { pattern: /all\s?that(\s?music)?/g, result: "올댓뮤직" },
@@ -169,6 +170,22 @@ const processVideo = (data: VideoRaw[]): Video[] =>
   );
 
 const data: VideoRaw[] = [
+  {
+    title: "TAMA 신제품 쇼케이스",
+    slug: "tama-shimmer",
+    setlist: [S.shimmer],
+    info: ["Guitarnet", "TAMA", "쇼케이스", "방요셉"],
+    links: [yt("https://www.youtube.com/watch?v=VQ65t_bIrGQ")],
+    date: "2025.02.25",
+  },
+  {
+    title: "TAMA 신제품 쇼케이스",
+    slug: "tama-noon",
+    setlist: [S.noon],
+    info: ["Guitarnet", "TAMA", "쇼케이스", "방요셉"],
+    links: [yt("https://www.youtube.com/watch?v=wPVEh6rBl3Y")],
+    date: "2025.02.21",
+  },
   {
     title: "도시전설 콘서트",
     slug: "city-mercury",
