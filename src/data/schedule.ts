@@ -3384,6 +3384,16 @@ const data_2025: Schedule[] = [
   },
   {
     year: 2025,
+    month: 5,
+    date: 17,
+    title: "그린캠프 페스티벌",
+    imageR: "202505-green-r.jpg",
+    location: ["송도 달빛축제공원"],
+    setlist: [],
+    links: [I.FNotice("https://www.instagram.com/p/DGmd2gUSW4f")],
+  },
+  {
+    year: 2025,
     month: 11,
     date: 10,
     slug: "Bang",
