@@ -3387,10 +3387,10 @@ const data_2025: Schedule[] = [
     month: 5,
     date: 17,
     title: "그린캠프 페스티벌",
-    imageR: "202505-green-r.jpg",
+    imageA: "202505-green-a.jpg",
     location: ["송도 달빛축제공원"],
     setlist: [],
-    links: [I.FNotice("https://www.instagram.com/p/DGmd2gUSW4f")],
+    links: [I.FNotice("https://www.instagram.com/p/DGwn_c7y4xJ/")],
   },
   {
     year: 2025,
