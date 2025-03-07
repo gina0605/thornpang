@@ -3384,6 +3384,16 @@ const data_2025: Schedule[] = [
   },
   {
     year: 2025,
+    month: 4,
+    date: 27,
+    title: "2025 LOVESOME",
+    imageA: "202504-lovesome-a.jpeg",
+    location: ["난지한강공원"],
+    setlist: [],
+    links: [I.FNotice("https://www.instagram.com/p/DG5G5IJRjzR")],
+  },
+  {
+    year: 2025,
     month: 5,
     date: 17,
     title: "그린캠프 페스티벌",

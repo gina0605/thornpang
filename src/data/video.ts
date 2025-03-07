@@ -172,6 +172,22 @@ const processVideo = (data: VideoRaw[]): Video[] =>
 const data: VideoRaw[] = [
   {
     title: "TAMA 신제품 쇼케이스",
+    slug: "tama-romanesque",
+    setlist: [S.romanesque],
+    info: ["Guitarnet", "TAMA", "쇼케이스", "방요셉"],
+    links: [yt("https://www.youtube.com/watch?v=Z5EagklONuU")],
+    date: "2025.03.07",
+  },
+  {
+    title: "TAMA 신제품 쇼케이스",
+    slug: "tama-difficult",
+    setlist: [S.difficult],
+    info: ["Guitarnet", "TAMA", "쇼케이스", "방요셉"],
+    links: [yt("https://www.youtube.com/watch?v=W5AWUhkHU3U")],
+    date: "2025.03.05",
+  },
+  {
+    title: "TAMA 신제품 쇼케이스",
     slug: "tama-shimmer",
     setlist: [S.shimmer],
     info: ["Guitarnet", "TAMA", "쇼케이스", "방요셉"],
