@@ -3387,10 +3387,10 @@ const data_2025: Schedule[] = [
     month: 4,
     date: 27,
     title: "2025 LOVESOME",
-    imageA: "202504-lovesome-a.jpeg",
+    imageA: "202504-lovesome-a.jpg",
     location: ["난지한강공원"],
     setlist: [],
-    links: [I.FNotice("https://www.instagram.com/p/DG5G5IJRjzR")],
+    links: [I.FNotice("https://www.instagram.com/p/DHCwrKRyzx0/")],
   },
   {
     year: 2025,
@@ -3400,7 +3400,7 @@ const data_2025: Schedule[] = [
     imageA: "202505-green-a.jpg",
     location: ["송도 달빛축제공원"],
     setlist: [],
-    links: [I.FNotice("https://www.instagram.com/p/DGwn_c7y4xJ/")],
+    links: [I.FNotice("https://www.instagram.com/p/DGzYTZDyTRx/")],
   },
   {
     year: 2025,
