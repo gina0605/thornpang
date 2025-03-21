@@ -3390,7 +3390,10 @@ const data_2025: Schedule[] = [
     imageA: "202504-lovesome-a.jpg",
     location: ["난지한강공원"],
     setlist: [],
-    links: [I.FNotice("https://www.instagram.com/p/DHCwrKRyzx0/")],
+    links: [
+      I.FNotice("https://www.instagram.com/p/DHCwrKRyzx0/"),
+      I.Hi("https://www.instagram.com/p/DHaIoKHxkm0/"),
+    ],
   },
   {
     year: 2025,
