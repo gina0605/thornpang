@@ -3366,7 +3366,7 @@ const data_2025: Schedule[] = [
     year: 2025,
     month: 3,
     date: 30,
-    title: "THE GLOW 2024",
+    title: "THE GLOW 2025",
     imageS: "202503-glow-s.jpg",
     location: ["일산 KINTEX"],
     setlist: [
@@ -3392,6 +3392,10 @@ const data_2025: Schedule[] = [
       I.Vid("https://www.instagram.com/p/DH05SGOyNKc/", S.extinction),
       I.Vid("https://www.instagram.com/p/DH08DV1S0HH/", S.peter),
       I.Photo("https://www.instagram.com/p/DIQBBHEpXXf"),
+      {
+        text: "필름카메라 사진",
+        link: "https://www.instagram.com/p/DIqnqU-I8BF",
+      },
     ],
   },
   {
@@ -3415,6 +3419,13 @@ const data_2025: Schedule[] = [
     links: [
       I.FNotice("https://www.instagram.com/p/DHCwrKRyzx0/"),
       I.Hi("https://www.instagram.com/p/DHaIoKHxkm0/"),
+      I.Zone("https://www.instagram.com/p/DI8iX1SxxkC/"),
+      {
+        text: "매거진 인터뷰",
+        link: "https://www.instagram.com/p/DI8jqXpzrHQ/",
+      },
+      I.Vid("https://www.instagram.com/p/DI8lk8rT7qI/", S.extinction),
+      I.Vid("https://www.instagram.com/p/DI8nZLcz6pi/", S.spring),
     ],
   },
   {
@@ -3425,7 +3436,10 @@ const data_2025: Schedule[] = [
     imageA: "202505-green-a.jpg",
     location: ["송도 달빛축제공원"],
     setlist: [],
-    links: [I.FNotice("https://www.instagram.com/p/DGzYTZDyTRx/")],
+    links: [
+      I.FNotice("https://www.instagram.com/p/DGzYTZDyTRx/"),
+      I.Hi("https://www.instagram.com/p/DIu8f-Yy9uJ/"),
+    ],
   },
   {
     year: 2025,
