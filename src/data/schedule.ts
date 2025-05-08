@@ -3518,6 +3518,16 @@ const data_2025: Schedule[] = [
   },
   {
     year: 2025,
+    month: 8,
+    date: 31,
+    title: "메가필드 뮤직페스티벌",
+    imageA: "202508-megafield-a.jpg",
+    location: ["일산 KINTEX"],
+    setlist: [],
+    links: [I.Notice("https://www.instagram.com/p/DJYUx0pOpQn/")],
+  },
+  {
+    year: 2025,
     month: 11,
     date: 10,
     slug: "Bang",
