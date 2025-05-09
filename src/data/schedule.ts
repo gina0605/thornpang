@@ -3518,6 +3518,16 @@ const data_2025: Schedule[] = [
   },
   {
     year: 2025,
+    month: 7,
+    date: 19,
+    title: "사운드베리 페스타",
+    imageA: "202507-soundberry-a.jpg",
+    location: ["일산 KINTEX"],
+    setlist: [],
+    links: [I.Notice("https://www.instagram.com/p/DJbOHn_zoi0/")],
+  },
+  {
+    year: 2025,
     month: 8,
     date: 31,
     title: "메가필드 뮤직페스티벌",
