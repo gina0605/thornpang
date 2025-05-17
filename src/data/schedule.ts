@@ -3445,7 +3445,16 @@ const data_2025: Schedule[] = [
     title: "그린캠프 페스티벌",
     imageA: "202505-green-a.jpg",
     location: ["송도 달빛축제공원"],
-    setlist: [],
+    setlist: [
+      S.spring,
+      S.lion,
+      S.cicadas,
+      S.living,
+      S.kirin,
+      S.peter,
+      S.crab,
+      S.extinction,
+    ],
     links: [
       I.FNotice("https://www.instagram.com/p/DGzYTZDyTRx/"),
       I.Hi("https://www.instagram.com/p/DIu8f-Yy9uJ/"),
