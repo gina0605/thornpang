@@ -3458,6 +3458,8 @@ const data_2025: Schedule[] = [
     links: [
       I.FNotice("https://www.instagram.com/p/DGzYTZDyTRx/"),
       I.Hi("https://www.instagram.com/p/DIu8f-Yy9uJ/"),
+      { text: "입장 영상", link: "https://www.instagram.com/p/DJyBZ3ey7dN/" },
+      I.Vid("https://www.instagram.com/p/DJyB6W_y7Td/"),
     ],
   },
   {
