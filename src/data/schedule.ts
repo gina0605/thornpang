@@ -3469,7 +3469,15 @@ const data_2025: Schedule[] = [
     title: "중앙대학교 축제",
     imageS: "202505-chungang-s.jpg",
     location: ["중앙대학교"],
-    setlist: [],
+    setlist: [
+      S.noon,
+      S.kirin,
+      S.cicadas,
+      S.extinction,
+      S.peter,
+      S.reason,
+      S.spring,
+    ],
     links: [I.FNotice("https://www.instagram.com/p/DJjRKFWyaaI")],
   },
   {
