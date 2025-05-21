@@ -3478,7 +3478,10 @@ const data_2025: Schedule[] = [
       S.reason,
       S.spring,
     ],
-    links: [I.FNotice("https://www.instagram.com/p/DJjRKFWyaaI")],
+    links: [
+      I.FNotice("https://www.instagram.com/p/DJjRKFWyaaI"),
+      I.Photo("https://www.instagram.com/p/DJ6xYB-yRQ-"),
+    ],
   },
   {
     year: 2025,
