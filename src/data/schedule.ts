@@ -3481,8 +3481,6 @@ const data_2025: Schedule[] = [
     links: [
       I.FNotice("https://www.instagram.com/p/DJjRKFWyaaI"),
       I.Photo("https://www.instagram.com/p/DJ6xYB-yRQ-"),
-      I.Vid("https://www.instagram.com/reel/DJ6ycXzSkF0"),
-      I.Vid("https://www.instagram.com/reel/DJ68EkRS_4V", S.reason),
     ],
   },
   {
