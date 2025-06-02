@@ -3482,6 +3482,9 @@ const data_2025: Schedule[] = [
     links: [
       I.FNotice("https://www.instagram.com/p/DJjRKFWyaaI"),
       I.Photo("https://www.instagram.com/p/DJ6xYB-yRQ-"),
+      I.Photo("https://www.instagram.com/p/DKU7cf2Sxnn"),
+      I.Vid("https://www.instagram.com/p/DKU8AFwSpsi/", S.spring),
+      I.Vid("https://www.instagram.com/p/DKU9OUESUYx/"),
     ],
   },
   {
@@ -3552,7 +3555,7 @@ const data_2025: Schedule[] = [
     imageA: "202507-soundberry-a.jpg",
     location: ["일산 KINTEX"],
     setlist: [],
-    links: [I.Notice("https://www.instagram.com/p/DJbOHn_zoi0/")],
+    links: [I.Notice("https://www.instagram.com/p/DKWOqRczt-z")],
   },
   {
     year: 2025,
