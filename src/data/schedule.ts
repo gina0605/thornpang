@@ -3555,7 +3555,7 @@ const data_2025: Schedule[] = [
     imageA: "202507-soundberry-a.jpg",
     location: ["일산 KINTEX"],
     setlist: [],
-    links: [I.Notice("https://www.instagram.com/p/DKWOqRczt-z")],
+    links: [I.FNotice("https://www.instagram.com/p/DKWOqRczt-z")],
   },
   {
     year: 2025,
@@ -3565,7 +3565,17 @@ const data_2025: Schedule[] = [
     imageA: "202508-megafield-a.jpg",
     location: ["일산 KINTEX"],
     setlist: [],
-    links: [I.Notice("https://www.instagram.com/p/DJYUx0pOpQn/")],
+    links: [I.FNotice("https://www.instagram.com/p/DJYUx0pOpQn/")],
+  },
+  {
+    year: 2025,
+    month: 9,
+    date: 7,
+    title: "렛츠락 페스티벌",
+    imageA: "202509-letsrock-a.jpg",
+    location: ["난지한강공원"],
+    setlist: [],
+    links: [I.FNotice("https://www.instagram.com/p/DKyIGrWyDt2")],
   },
   {
     year: 2025,
