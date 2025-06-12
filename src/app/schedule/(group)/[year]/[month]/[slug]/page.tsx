@@ -64,7 +64,7 @@ export default ({ params: { year, month, slug } }: { params: PageParams }) => {
     <ScheduleModal
       dateText={`${year}. ${month.padStart(2, "0")}. ${data[idx].date
         .toString()
-        .padStart(2, "0")}`}
+        .padStart(2, "0")}${data[idx].info ? ` (${data[idx].info})` : ""}`}
       schedule={data[idx]}
       closeLink={`/schedule/${year}/${month}/`}
       nxtLink={`/schedule/${nxtY}/${nxtM}/${nxtS ?? nxtD}`}

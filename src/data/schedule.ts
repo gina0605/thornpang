@@ -24,6 +24,7 @@ const I = {
   Vid: makeLinkItem("무대 영상"),
   Inst: makeLinkItem("인스타그램 게시글"),
   Hi: makeLinkItem("인사 영상"),
+  DU: "날짜 미정",
 };
 
 export const minYear = 2020;
@@ -3576,6 +3577,39 @@ const data_2025: Schedule[] = [
     location: ["난지한강공원"],
     setlist: [],
     links: [I.FNotice("https://www.instagram.com/p/DKyIGrWyDt2")],
+  },
+  {
+    year: 2025,
+    month: 9,
+    date: 26,
+    info: I.DU,
+    title: "부산국제록페스티벌",
+    imageA: "202509-busan-a.jpg",
+    location: ["삼락생태공원"],
+    setlist: [],
+    links: [I.FNotice("https://www.instagram.com/p/DJkcpmNTsJh")],
+  },
+  {
+    year: 2025,
+    month: 9,
+    date: 27,
+    info: I.DU,
+    title: "부산국제록페스티벌",
+    imageA: "202509-busan-a.jpg",
+    location: ["삼락생태공원"],
+    setlist: [],
+    links: [I.FNotice("https://www.instagram.com/p/DJkcpmNTsJh")],
+  },
+  {
+    year: 2025,
+    month: 9,
+    date: 28,
+    info: I.DU,
+    title: "부산국제록페스티벌",
+    imageA: "202509-busan-a.jpg",
+    location: ["삼락생태공원"],
+    setlist: [],
+    links: [I.FNotice("https://www.instagram.com/p/DJkcpmNTsJh")],
   },
   {
     year: 2025,

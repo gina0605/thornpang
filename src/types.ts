@@ -21,6 +21,7 @@ export interface Schedule {
   imageR?: string;
   imageS?: string;
   imageA?: string;
+  info?: string;
   title: string;
   location?: string[];
   setlist?: string[];
