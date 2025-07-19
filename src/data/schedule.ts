@@ -3681,7 +3681,16 @@ const data_2025: Schedule[] = [
     title: "사운드베리 페스타",
     imageA: "202507-soundberry-a.jpg",
     location: ["일산 KINTEX"],
-    setlist: [],
+    setlist: [
+      S.witchcraft,
+      S.noon,
+      S.extinction,
+      S.salamander,
+      S.gills,
+      S.pomegranate,
+      S.peter,
+      S.spring,
+    ],
     links: [I.FNotice("https://www.instagram.com/p/DKWOqRczt-z")],
   },
   {
