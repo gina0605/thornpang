@@ -3695,6 +3695,11 @@ const data_2025: Schedule[] = [
       I.FNotice("https://www.instagram.com/p/DKWOqRczt-z"),
       I.Photo("https://www.instagram.com/p/DMS2gUzyuSW"),
       I.Vid("https://www.instagram.com/p/DMS3ZJnyiV2/"),
+      {
+        text: "네컷사진",
+        link: "https://www.instagram.com/p/DMhZzxgTKMY/?img_index=6",
+      },
+      I.Zone("https://www.instagram.com/p/DMulDCVTX8D"),
     ],
   },
   {
@@ -3726,6 +3731,16 @@ const data_2025: Schedule[] = [
     location: ["삼락생태공원"],
     setlist: [],
     links: [I.FNotice("https://www.instagram.com/p/DLB5UPJviBV")],
+  },
+  {
+    year: 2025,
+    month: 10,
+    date: 19,
+    title: "그랜드민트페스티벌",
+    imageA: "202510-gmf-a.jpg",
+    location: ["올림픽공원"],
+    setlist: [],
+    links: [I.FNotice("https://www.instagram.com/p/DMueKRohfAj/")],
   },
   {
     year: 2025,
