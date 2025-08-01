@@ -173,6 +173,24 @@ const processVideo = (data: VideoRaw[]): Video[] =>
 
 const data: VideoRaw[] = [
   {
+    title: "불구경",
+    subtitle: "투어",
+    slug: "fire-tour",
+    setlist: [I.ss(S.shore), S.whale, S.nightwalk, I.ss(S.romanesque)],
+    info: ["불구경", I.docu],
+    links: [yt("https://www.youtube.com/watch?v=Hvz7Chg3JBo")],
+    date: "2025.07.26",
+  },
+  {
+    title: "불구경 10주년 기념 다큐멘터리",
+    subtitle: "Teaser",
+    slug: "fire-docu-teaser",
+    setlist: [S.whale],
+    info: ["불구경", I.docu, I.teas],
+    links: [yt("https://www.youtube.com/watch?v=BCZkW9vpEbA")],
+    date: "2025.07.24",
+  },
+  {
     title: "불구경 2025",
     subtitle: "셋리스트 플레이리스트",
     slug: "fire-2025-playlist",

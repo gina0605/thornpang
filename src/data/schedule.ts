@@ -3705,6 +3705,16 @@ const data_2025: Schedule[] = [
   {
     year: 2025,
     month: 8,
+    date: 1,
+    title: "불구경 10주년 팝업",
+    imageA: "202508-popup-a.jpeg",
+    location: ["타임스퀘어 1층"],
+    setlist: [S.spring, S.noon],
+    links: [],
+  },
+  {
+    year: 2025,
+    month: 8,
     date: 31,
     title: "메가필드 뮤직페스티벌",
     imageA: "202508-megafield-a.jpg",
@@ -3720,7 +3730,7 @@ const data_2025: Schedule[] = [
     imageA: "202509-letsrock-a.jpg",
     location: ["난지한강공원"],
     setlist: [],
-    links: [I.FNotice("https://www.instagram.com/p/DKyIGrWyDt2")],
+    links: [I.FNotice("https://www.instagram.com/p/DMHowjCzHGx/")],
   },
   {
     year: 2025,
@@ -3740,7 +3750,7 @@ const data_2025: Schedule[] = [
     imageA: "202510-gmf-a.jpg",
     location: ["올림픽공원"],
     setlist: [],
-    links: [I.FNotice("https://www.instagram.com/p/DMueKRohfAj/")],
+    links: [I.FNotice("https://www.instagram.com/p/DMxDigeBBb2")],
   },
   {
     year: 2025,
