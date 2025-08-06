@@ -3700,6 +3700,7 @@ const data_2025: Schedule[] = [
         link: "https://www.instagram.com/p/DMhZzxgTKMY/?img_index=6",
       },
       I.Zone("https://www.instagram.com/p/DMulDCVTX8D"),
+      I.Photo("https://www.instagram.com/p/DM-FRQkzFlQ"),
     ],
   },
   {
@@ -3710,7 +3711,7 @@ const data_2025: Schedule[] = [
     imageA: "202508-popup-a.jpeg",
     location: ["타임스퀘어 1층"],
     setlist: [S.spring, S.noon],
-    links: [],
+    links: [I.Zone("https://www.instagram.com/p/DM7oFKlzvjJ")],
   },
   {
     year: 2025,
