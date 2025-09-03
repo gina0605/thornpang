@@ -3756,7 +3756,10 @@ const data_2025: Schedule[] = [
     imageA: "202509-busan-a.jpg",
     location: ["삼락생태공원"],
     setlist: [],
-    links: [I.FNotice("https://www.instagram.com/p/DLB5UPJviBV")],
+    links: [
+      I.FNotice("https://www.instagram.com/p/DLB5UPJviBV"),
+      I.Hi("https://www.instagram.com/p/DOILeWxjxsm/"),
+    ],
   },
   {
     year: 2025,
