@@ -3746,7 +3746,15 @@ const data_2025: Schedule[] = [
     imageA: "202509-letsrock-a.jpg",
     location: ["난지한강공원"],
     setlist: [],
-    links: [I.FNotice("https://www.instagram.com/p/DMHowjCzHGx/")],
+    links: [
+      I.FNotice("https://www.instagram.com/p/DMHowjCzHGx/"),
+      I.Photo("https://www.instagram.com/p/DOTRLepkV5L"),
+      I.Vid("https://www.instagram.com/p/DOTeDvpkUel/", S.spring),
+      I.Vid("https://www.instagram.com/p/DOTeat8D8vk/", S.difficult),
+      I.Vid("https://www.instagram.com/p/DOTesiGD_Ro/", "RECAP"),
+      I.Vid("https://www.instagram.com/p/DOTLiGVEyMJ/", "입장"),
+      I.Vid("https://www.instagram.com/p/DOTLr09k9Qi/"),
+    ],
   },
   {
     year: 2025,
@@ -3769,7 +3777,10 @@ const data_2025: Schedule[] = [
     imageA: "202510-gmf-a.jpg",
     location: ["올림픽공원"],
     setlist: [],
-    links: [I.FNotice("https://www.instagram.com/p/DMxDigeBBb2")],
+    links: [
+      I.FNotice("https://www.instagram.com/p/DMxDigeBBb2"),
+      I.Hi("https://www.instagram.com/p/DOXnO1NASXJ/"),
+    ],
   },
   {
     year: 2025,
