@@ -24,6 +24,11 @@ export const replaceLogic = [
   },
   { pattern: /jumf/g, result: "전주얼티밋뮤직페스티벌" },
   { pattern: /let.?s\s?rock/g, result: "렛츠락" },
+  {
+    pattern:
+      /busan.?(rock)?.?(fes[^\s]*)?|부산?.?(국제)?.?(락|록).?(페[^\s]*)?/g,
+    result: "부산국제록페스티벌",
+  },
   { pattern: /festival/g, result: "페스티벌" },
   {
     pattern: /언플러그[^\s]*|unplug[^\s]*|acou[^\s]*|어쿠[^s]*/g,
@@ -110,9 +115,11 @@ export const replaceLogic = [
   { pattern: /춤별|춤추는\s별/g, result: "춤추는별" },
   { pattern: /물기|물의\s기억/g, result: "물의기억" },
   { pattern: /오밤/g, result: "오늘도밤이야" },
+  { pattern: /도전/g, result: "도시전설" },
+  { pattern: /바다와\s?구름과\s?무대|바구무/g, result: "바다와구름과무대" },
   {
     pattern:
-      /(라이온|열대|상기후|퍼런봄|려운달|한낮|6|서울병|서울|계몽|뭍|마술|은하|넓은밤|하루|에서도|류의맛|검은별|동물|밤이야|멸종)\s콘/g,
+      /(라이온|열대|상기후|퍼런봄|려운달|한낮|6|서울병|서울|계몽|뭍|마술|은하|넓은밤|하루|에서도|류의맛|검은별|동물|밤이야|멸종|전설|무대)\s콘/g,
     result: "$1콘",
   },
   { pattern: /영상/g, result: "" },
@@ -176,6 +183,15 @@ const processVideo = (data: VideoRaw[]): Video[] =>
   );
 
 const data: VideoRaw[] = [
+  {
+    title: "바다와 구름과 무대",
+    subtitle: "Teaser",
+    slug: "cloud-teaser",
+    setlist: ["신곡 (추정)"],
+    info: [I.teas],
+    links: [yt("https://www.youtube.com/watch?v=vmVIEBB1Mcw")],
+    date: "2025. 10. 17",
+  },
   {
     title: "불구경 10주년 기념",
     subtitle: "다큐멘터리",

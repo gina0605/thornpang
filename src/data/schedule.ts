@@ -24,6 +24,7 @@ const I = {
   Vid: makeLinkItem("무대 영상"),
   Inst: makeLinkItem("인스타그램 게시글"),
   Hi: makeLinkItem("인사 영상"),
+  Enter: makeLinkItem("입장 영상"),
   DU: "날짜 미정",
 };
 
@@ -3083,7 +3084,7 @@ const data_2024: Schedule[] = [
     links: [
       I.FNotice("https://www.instagram.com/p/DBBphxsyqD_/"),
       I.Hi("https://www.instagram.com/p/DB3XanXyt5v/"),
-      { text: "입장 영상", link: "https://www.instagram.com/p/DB3owANyUU6/" },
+      I.Enter("https://www.instagram.com/p/DB3owANyUU6/"),
       I.Photo("https://www.mintpaper.co.kr/festivals/137/extras/4278"),
     ],
   },
@@ -3459,7 +3460,7 @@ const data_2025: Schedule[] = [
     links: [
       I.FNotice("https://www.instagram.com/p/DGzYTZDyTRx/"),
       I.Hi("https://www.instagram.com/p/DIu8f-Yy9uJ/"),
-      { text: "입장 영상", link: "https://www.instagram.com/p/DJyBZ3ey7dN/" },
+      I.Enter("https://www.instagram.com/p/DJyBZ3ey7dN/"),
       I.Vid("https://www.instagram.com/p/DJyB6W_y7Td/"),
       I.Photo("https://www.instagram.com/p/DKJIiwESQHa"),
     ],
@@ -3752,7 +3753,7 @@ const data_2025: Schedule[] = [
       I.Vid("https://www.instagram.com/p/DOTeDvpkUel/", S.spring),
       I.Vid("https://www.instagram.com/p/DOTeat8D8vk/", S.difficult),
       I.Vid("https://www.instagram.com/p/DOTesiGD_Ro/", "RECAP"),
-      I.Vid("https://www.instagram.com/p/DOTLiGVEyMJ/", "입장"),
+      I.Enter("https://www.instagram.com/p/DOTLiGVEyMJ/"),
       I.Vid("https://www.instagram.com/p/DOTLr09k9Qi/"),
       {
         text: "매거진 인터뷰",
@@ -3794,10 +3795,30 @@ const data_2025: Schedule[] = [
     title: "그랜드민트페스티벌",
     imageA: "202510-gmf-a.jpg",
     location: ["올림픽공원"],
-    setlist: [],
+    setlist: [
+      S.spring,
+      S.noon,
+      S.pomegranate,
+      S.nightwalk,
+      S.shore,
+      S.black,
+      S.cicadas,
+      S.peter,
+      S.extinction,
+    ],
     links: [
       I.FNotice("https://www.instagram.com/p/DMxDigeBBb2"),
       I.Hi("https://www.instagram.com/p/DOXnO1NASXJ/"),
+      {
+        text: "무대 전 소감",
+        link: "https://www.instagram.com/p/DP_WwoFAcjA/",
+      },
+      I.Photo("https://www.instagram.com/p/DP_vuqBkWaw"),
+      I.Vid("https://www.instagram.com/p/DQBLIDxiq_4/", S.black),
+      I.Vid("https://www.instagram.com/p/DQBMXZ4jJOd/", S.shore),
+      I.Vid("https://www.instagram.com/p/DQBMpefDBLj/", S.nightwalk),
+      I.Vid("https://www.instagram.com/p/DQBNKdLjElC/", "멘트"),
+      I.Enter("https://www.instagram.com/p/DQB4-tTAZQP/"),
     ],
   },
   {
@@ -3817,7 +3838,10 @@ const data_2025: Schedule[] = [
     title: "단독 콘서트 <바다와 구름과 무대>",
     imageA: "202512-cloud-a.jpg",
     location: ["고려대학교 화정체육관"],
-    links: [I.Notice("https://www.instagram.com/p/DPvlzZjkgRO")],
+    links: [
+      I.Notice("https://www.instagram.com/p/DPvlzZjkgRO"),
+      { text: "티저", link: "https://www.youtube.com/watch?v=vmVIEBB1Mcw" },
+    ],
   },
   {
     year: 2025,
@@ -3826,7 +3850,10 @@ const data_2025: Schedule[] = [
     title: "단독 콘서트 <바다와 구름과 무대>",
     imageA: "202512-cloud-a.jpg",
     location: ["고려대학교 화정체육관"],
-    links: [I.Notice("https://www.instagram.com/p/DPvlzZjkgRO")],
+    links: [
+      I.Notice("https://www.instagram.com/p/DPvlzZjkgRO"),
+      { text: "티저", link: "https://www.youtube.com/watch?v=vmVIEBB1Mcw" },
+    ],
   },
   {
     year: 2025,
