@@ -3746,7 +3746,16 @@ const data_2025: Schedule[] = [
     title: "렛츠락 페스티벌",
     imageA: "202509-letsrock-a.jpg",
     location: ["난지한강공원"],
-    setlist: [],
+    setlist: [
+      S.mercury,
+      S.noon,
+      S.extinction,
+      S.difficult,
+      S.refuge,
+      S.cicadas,
+      S.peter,
+      S.spring,
+    ],
     links: [
       I.FNotice("https://www.instagram.com/p/DMHowjCzHGx/"),
       I.Photo("https://www.instagram.com/p/DOTRLepkV5L"),
