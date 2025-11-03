@@ -3833,6 +3833,16 @@ const data_2025: Schedule[] = [
   {
     year: 2025,
     month: 11,
+    date: 4,
+    title: "고려대학교 축제",
+    imageS: "202511-korea-a.jpg",
+    location: ["고려대학교"],
+    setlist: [],
+    links: [I.FNotice("https://www.instagram.com/p/DQfa4LIE7BS/")],
+  },
+  {
+    year: 2025,
+    month: 11,
     date: 10,
     slug: "Bang",
     title: "방요셉 생일",
