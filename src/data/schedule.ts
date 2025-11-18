@@ -3828,6 +3828,7 @@ const data_2025: Schedule[] = [
       I.Vid("https://www.instagram.com/p/DQBMpefDBLj/", S.nightwalk),
       I.Vid("https://www.instagram.com/p/DQBNKdLjElC/", "멘트"),
       I.Enter("https://www.instagram.com/p/DQB4-tTAZQP/"),
+      I.Photo("https://www.instagram.com/p/DRCPr39km_0"),
     ],
   },
   {
@@ -3837,8 +3838,19 @@ const data_2025: Schedule[] = [
     title: "고려대학교 축제",
     imageS: "202511-korea-a.jpg",
     location: ["고려대학교"],
-    setlist: [],
-    links: [I.FNotice("https://www.instagram.com/p/DQfa4LIE7BS/")],
+    setlist: [
+      S.extinction,
+      S.peter,
+      S.mercury,
+      S.noon,
+      S.spring,
+      I.E(S.cicadas),
+    ],
+    links: [
+      I.FNotice("https://www.instagram.com/p/DQfa4LIE7BS/"),
+      I.Photo("https://www.instagram.com/p/DQo9C24D2Zy"),
+      I.Vid("https://www.instagram.com/p/DQpD2-sj_Zw"),
+    ],
   },
   {
     year: 2025,
@@ -3848,7 +3860,7 @@ const data_2025: Schedule[] = [
     title: "방요셉 생일",
     imageA: "bang.jpeg",
     etc: [{ subtitle: "-", text: ["요셉님 생일 축하드려요!"] }],
-    links: [],
+    links: [I.Inst("https://www.instagram.com/p/DQ3C1vLEpdI/")],
   },
   {
     year: 2025,

@@ -184,6 +184,24 @@ const processVideo = (data: VideoRaw[]): Video[] =>
 
 const data: VideoRaw[] = [
   {
+    title: "고려대학교 축제",
+    subtitle: "KUBS",
+    slug: "kubs",
+    setlist: [S.extinction, S.peter, S.mercury, S.noon, S.spring, S.cicadas],
+    info: [I.live, "고려대학교", "축제"],
+    links: [yt("https://www.youtube.com/watch?v=itTR0wP69FM")],
+    date: "2025.11.04",
+  },
+  {
+    title: "고려대학교 축제",
+    subtitle: "KTN",
+    slug: "ktn",
+    setlist: [S.extinction, S.peter, S.mercury, S.noon, S.spring, S.cicadas],
+    info: [I.live, "고려대학교", "축제"],
+    links: [yt("https://www.youtube.com/watch?v=dnMGFXIiVdg")],
+    date: "2025.11.04",
+  },
+  {
     title: "바다와 구름과 무대",
     subtitle: "Teaser",
     slug: "cloud-teaser",
