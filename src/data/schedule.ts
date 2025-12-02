@@ -3896,6 +3896,16 @@ const data_2025: Schedule[] = [
     etc: [{ subtitle: "-", text: ["데뷔 16주년 축하합니다!!"] }],
     links: [],
   },
+  {
+    year: 2025,
+    month: 12,
+    date: 30,
+    title: "카운트다운 판타지 2024-2025",
+    imageS: "202512-cdf-a.jpg",
+    location: ["일산 KINTEX"],
+    setlist: [],
+    links: [I.FNotice("https://www.instagram.com/p/DRmFxXqAezT/")],
+  },
 ];
 
 const data = [

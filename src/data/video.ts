@@ -184,6 +184,14 @@ const processVideo = (data: VideoRaw[]): Video[] =>
 
 const data: VideoRaw[] = [
   {
+    title: I.fire(2025),
+    slug: "fire-2025-mob-refuge",
+    setlist: [S.mob, S.refuge],
+    info: [I.live, I.fire(2025), "흑백"],
+    links: [yt("https://www.youtube.com/watch?v=fajIczv7w_0")],
+    date: "2025. 11. 24",
+  },
+  {
     title: "고려대학교 축제",
     subtitle: "KUBS",
     slug: "kubs",
