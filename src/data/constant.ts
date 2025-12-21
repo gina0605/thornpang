@@ -52,4 +52,6 @@ export const SONGS = {
   pinocchio: "피노키오",
   whale: "The Whale",
   glow: "야광",
+  decline: "쇠퇴론",
+  cloud: "바다와 구름과 무대",
 };

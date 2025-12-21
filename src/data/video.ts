@@ -185,6 +185,15 @@ const processVideo = (data: VideoRaw[]): Video[] =>
 const data: VideoRaw[] = [
   {
     title: I.fire(2025),
+    subtitle: `${S.lion} / ${S.idiot} (360˚ ver.)`,
+    slug: "fire-2025-lion",
+    setlist: [S.lion, S.idiot],
+    info: [I.live, S.lion, S.idiot, "360˚"],
+    links: [yt("https://www.youtube.com/watch?v=QVGJrJbyaVk")],
+    date: "2025. 12. 04",
+  },
+  {
+    title: I.fire(2025),
     slug: "fire-2025-mob-refuge",
     setlist: [S.mob, S.refuge],
     info: [I.live, I.fire(2025), "흑백"],
