@@ -3936,6 +3936,8 @@ const data_2025: Schedule[] = [
       I.Notice("https://www.instagram.com/p/DPvlzZjkgRO"),
       { text: "티저", link: "https://www.youtube.com/watch?v=vmVIEBB1Mcw" },
       I.Photo("https://www.instagram.com/p/DSiAE1ojzC9"),
+      I.Vid("https://www.instagram.com/p/DSiKjVRkkPp"),
+      { text: "하이라이트", link: "https://www.instagram.com/p/DSiMph9SQXp/" },
     ],
   },
   {
