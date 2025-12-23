@@ -184,6 +184,15 @@ const processVideo = (data: VideoRaw[]): Video[] =>
 
 const data: VideoRaw[] = [
   {
+    title: "바다와 구름과 무대",
+    subtitle: "타임랩스",
+    slug: "cloud-timelapse",
+    setlist: [`${S.black} (오케스트라 ver.)`],
+    info: ["바다와 구름과 무대 콘서트", "셋업", "타임랩스"],
+    links: [yt("https://www.youtube.com/watch?v=UvPC_yGcAgk")],
+    date: "2025.12.23",
+  },
+  {
     title: I.fire(2025),
     subtitle: `${S.lion} / ${S.idiot} (360˚ ver.)`,
     slug: "fire-2025-lion",
@@ -222,7 +231,7 @@ const data: VideoRaw[] = [
     title: "바다와 구름과 무대",
     subtitle: "Teaser",
     slug: "cloud-teaser",
-    setlist: ["신곡 (추정)"],
+    setlist: [S.cloud],
     info: [I.teas],
     links: [yt("https://www.youtube.com/watch?v=vmVIEBB1Mcw")],
     date: "2025. 10. 17",
@@ -282,6 +291,7 @@ const data: VideoRaw[] = [
     links: [yt("https://www.youtube.com/watch?v=BCZkW9vpEbA")],
     date: "2025.07.24",
   },
+  /*
   {
     title: "불구경 2025",
     subtitle: "셋리스트 플레이리스트",
@@ -611,7 +621,7 @@ const data: VideoRaw[] = [
     info: [I.fire(2019), "셋리스트", "플레이리스트"],
     links: [yt("https://www.youtube.com/watch?v=SiryEJpfN30")],
     date: "2025.05.26",
-  },
+  }, */
   {
     title: "불구경 2018",
     subtitle: "셋리스트 플레이리스트",
@@ -668,6 +678,7 @@ const data: VideoRaw[] = [
     links: [yt("https://www.youtube.com/watch?v=joITtx87NPA")],
     date: "2025.05.21",
   },
+  /*
   {
     title: "불구경 2017",
     subtitle: "셋리스트 플레이리스트",
@@ -737,7 +748,7 @@ const data: VideoRaw[] = [
     info: [I.fire(2016), "셋리스트", "플레이리스트"],
     links: [yt("https://www.youtube.com/watch?v=SM75os_l3dE")],
     date: "2025.05.19",
-  },
+  }, */
   {
     title: "TAMA 신제품 쇼케이스",
     slug: "tama-romanesque",
