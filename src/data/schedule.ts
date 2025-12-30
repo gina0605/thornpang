@@ -3969,11 +3969,11 @@ const data_2025: Schedule[] = [
     imageS: "202512-cdf-a.jpg",
     location: ["일산 KINTEX"],
     setlist: [
-      S.decline,
+      I.U(S.decline),
       S.peter,
       S.kirin,
       S.flesh,
-      S.glow,
+      I.U(S.glow),
       S.lion,
       S.extinction,
       S.spring,
