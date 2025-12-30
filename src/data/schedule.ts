@@ -29,7 +29,7 @@ const I = {
 };
 
 export const minYear = 2020;
-export const maxYear = 2025;
+export const maxYear = 2026;
 
 export const holidays: Record<
   number,
@@ -97,6 +97,17 @@ export const holidays: Record<
     6: { 6: "현충일" },
     8: { 15: "광복절" },
     10: { 3: "개천절", 5: "", 6: "추석", 7: "", 8: "대체공휴일", 9: "한글날" },
+    12: { 25: "크리스마스" },
+  },
+  2026: {
+    1: { 1: "신정" },
+    2: { 16: "", 17: "설날", 18: "" },
+    3: { 1: "삼일절", 2: "대체공휴일" },
+    5: { 5: "어린이날", 24: "부처님 오신 날", 25: "대체공휴일" },
+    6: { 3: "지방선거", 6: "현충일" },
+    8: { 15: "광복절", 17: "대체공휴일" },
+    9: { 24: "", 25: "추석", 26: "" },
+    10: { 3: "개천절", 5: "대체공휴일", 9: "한글날" },
     12: { 25: "크리스마스" },
   },
 };
@@ -3858,7 +3869,7 @@ const data_2025: Schedule[] = [
     date: 10,
     slug: "Bang",
     title: "방요셉 생일",
-    imageA: "bang.jpeg",
+    imageA: "bang-2025.jpg",
     etc: [{ subtitle: "-", text: ["요셉님 생일 축하드려요!"] }],
     links: [I.Inst("https://www.instagram.com/p/DQ3C1vLEpdI/")],
   },
@@ -3957,8 +3968,78 @@ const data_2025: Schedule[] = [
     title: "카운트다운 판타지 2024-2025",
     imageS: "202512-cdf-a.jpg",
     location: ["일산 KINTEX"],
+    setlist: [
+      S.decline,
+      S.peter,
+      S.kirin,
+      S.flesh,
+      S.glow,
+      S.lion,
+      S.extinction,
+      S.spring,
+    ],
+    links: [
+      I.FNotice("https://www.instagram.com/p/DRmFxXqAezT/"),
+      I.Hi("https://www.instagram.com/p/DSCd_hkgQx3/"),
+      {
+        text: "무대 전 소감",
+        link: "https://www.instagram.com/p/DS4pSl-gZLw/",
+      },
+      { text: "하이라이트", link: "https://www.instagram.com/p/DS42HeBAWVV/" },
+      I.Vid("https://www.instagram.com/p/DS5CAwMESck"),
+    ],
+  },
+];
+
+const data_2026: Schedule[] = [
+  {
+    year: 2026,
+    month: 1,
+    date: 8,
+    slug: "Yoon",
+    title: "윤성현 생일",
+    imageS: "yoon.jpeg",
+    etc: [{ subtitle: "-", text: ["성현님 생일 축하드려요!"] }],
+    links: [],
+  },
+  {
+    year: 2026,
+    month: 2,
+    date: 22,
+    title: "민트페스타",
+    location: ["KT&G 상상마당"],
     setlist: [],
-    links: [I.FNotice("https://www.instagram.com/p/DRmFxXqAezT/")],
+    links: [],
+  },
+  {
+    year: 2026,
+    month: 4,
+    date: 10,
+    slug: "Hong",
+    title: "홍동균 생일",
+    imageA: "hong.jpeg",
+    etc: [{ subtitle: "-", text: ["동균님 생일 축하드려요!"] }],
+    links: [],
+  },
+  {
+    year: 2026,
+    month: 11,
+    date: 10,
+    slug: "Bang",
+    title: "방요셉 생일",
+    imageA: "bang.jpeg",
+    etc: [{ subtitle: "-", text: ["요셉님 생일 축하드려요!"] }],
+    links: [],
+  },
+  {
+    year: 2026,
+    month: 12,
+    date: 24,
+    title: "2025 쏜탄절",
+    imageR: "thornapple-r.png",
+    imageS: "thornapple-s.png",
+    etc: [{ subtitle: "-", text: ["데뷔 16주년 축하합니다!!"] }],
+    links: [],
   },
 ];
 
@@ -3969,6 +4050,7 @@ const data = [
   ...data_2023,
   ...data_2024,
   ...data_2025,
+  ...data_2026,
 ];
 
 export default data;
