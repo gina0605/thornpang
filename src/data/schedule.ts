@@ -4076,8 +4076,11 @@ const data_2026: Schedule[] = [
     title: "서울히어로락페스티벌",
     imageA: "202604-hero-a.jpg",
     location: ["문화비축기지"],
-    setlist: [],
-    links: [I.FNotice("https://www.instagram.com/p/DVpvweViXBM/")],
+    setlist: [S.noon, S.pomegranate, S.kirin, S.extinction, S.peter, S.spring],
+    links: [
+      I.FNotice("https://www.instagram.com/p/DVpvweViXBM/"),
+      I.Vid("https://www.instagram.com/p/DXmCzxtiRWw/"),
+    ],
   },
   {
     year: 2026,
@@ -4087,7 +4090,7 @@ const data_2026: Schedule[] = [
     imageA: "202605-lemon-a.jpg",
     location: ["달서아트센터 일원"],
     setlist: [],
-    links: [I.FNotice("https://www.instagram.com/p/DW-9_NLgSbv")],
+    links: [I.FNotice("https://www.instagram.com/p/DXBUfVdgf0N/")],
   },
   {
     year: 2026,
