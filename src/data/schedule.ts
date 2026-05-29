@@ -4158,6 +4158,18 @@ const data_2026: Schedule[] = [
   },
   {
     year: 2026,
+    month: 6,
+    date: 23,
+    title: "EP [나의 세기] 발매",
+    imageS: "apple-s.png",
+    imageR: "apple-r.png",
+    etc: [],
+    links: [
+      { text: "티저", link: "https://www.youtube.com/watch?v=OkqsrdjAsBQ" },
+    ],
+  },
+  {
+    year: 2026,
     month: 7,
     date: 19,
     title: "사운드베리페스타",
