@@ -4161,8 +4161,7 @@ const data_2026: Schedule[] = [
     month: 6,
     date: 23,
     title: "EP [나의 세기] 발매",
-    imageS: "apple-s.png",
-    imageR: "apple-r.png",
+    imageS: "202606-century-s.jpg",
     etc: [],
     links: [
       { text: "티저", link: "https://www.youtube.com/watch?v=OkqsrdjAsBQ" },
