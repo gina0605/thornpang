@@ -4133,8 +4133,21 @@ const data_2026: Schedule[] = [
     title: "벨포레위크",
     imageA: "202606-belle-a.jpeg",
     location: ["벨포레리조트 모토아레나"],
-    setlist: [],
-    links: [],
+    setlist: [
+      S.refuge,
+      S.noon,
+      S.pomegranate,
+      S.crab,
+      S.veranda,
+      S.shimmer,
+      S.spring,
+      S.peter,
+      S.extinction,
+    ],
+    links: [
+      I.FNotice("https://www.instagram.com/p/DXgjIOWEwhF/"),
+      I.Hi("https://www.instagram.com/p/DZCRrV0zo0U/"),
+    ],
   },
   {
     year: 2026,
@@ -4143,7 +4156,15 @@ const data_2026: Schedule[] = [
     title: "칠포재즈페스티벌",
     imageA: "202606-chilpo-a.jpg",
     location: ["포항 칠포해수욕장 야외상설무대"],
-    setlist: [],
+    setlist: [
+      S.mercury,
+      S.extinction,
+      S.romanesque,
+      S.february,
+      S.idiot,
+      S.cicadas,
+      S.spring,
+    ],
     links: [I.FNotice("https://www.instagram.com/p/DYBhFAZk0pS/")],
   },
   {
@@ -4153,7 +4174,7 @@ const data_2026: Schedule[] = [
     title: "나의 세기 익스텐디드 플레이 필름 무대인사",
     imageR: "202606-film-r.jpeg",
     location: ["CGV 영등포타임스퀘어"],
-    links: [],
+    links: [{ text: "공지", link: "https://www.instagram.com/p/DZUHi0rEt5B" }],
   },
   {
     year: 2026,
@@ -4172,7 +4193,7 @@ const data_2026: Schedule[] = [
     title: "나의 세기 익스텐디드 플레이 필름 무대인사",
     imageR: "202606-film-r.jpeg",
     location: ["CGV 용산아이파크몰"],
-    links: [],
+    links: [{ text: "공지", link: "https://www.instagram.com/p/DZUHi0rEt5B" }],
   },
   {
     year: 2026,
@@ -4204,7 +4225,6 @@ const data_2026: Schedule[] = [
     location: ["송도 달빛축제공원"],
     setlist: [],
     links: [I.FNotice("https://www.instagram.com/p/DYTZ5RFmTD5")],
-    etc: [],
   },
   {
     year: 2026,
@@ -4214,7 +4234,7 @@ const data_2026: Schedule[] = [
     imageR: "202608-century-r.jpeg",
     location: ["올림픽홀"],
     setlist: [],
-    links: [],
+    links: [I.Notice("https://www.instagram.com/p/DZeuOyakS-i")],
   },
   {
     year: 2026,
@@ -4224,7 +4244,7 @@ const data_2026: Schedule[] = [
     imageR: "202608-century-r.jpeg",
     location: ["올림픽홀"],
     setlist: [],
-    links: [],
+    links: [I.Notice("https://www.instagram.com/p/DZeuOyakS-i")],
   },
   {
     year: 2026,
@@ -4234,7 +4254,7 @@ const data_2026: Schedule[] = [
     imageR: "202608-century-r.jpeg",
     location: ["벡스코"],
     setlist: [],
-    links: [],
+    links: [I.Notice("https://www.instagram.com/p/DZeuOyakS-i")],
   },
   {
     year: 2026,
@@ -4244,7 +4264,7 @@ const data_2026: Schedule[] = [
     imageR: "202608-century-r.jpeg",
     location: ["벡스코"],
     setlist: [],
-    links: [],
+    links: [I.Notice("https://www.instagram.com/p/DZeuOyakS-i")],
   },
   {
     year: 2026,

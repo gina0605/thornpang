@@ -103,6 +103,8 @@ export const replaceLogic = [
   { pattern: /검은?\s?별/g, result: "검은별" },
   { pattern: /파왕/g, result: "파리의왕" },
   { pattern: /게돗물/g, result: "게와수돗물" },
+  { pattern: /바다와\s?구름과\s?무대|바구무/g, result: "바다와구름과무대" },
+  { pattern: /플6/g, result: "플라네타리움" },
   { pattern: /우밤당낮/g, result: "우리의밤은당신의낮보다아름답다" },
   { pattern: /로렌스/g, result: "lawrence" },
   {
@@ -116,7 +118,6 @@ export const replaceLogic = [
   { pattern: /물기|물의\s기억/g, result: "물의기억" },
   { pattern: /오밤/g, result: "오늘도밤이야" },
   { pattern: /도전/g, result: "도시전설" },
-  { pattern: /바다와\s?구름과\s?무대|바구무/g, result: "바다와구름과무대" },
   {
     pattern:
       /(라이온|열대|상기후|퍼런봄|려운달|한낮|6|서울병|서울|계몽|뭍|마술|은하|넓은밤|하루|에서도|류의맛|검은별|동물|밤이야|멸종|전설|무대)\s콘/g,
@@ -179,10 +180,56 @@ const processVideo = (data: VideoRaw[]): Video[] =>
       info,
       links,
       date,
-    })
+    }),
   );
 
 const data: VideoRaw[] = [
+  {
+    title: "바다와 구름과 무대 콘서트",
+    slug: "cloud-shore",
+    setlist: [S.shore],
+    info: [I.live, "바다와 구름과 무대 콘서트"],
+    links: [yt("https://www.youtube.com/watch?v=bNRd8gO_te8")],
+    date: "2026. 06. 13",
+  },
+  {
+    title: "바다와 구름과 무대 라이브 콘서트 필름",
+    subtitle: "Official Trailer",
+    slug: "cloud-film-teaser",
+    setlist: [
+      S.witchcraft,
+      S.mercury,
+      S.noon,
+      S.pomegranate,
+      S.halcyon,
+      S.veranda,
+      S.glow,
+      S.february,
+      S.romanesque,
+      S.seoul,
+      S.decline,
+      S.shore,
+      S.galaxy,
+      S.black,
+      S.cloud,
+      S.cicadas,
+      S.extinction,
+      S.peter,
+      S.spring,
+    ],
+    info: ["바다와 구름과무대 콘서트", I.teas],
+    links: [yt("https://www.youtube.com/watch?v=IWePZ41224w")],
+    date: "2026. 06. 10",
+  },
+  {
+    title: "Teaser",
+    subtitle: "나의 세기",
+    slug: "teaser-century",
+    setlist: [`${S.cloud} (inst.)`],
+    info: [ALBUMS.century, I.teas],
+    links: [yt("https://www.youtube.com/watch?v=OkqsrdjAsBQ")],
+    date: "2026. 05. 25",
+  },
   {
     title: "바다와 구름과 무대",
     subtitle: "타임랩스",
@@ -190,7 +237,7 @@ const data: VideoRaw[] = [
     setlist: [`${S.black} (오케스트라 ver.)`],
     info: ["바다와 구름과 무대 콘서트", "셋업", "타임랩스"],
     links: [yt("https://www.youtube.com/watch?v=UvPC_yGcAgk")],
-    date: "2025.12.23",
+    date: "2025. 12. 23",
   },
   {
     title: I.fire(2025),
@@ -216,7 +263,7 @@ const data: VideoRaw[] = [
     setlist: [S.extinction, S.peter, S.mercury, S.noon, S.spring, S.cicadas],
     info: [I.live, "고려대학교", "축제"],
     links: [yt("https://www.youtube.com/watch?v=itTR0wP69FM")],
-    date: "2025.11.04",
+    date: "2025. 11. 04",
   },
   {
     title: "고려대학교 축제",
@@ -225,7 +272,7 @@ const data: VideoRaw[] = [
     setlist: [S.extinction, S.peter, S.mercury, S.noon, S.spring, S.cicadas],
     info: [I.live, "고려대학교", "축제"],
     links: [yt("https://www.youtube.com/watch?v=dnMGFXIiVdg")],
-    date: "2025.11.04",
+    date: "2025. 11. 04",
   },
   {
     title: "바다와 구름과 무대",
@@ -253,7 +300,7 @@ const data: VideoRaw[] = [
     ],
     info: ["불구경", "10주년", I.docu],
     links: [yt("https://www.youtube.com/watch?v=i0ul8I8YVF4")],
-    date: "2025.08.05",
+    date: "2025. 08. 05",
   },
   {
     title: "불구경 10주년 기념 팝업",
@@ -262,7 +309,7 @@ const data: VideoRaw[] = [
     setlist: [I.ss(S.idiot)],
     info: ["불구경", "10주년", "팝업", "셋업", "타임랩스"],
     links: [yt("https://www.youtube.com/watch?v=JdnNREfmEzQ")],
-    date: "2025.08.03",
+    date: "2025. 08. 03",
   },
   {
     title: "불구경 10주년 기념 팝업",
@@ -271,7 +318,7 @@ const data: VideoRaw[] = [
     setlist: [S.spring, S.noon],
     info: ["불구경", "10주년", "팝업", "리캡"],
     links: [yt("https://www.youtube.com/watch?v=85DY2M3uXwI")],
-    date: "2025.08.02",
+    date: "2025. 08. 02",
   },
   {
     title: "불구경",
@@ -280,7 +327,7 @@ const data: VideoRaw[] = [
     setlist: [I.ss(S.shore), S.whale, S.nightwalk, I.ss(S.romanesque)],
     info: ["불구경", I.docu],
     links: [yt("https://www.youtube.com/watch?v=Hvz7Chg3JBo")],
-    date: "2025.07.26",
+    date: "2025. 07. 26",
   },
   {
     title: "불구경 10주년 기념 다큐멘터리",
@@ -289,7 +336,7 @@ const data: VideoRaw[] = [
     setlist: [S.whale],
     info: ["불구경", "10주년", I.docu, I.teas],
     links: [yt("https://www.youtube.com/watch?v=BCZkW9vpEbA")],
-    date: "2025.07.24",
+    date: "2025. 07. 24",
   },
   /*
   {
@@ -340,7 +387,7 @@ const data: VideoRaw[] = [
     ],
     info: [I.fire(2025), "셋리스트", "플레이리스트"],
     links: [yt("https://www.youtube.com/watch?v=jCHk4M0VGjE")],
-    date: "2025.06.30",
+    date: "2025. 06. 30",
   },
   {
     title: "불구경 2024",
@@ -390,7 +437,7 @@ const data: VideoRaw[] = [
     ],
     info: [I.fire(2024), "셋리스트", "플레이리스트"],
     links: [yt("https://www.youtube.com/watch?v=WgJZe-BX25I")],
-    date: "2025.06.13",
+    date: "2025. 06. 13",
   },
   {
     title: "불구경 2023",
@@ -440,7 +487,7 @@ const data: VideoRaw[] = [
     ],
     info: [I.fire(2023), "셋리스트", "플레이리스트"],
     links: [yt("https://www.youtube.com/watch?v=PqYI9S8dAwM")],
-    date: "2025.06.09",
+    date: "2025. 06. 09",
   },
   {
     title: "불구경 2022",
@@ -485,7 +532,7 @@ const data: VideoRaw[] = [
     ],
     info: [I.fire(2022), "셋리스트", "플레이리스트"],
     links: [yt("https://www.youtube.com/watch?v=WUQWUjC30D4")],
-    date: "2025.06.05",
+    date: "2025. 06. 05",
   },
   {
     title: "불구경 2021",
@@ -530,7 +577,7 @@ const data: VideoRaw[] = [
     ],
     info: [I.fire(2021), "셋리스트", "플레이리스트"],
     links: [yt("https://www.youtube.com/watch?v=uuXbYIWRN6E")],
-    date: "2025.06.02",
+    date: "2025. 06. 02",
   },
   {
     title: "불구경 2020",
@@ -575,7 +622,7 @@ const data: VideoRaw[] = [
     ],
     info: [I.fire(2020), "셋리스트", "플레이리스트"],
     links: [yt("https://www.youtube.com/watch?v=ew8lEOhcc2c")],
-    date: "2025.05.29",
+    date: "2025. 05. 29",
   },
   {
     title: "불구경 2019",
@@ -620,7 +667,7 @@ const data: VideoRaw[] = [
     ],
     info: [I.fire(2019), "셋리스트", "플레이리스트"],
     links: [yt("https://www.youtube.com/watch?v=SiryEJpfN30")],
-    date: "2025.05.26",
+    date: "2025. 05. 26",
   }, */
   {
     title: "불구경 2018",
@@ -659,7 +706,7 @@ const data: VideoRaw[] = [
     ],
     info: [I.fire(2018), "셋리스트", "플레이리스트"],
     links: [yt("https://www.youtube.com/watch?v=TTNNm3ei_hw")],
-    date: "2025.05.23",
+    date: "2025. 05. 23",
   },
   {
     title: "2025 중앙대학교 축제 LUCAUS",
@@ -667,7 +714,7 @@ const data: VideoRaw[] = [
     setlist: [S.reason],
     info: [I.live, "중앙대학교", "축제", "lucaus"],
     links: [yt("https://www.youtube.com/watch?v=WiNPB7ccAew")],
-    date: "2025.05.22",
+    date: "2025. 05. 22",
   },
   {
     title: "2025 중앙대학교 축제 LUCAUS",
@@ -676,7 +723,7 @@ const data: VideoRaw[] = [
     setlist: [I.ss(S.spring)],
     info: ["중앙대학교", "축제", "lucaus", "청람", "recap"],
     links: [yt("https://www.youtube.com/watch?v=joITtx87NPA")],
-    date: "2025.05.21",
+    date: "2025. 05. 21",
   },
   /*
   {
@@ -755,7 +802,7 @@ const data: VideoRaw[] = [
     setlist: [S.romanesque],
     info: ["Guitarnet", "TAMA", "쇼케이스", "방요셉"],
     links: [yt("https://www.youtube.com/watch?v=Z5EagklONuU")],
-    date: "2025.03.07",
+    date: "2025. 03. 07",
   },
   {
     title: "TAMA 신제품 쇼케이스",
@@ -763,7 +810,7 @@ const data: VideoRaw[] = [
     setlist: [S.difficult],
     info: ["Guitarnet", "TAMA", "쇼케이스", "방요셉"],
     links: [yt("https://www.youtube.com/watch?v=W5AWUhkHU3U")],
-    date: "2025.03.05",
+    date: "2025. 03. 05",
   },
   {
     title: "TAMA 신제품 쇼케이스",
@@ -771,7 +818,7 @@ const data: VideoRaw[] = [
     setlist: [S.shimmer],
     info: ["Guitarnet", "TAMA", "쇼케이스", "방요셉"],
     links: [yt("https://www.youtube.com/watch?v=VQ65t_bIrGQ")],
-    date: "2025.02.25",
+    date: "2025. 02. 25",
   },
   {
     title: "TAMA 신제품 쇼케이스",
@@ -779,7 +826,7 @@ const data: VideoRaw[] = [
     setlist: [S.noon],
     info: ["Guitarnet", "TAMA", "쇼케이스", "방요셉"],
     links: [yt("https://www.youtube.com/watch?v=wPVEh6rBl3Y")],
-    date: "2025.02.21",
+    date: "2025. 02. 21",
   },
   {
     title: "도시전설 콘서트",

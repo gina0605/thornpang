@@ -4,6 +4,7 @@ export const ALBUMS = {
   seoul: "서울병",
   enlight: "계몽",
   animal: "동물",
+  century: "나의 세기",
 };
 
 export const SONGS = {
@@ -54,4 +55,6 @@ export const SONGS = {
   glow: "야광",
   decline: "쇠퇴론",
   cloud: "바다와 구름과 무대",
+  arcacia: "아카시아",
+  planetarium: "플라네타리움",
 };
