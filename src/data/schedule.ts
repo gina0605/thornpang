@@ -4174,7 +4174,10 @@ const data_2026: Schedule[] = [
     title: "나의 세기 익스텐디드 플레이 필름 무대인사",
     imageR: "202606-film-r.jpeg",
     location: ["CGV 영등포타임스퀘어"],
-    links: [{ text: "공지", link: "https://www.instagram.com/p/DZUHi0rEt5B" }],
+    links: [
+      { text: "공지", link: "https://www.instagram.com/p/DZUHi0rEt5B" },
+      { text: "사진", link: "https://www.instagram.com/p/DZnJjlmj4l3" },
+    ],
   },
   {
     year: 2026,
@@ -4184,7 +4187,10 @@ const data_2026: Schedule[] = [
     imageA: "202606-park-a.jpg",
     location: ["올림픽공원"],
     setlist: [],
-    links: [I.FNotice("https://www.instagram.com/p/DXyJUx0AdTr/")],
+    links: [
+      I.FNotice("https://www.instagram.com/p/DXyJUx0AdTr/"),
+      I.Photo("https://www.instagram.com/p/DZz8FXbj6LG"),
+    ],
   },
   {
     year: 2026,
@@ -4193,7 +4199,10 @@ const data_2026: Schedule[] = [
     title: "나의 세기 익스텐디드 플레이 필름 무대인사",
     imageR: "202606-film-r.jpeg",
     location: ["CGV 용산아이파크몰"],
-    links: [{ text: "공지", link: "https://www.instagram.com/p/DZUHi0rEt5B" }],
+    links: [
+      { text: "공지", link: "https://www.instagram.com/p/DZUHi0rEt5B" },
+      { text: "사진", link: "https://www.instagram.com/p/DZ5J58iD5jF" },
+    ],
   },
   {
     year: 2026,
@@ -4201,8 +4210,20 @@ const data_2026: Schedule[] = [
     date: 23,
     title: "EP [나의 세기] 발매",
     imageS: "202606-century-s.jpg",
-    etc: [],
+    etc: [
+      {
+        subtitle: "트랙리스트",
+        text: [
+          S.glow,
+          S.decline,
+          S.cloud,
+          S.arcacia,
+          `${S.planetarium} (Title)`,
+        ],
+      },
+    ],
     links: [
+      { text: "공지", link: "https://www.instagram.com/p/DZHjCyTD2aO" },
       { text: "티저", link: "https://www.youtube.com/watch?v=OkqsrdjAsBQ" },
     ],
   },

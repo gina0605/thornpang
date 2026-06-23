@@ -29,6 +29,9 @@ export const Title = () => {
   } else if (album === "animal") {
     albumTitle = ALBUMS.animal;
     bgColor = "from-animal/10";
+  } else if (album === "century") {
+    albumTitle = ALBUMS.century;
+    bgColor = "from-century/10";
   }
 
   return (

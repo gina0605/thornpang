@@ -27,6 +27,7 @@ export const ListItem = ({
   else if (album === "seoul") bgColor = "to-seoul";
   else if (album === "3") bgColor = "to-enlight";
   else if (album === "animal") bgColor = "to-animal";
+  else if (album === "century") bgColor = "to-century";
 
   return (
     <div

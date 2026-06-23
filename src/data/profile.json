@@ -1,13 +1,13 @@
 [
   {
-    "image": "yoon.jpeg",
+    "image": "yoon.jpg",
     "name": "윤성현",
     "bday": "1986.01.08",
     "session": "Vocal,Guitar",
     "sns": []
   },
   {
-    "image": "hong.jpeg",
+    "image": "hong.jpg",
     "name": "홍동균",
     "bday": "1988.04.10",
     "session": "Guitar",
@@ -21,7 +21,7 @@
     ]
   },
   {
-    "image": "bang.jpeg",
+    "image": "bang.jpg",
     "name": "방요셉",
     "bday": "1990.11.10",
     "session": "Drums",

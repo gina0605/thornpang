@@ -185,6 +185,31 @@ const processVideo = (data: VideoRaw[]): Video[] =>
 
 const data: VideoRaw[] = [
   {
+    title: "Music Video",
+    slug: "mv-planetarium",
+    setlist: [S.planetarium],
+    info: [I.mv],
+    links: [yt("https://www.youtube.com/watch?v=hdMSrbu-0GM")],
+    date: "2026. 06. 23",
+  },
+  {
+    title: "Teaser",
+    slug: "teaser-planetarium",
+    setlist: [S.planetarium],
+    info: [I.teas],
+    links: [yt("https://www.youtube.com/watch?v=YTPaWdaPjbs")],
+    date: "2026. 06. 21",
+  },
+  {
+    title: "Official Trailer",
+    subtitle: "나의 세기",
+    slug: "trailer-century",
+    setlist: [S.glow, S.decline, S.cloud, S.arcacia, S.planetarium],
+    info: [ALBUMS.century, I.teas],
+    links: [yt("https://www.youtube.com/watch?v=wSG7cLeNw8A")],
+    date: "2026. 06. 19",
+  },
+  {
     title: "바다와 구름과 무대 콘서트",
     slug: "cloud-shore",
     setlist: [S.shore],

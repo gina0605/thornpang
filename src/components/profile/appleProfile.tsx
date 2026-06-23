@@ -9,7 +9,7 @@ export const AppleProfile = () => {
   return (
     <div className="w-full pt-[66%] relative">
       <Image
-        src="/profile/apple3.jpeg"
+        src="/profile/apple3.jpg"
         alt="THORNAPPLE profile picture"
         fill
         style={{ objectFit: "contain" }}

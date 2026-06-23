@@ -14,12 +14,13 @@ const config: Config = {
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
       },
       colors: {
-        "gray-pfp": "#939393",
+        "gray-pfp": "#949ea8",
         stammer: "#e69085",
         weather: "#77a9bf",
         seoul: "#bf796b",
         enlight: "#8a837a",
         animal: "#9e926c",
+        century: "#384647",
         "link-blue": "#1b75d0",
       },
       fontFamily: {
