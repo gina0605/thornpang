@@ -30,7 +30,7 @@ const yuniverse = localFont({
 const pretendard = localFont({
   src: [
     {
-      path: "../font/Pretendard-Light.woff2",
+      path: "../font/Pretendard-Light-subset.woff2",
       weight: "300",
       style: "normal",
     },
