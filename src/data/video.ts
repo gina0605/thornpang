@@ -189,7 +189,10 @@ const data: VideoRaw[] = [
     slug: "mv-planetarium",
     setlist: [S.planetarium],
     info: [I.mv],
-    links: [yt("https://www.youtube.com/watch?v=hdMSrbu-0GM")],
+    links: [
+      yt("https://www.youtube.com/watch?v=hdMSrbu-0GM"),
+      genie("https://www.genie.co.kr/detail/mediaInfo?xvnm=262066"),
+    ],
     date: "2026. 06. 23",
   },
   {
@@ -197,7 +200,10 @@ const data: VideoRaw[] = [
     slug: "teaser-planetarium",
     setlist: [S.planetarium],
     info: [I.teas],
-    links: [yt("https://www.youtube.com/watch?v=YTPaWdaPjbs")],
+    links: [
+      yt("https://www.youtube.com/watch?v=YTPaWdaPjbs"),
+      genie("https://www.genie.co.kr/detail/mediaInfo?xvnm=262076"),
+    ],
     date: "2026. 06. 21",
   },
   {
