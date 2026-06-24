@@ -20,17 +20,16 @@ export const SongItem = ({
 
   useEffect(() => {
     if (move) {
-      const timerFunc = (i: number) => i * 90 - i * i * 0.8 - i * i * i * 0.005;
-      if (idx <= 2) setTimeout(() => setActivated(true), timerFunc(idx));
+      let i;
+      if (idx <= 2) i = idx;
       else {
-        setTimeout(() => {
-          const bound = ref.current?.getBoundingClientRect();
-          const i = bound
-            ? Math.min(Math.floor(bound.top / bound.height) + 5, idx)
-            : idx;
-          setTimeout(() => setActivated(true), Math.max(timerFunc(i) - 200, 0));
-        }, 200);
+        const bound = ref.current?.getBoundingClientRect();
+        i = bound
+          ? Math.min(Math.floor(bound.top / bound.height) + 4, idx)
+          : idx;
       }
+      const timerFunc = (i: number) => 400 * (1 - Math.exp(-0.09 * i));
+      setTimeout(() => setActivated(true), timerFunc(i));
     }
   }, []);
 
