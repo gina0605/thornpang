@@ -185,6 +185,14 @@ const processVideo = (data: VideoRaw[]): Video[] =>
 
 const data: VideoRaw[] = [
   {
+    title: "나의 세기 Extended Play Film",
+    slug: "century-film-cloud",
+    setlist: [S.cloud],
+    info: [I.live, ALBUMS.century],
+    links: [yt("https://www.youtube.com/watch?v=RdevgiEHh2k")],
+    date: "2025. 06. 25",
+  },
+  {
     title: "Music Video",
     slug: "mv-planetarium",
     setlist: [S.planetarium],

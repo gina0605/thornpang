@@ -4242,10 +4242,10 @@ const data_2026: Schedule[] = [
     month: 7,
     date: 31,
     title: "펜타포트 락 페스티벌",
-    imageA: "202608-penta-a.jpg",
+    imageA: "202607-penta-a.jpg",
     location: ["송도 달빛축제공원"],
     setlist: [],
-    links: [I.FNotice("https://www.instagram.com/p/DYTZ5RFmTD5")],
+    links: [I.FNotice("https://www.instagram.com/p/DaCqnXgmVb_")],
   },
   {
     year: 2026,
