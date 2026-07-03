@@ -10,6 +10,7 @@ export const replaceLogic = [
   { pattern: /(엠|M)\s?긱스/g, result: "m gigs" },
   { pattern: /ebs\s?space/g, result: "ebs스페이스" },
   { pattern: /기타네트/g, result: "guitarnet" },
+  { pattern: /Fender/g, result: "펜더" },
   { pattern: /flo/g, result: "플로" },
   { pattern: /mu\s?[:]?\s?con/g, result: "뮤콘" },
   { pattern: /뮤즈\s?온/g, result: "museon" },
@@ -184,6 +185,15 @@ const processVideo = (data: VideoRaw[]): Video[] =>
   );
 
 const data: VideoRaw[] = [
+  {
+    title: "Riff To Song",
+    subtitle: "윤성현",
+    slug: "fender-yoon",
+    setlist: [S.planetarium, S.cloud, S.mob],
+    info: ["Riff To Song", "펜더", "윤성현"],
+    links: [yt("https://www.youtube.com/watch?v=TuX6zJkGGnM")],
+    date: "2026. 07. 03",
+  },
   {
     title: "나의 세기 Extended Play Film",
     slug: "century-film-cloud",
