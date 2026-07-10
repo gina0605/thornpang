@@ -186,6 +186,23 @@ const processVideo = (data: VideoRaw[]): Video[] =>
 
 const data: VideoRaw[] = [
   {
+    title: "나의 세기",
+    subtitle: "코멘터리 인터뷰",
+    slug: "century-interview",
+    setlist: [S.planetarium],
+    info: ["코멘터리", "인터뷰"],
+    links: [yt("https://www.youtube.com/watch?v=3-r0PZ2iALs")],
+    date: "2026. 07. 10",
+  },
+  {
+    title: "라이브",
+    slug: "live-planetarium",
+    setlist: [S.planetarium],
+    info: ["라이브 세션", "국립과천과학관"],
+    links: [yt("https://www.youtube.com/watch?v=BcXGhXmVqNw")],
+    date: "2026. 07. 08",
+  },
+  {
     title: "Riff To Song",
     subtitle: "윤성현",
     slug: "fender-yoon",
