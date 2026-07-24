@@ -186,6 +186,24 @@ const processVideo = (data: VideoRaw[]): Video[] =>
 
 const data: VideoRaw[] = [
   {
+    title: "플라네타리움 챌린지",
+    subtitle: "리액션 영상",
+    slug: "planetarium-challenge",
+    setlist: [S.planetarium],
+    info: [S.planetarium, "챌린지", "리액션"],
+    links: [yt("https://www.youtube.com/watch?v=AML5ijUMO_w")],
+    date: "2026. 07. 20",
+  },
+  {
+    title: "TAMA 아티스트 인터뷰",
+    subtitle: "방요셉",
+    slug: "tama-bbang",
+    setlist: [S.glow, S.decline, S.planetarium],
+    info: ["Guitarnet", "TAMA", "방요셉", "인터뷰"],
+    links: [yt("https://www.youtube.com/watch?v=_RcnditIMVE")],
+    date: "2026. 07. 15",
+  },
+  {
     title: "나의 세기",
     subtitle: "코멘터리 인터뷰",
     slug: "century-interview",
