@@ -4329,6 +4329,8 @@ const data_2026: Schedule[] = [
     links: [
       I.Notice("https://www.instagram.com/p/DZeuOyakS-i"),
       I.Photo("https://www.instagram.com/p/DcG3hfJD9iL"),
+      I.Vid("https://www.instagram.com/p/DcIb0iWkRhV"),
+      I.Vid("https://www.instagram.com/p/DcIqsnyh59u/", "홍동균 멘트"),
     ],
   },
   {

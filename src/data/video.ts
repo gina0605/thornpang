@@ -189,7 +189,7 @@ const data: VideoRaw[] = [
     title: "페달보드 스토리",
     subtitle: "홍동균",
     slug: "pedalboard",
-    setlist: [S.glow, S.shore],
+    setlist: [S.glow, S.black, S.shore],
     info: ["페달보드"],
     links: [yt("https://www.youtube.com/watch?v=ZMyt2zWKg1w")],
     date: "2026. 07. 27",
