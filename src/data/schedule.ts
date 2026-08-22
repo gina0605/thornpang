@@ -4293,7 +4293,9 @@ const data_2026: Schedule[] = [
     links: [
       I.Notice("https://www.instagram.com/p/DZeuOyakS-i"),
       I.Photo("https://www.instagram.com/p/DcEZrLHD2om"),
-      I.Vid("https://www.instagram.com/p/DcFdR8nEVUy"),
+      I.Vid("https://www.instagram.com/p/DcFdR8nEVUy", "Day 1"),
+      I.Vid("https://www.instagram.com/p/DcQZC65Ta9l/", "공연장 내부 투어"),
+      I.Vid("https://www.instagram.com/p/DcOCp4PlOtI"),
     ],
   },
   {
@@ -4329,8 +4331,9 @@ const data_2026: Schedule[] = [
     links: [
       I.Notice("https://www.instagram.com/p/DZeuOyakS-i"),
       I.Photo("https://www.instagram.com/p/DcG3hfJD9iL"),
-      I.Vid("https://www.instagram.com/p/DcIb0iWkRhV"),
+      I.Vid("https://www.instagram.com/p/DcIb0iWkRhV", "Day 2"),
       I.Vid("https://www.instagram.com/p/DcIqsnyh59u/", "홍동균 멘트"),
+      I.Vid("https://www.instagram.com/p/DcOCp4PlOtI"),
     ],
   },
   {
@@ -4362,6 +4365,16 @@ const data_2026: Schedule[] = [
     location: ["파라다이스 시티"],
     setlist: [],
     links: [I.FNotice("https://www.instagram.com/p/DWTMrRmj18r/")],
+  },
+  {
+    year: 2026,
+    month: 10,
+    date: 3,
+    title: "렛츠락 페스티벌",
+    imageA: "202610-letsrock-a.jpg",
+    location: ["난지한강공원"],
+    setlist: [],
+    links: [I.FNotice("https://www.instagram.com/p/DcNY5HPExB2/")],
   },
   {
     year: 2026,
